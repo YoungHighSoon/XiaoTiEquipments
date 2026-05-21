@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: autocannon pack -->
+  <RNApparelHD2_Backpack_AutocannonPack.label>机炮背包</RNApparelHD2_Backpack_AutocannonPack.label>
+  <!-- EN: The SEAF Autocannon Pack. This backpack uses an electromagnetic system to hover around the wearer's back and take the weight off the user, allowing freedom of movement. -->
+  <RNApparelHD2_Backpack_AutocannonPack.description>SEAF配备的机炮背包，配合机炮使用。这款使用电磁系统的背包悬浮在佩戴者的背部以减轻使用者的负担，使其能够自由活动。</RNApparelHD2_Backpack_AutocannonPack.description>
+  
+  <!-- EN: recoilless rifle pack -->
+  <RNApparelHD2_Backpack_RecoillessRiflePack.label>无后座力步枪背包</RNApparelHD2_Backpack_RecoillessRiflePack.label>
+  <!-- EN: The SEAF Recoilless Rifle Pack. This backpack uses an electromagnetic system to hover around the wearer's back and take the weight off the user, allowing freedom of movement. -->
+  <RNApparelHD2_Backpack_RecoillessRiflePack.description>SEAF配备的无后座力步枪背包，配合无后座力步枪使用。这款使用电磁系统的背包悬浮在佩戴者的背部以减轻佩戴者的负担，使其能够自由活动。</RNApparelHD2_Backpack_RecoillessRiflePack.description>
+  
+  <!-- EN: SEAF patrol pack -->
+  <RNApparelHD2_Backpack_SEAFPack.label>SEAF行军背包</RNApparelHD2_Backpack_SEAFPack.label>
+  <!-- EN: The SEAF patrol pack. This backpack uses an electromagnetic system to hover around the wearer's back and take the weight off the user, allowing freedom of movement. -->
+  <RNApparelHD2_Backpack_SEAFPack.description>SEAF配备的行军背包，能够提高佩戴者的携带能力。</RNApparelHD2_Backpack_SEAFPack.description>
+  
+  <!-- EN: SEAF shield pack -->
+  <RNApparelHD2_Backpack_ShieldPack.label>SEAF防护罩生成包</RNApparelHD2_Backpack_ShieldPack.label>
+  <!-- EN: The SEAF Shield Pack. Generates a shield bubble for the wearer. This backpack allows the wearer to carry up to 100 KG for caravan trips and other outdoor activities. It uses an electromagnetic system to hover around the wearer's back and take the weight off the user, allowing freedom of movement. -->
+  <RNApparelHD2_Backpack_ShieldPack.description>SEAF配备的防护罩生成包，以球状护盾包裹佩戴者，抵挡高速射弹。</RNApparelHD2_Backpack_ShieldPack.description>
+  
+  <!-- EN: supply pack -->
+  <RNApparelHD2_Backpack_SupplyPack.label>补给背包</RNApparelHD2_Backpack_SupplyPack.label>
+  <!-- EN: The supply Pack. This backpack uses an electromagnetic system to hover around the wearer's back and take the weight off the user, allowing freedom of movement. -->
+  <RNApparelHD2_Backpack_SupplyPack.description>装着弹药的补给箱，配有背包，可供使用者将箱子分给其他绝地潜兵。\n可惜在边缘世界中既没有弹药也没有治疗针，因此这个背包只能为殖民者提供+100的携带能力。</RNApparelHD2_Backpack_SupplyPack.description>
+  
+</LanguageData>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: CQC-5 Combat Hatchet -->
+  <RNMeleeWeapon_CQC5_CombatHatchet.label>CQC-5战斗短柄斧</RNMeleeWeapon_CQC5_CombatHatchet.label>
+  <!-- EN: A rugged, one-handed melee weapon designed for close-quarters combat. The CQC-5 Combat Hatchet delivers swift, heavy strikes, making it effective for dispatching lightly armored enemies in tight situations. Its compact design allows for quick swings and easy handling, providing Helldivers with a reliable option when ammunition is scarce or stealth is required. -->
+  <RNMeleeWeapon_CQC5_CombatHatchet.description>CQC-5战斗短柄斧是一款坚固耐用的单手近战武器，使用者能在狭窄的环境中有效杀伤轻甲敌人。其紧凑的设计使其能够快速挥舞且易于操作，在弹药匮乏或需要潜行时是绝地潜兵们的可靠的伙伴。</RNMeleeWeapon_CQC5_CombatHatchet.description>
+  <!-- EN: handle -->
+  <RNMeleeWeapon_CQC5_CombatHatchet.tools.handle.label>斧柄</RNMeleeWeapon_CQC5_CombatHatchet.tools.handle.label>
+  <!-- EN: spike -->
+  <RNMeleeWeapon_CQC5_CombatHatchet.tools.spike.label>尖刺</RNMeleeWeapon_CQC5_CombatHatchet.tools.spike.label>
+  <!-- EN: axe head -->
+  <RNMeleeWeapon_CQC5_CombatHatchet.tools.axe_head.label>斧刃</RNMeleeWeapon_CQC5_CombatHatchet.tools.axe_head.label>
+  
+</LanguageData>

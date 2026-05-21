@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: LAS-58 Talon energy round -->
+  <RNBullet_LAS58Talon_Round.label>LAS-58“猛爪”激光弹</RNBullet_LAS58Talon_Round.label>
+  
+  <!-- EN: LAS-58 Talon -->
+  <RNGun_LAS58Talon_Revolver.label>LAS-58“猛爪”</RNGun_LAS58Talon_Revolver.label>
+  <!-- EN: A semi-automatic laser revolver engineered for precision and armor penetration. Firing 10mm energy pulses at 750 RPM, it delivers a devastating yellow laser shot with medium armor penetration capabilities. Its compact design and manageable recoil make it ideal for Helldivers requiring a reliable sidearm in high-threat environments.​ -->
+  <RNGun_LAS58Talon_Revolver.description>这把半自动激光左轮手枪精准且威力强大。紧凑的设计和可控的后坐力使其成为在高危环境中需要可靠副武器的绝地潜兵的理想之选。</RNGun_LAS58Talon_Revolver.description>
+  <!-- EN: grip -->
+  <RNGun_LAS58Talon_Revolver.tools.grip.label>握把</RNGun_LAS58Talon_Revolver.tools.grip.label>
+  <!-- EN: barrel -->
+  <RNGun_LAS58Talon_Revolver.tools.barrel.label>枪管</RNGun_LAS58Talon_Revolver.tools.barrel.label>
+  <!-- EN: LAS-58 Talon -->
+  <RNGun_LAS58Talon_Revolver.verbs.Verb_Shoot.label>LAS-58“猛爪”</RNGun_LAS58Talon_Revolver.verbs.Verb_Shoot.label>
+  
+  <!-- EN: P-2 Peacemaker -->
+  <RNGun_P2Peacemaker_Pistol.label>P-2“和平制造者”</RNGun_P2Peacemaker_Pistol.label>
+  <!-- EN: The P-2 Peacemaker is a semi-automatic pistol chambered in 9×19mm, designed for reliability and versatility in the field. Compact and lightweight, it offers a balanced mix of accuracy and stopping power, making it a trusted sidearm for Helldivers in high-stakes missions. -->
+  <RNGun_P2Peacemaker_Pistol.description>P-2“和平制造者”是一款半自动手枪，专为野战而设计，可靠性高，功能多样。它结构紧凑轻巧，精准度和制止力兼具，是绝地潜兵在高风险任务中值得信赖的随身武器。</RNGun_P2Peacemaker_Pistol.description>
+  <!-- EN: grip -->
+  <RNGun_P2Peacemaker_Pistol.tools.grip.label>握把</RNGun_P2Peacemaker_Pistol.tools.grip.label>
+  <!-- EN: barrel -->
+  <RNGun_P2Peacemaker_Pistol.tools.barrel.label>枪管</RNGun_P2Peacemaker_Pistol.tools.barrel.label>
+  <!-- EN: P-2 Peacemaker -->
+  <RNGun_P2Peacemaker_Pistol.verbs.Verb_Shoot.label>P-2“和平制造者”</RNGun_P2Peacemaker_Pistol.verbs.Verb_Shoot.label>
+  
+  <!-- EN: P-4 Senator -->
+  <RNGun_P4Senator_Revolver.label>P-4“参议员”</RNGun_P4Senator_Revolver.label>
+  <!-- EN: The P-4 Senator is a double-action revolver chambered in 12.5mm rounds, engineered for maximum stopping power and battlefield intimidation. Though limited to six rounds, its heavy frame and high-caliber payload make it ideal for close-quarters combat against armored targets. Preferred by seasoned Helldivers who value raw impact over finesse. -->
+  <RNGun_P4Senator_Revolver.description>P-4“参议员”是一款双动式左轮手枪，此随身武器攻击力强大，相当可靠。虽然弹容量只有六发，但其厚重的枪身和高口径弹药使其成为近距离对抗装甲目标的理想之选，受到了那些注重力大砖飞的野蛮火力的老兵的青睐。</RNGun_P4Senator_Revolver.description>
+  <!-- EN: grip -->
+  <RNGun_P4Senator_Revolver.tools.grip.label>握把</RNGun_P4Senator_Revolver.tools.grip.label>
+  <!-- EN: barrel -->
+  <RNGun_P4Senator_Revolver.tools.barrel.label>枪管</RNGun_P4Senator_Revolver.tools.barrel.label>
+  <!-- EN: P-4 Senator -->
+  <RNGun_P4Senator_Revolver.verbs.Verb_Shoot.label>P-4“参议员”</RNGun_P4Senator_Revolver.verbs.Verb_Shoot.label>
+  
+</LanguageData>

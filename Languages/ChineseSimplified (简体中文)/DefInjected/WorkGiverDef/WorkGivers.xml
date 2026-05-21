@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: make equipment -->
+  <DoBillsMakeRH2SEAFEquipment.label>制造装备</DoBillsMakeRH2SEAFEquipment.label>
+  <!-- EN: crafting at -->
+  <DoBillsMakeRH2SEAFEquipment.gerund>制作于</DoBillsMakeRH2SEAFEquipment.gerund>
+  <!-- EN: craft -->
+  <DoBillsMakeRH2SEAFEquipment.verb>制作</DoBillsMakeRH2SEAFEquipment.verb>
+  
+</LanguageData>

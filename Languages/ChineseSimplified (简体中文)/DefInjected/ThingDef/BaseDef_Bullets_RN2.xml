@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 12.7x108mm bullet -->
+  <RNBullet_127x108_Sniper.label>TODO</RNBullet_127x108_Sniper.label>
+  
+  <!-- EN: 12 Gauge shotgun blast -->
+  <RNBullet_12Gauge_Shotgun.label>TODO</RNBullet_12Gauge_Shotgun.label>
+  
+  <!-- EN: .223 Remington bullet -->
+  <RNBullet_223Remington_Rifle.label>TODO</RNBullet_223Remington_Rifle.label>
+  
+  <!-- EN: 23x75mmR blast -->
+  <RNBullet_23x75mmR_Shotgun.label>TODO</RNBullet_23x75mmR_Shotgun.label>
+  
+  <!-- EN: .303 British bullet -->
+  <RNBullet_303British_Rifle.label>TODO</RNBullet_303British_Rifle.label>
+  
+  <!-- EN: .308 Winchester bullet -->
+  <RNBullet_308Winchester_DMR.label>TODO</RNBullet_308Winchester_DMR.label>
+  
+  <!-- EN: .308 Winchester bullet -->
+  <RNBullet_308Winchester_Sniper.label>TODO</RNBullet_308Winchester_Sniper.label>
+  
+  <!-- EN: .32 ACP bullet -->
+  <RNBullet_32ACP_Pistol.label>TODO</RNBullet_32ACP_Pistol.label>
+  
+  <!-- EN: .338 Lapua Magnum bullet -->
+  <RNBullet_338Lapua_Sniper.label>TODO</RNBullet_338Lapua_Sniper.label>
+  
+  <!-- EN: .357 Magnum bullet -->
+  <RNBullet_357_Revolver.label>TODO</RNBullet_357_Revolver.label>
+  
+  <!-- EN: .380 bullet -->
+  <RNBullet_380_SMG.label>TODO</RNBullet_380_SMG.label>
+  
+  <!-- EN: .38 Special bullet -->
+  <RNBullet_38Special_Pistol.label>TODO</RNBullet_38Special_Pistol.label>
+  
+  <!-- EN: .408 Cheyenne Tactical bullet -->
+  <RNBullet_408Cheyenne_Sniper.label>TODO</RNBullet_408Cheyenne_Sniper.label>
+  
+  <!-- EN: .40 SW bullet -->
+  <RNBullet_40SW_Pistol.label>TODO</RNBullet_40SW_Pistol.label>
+  
+  <!-- EN: .44 Magnum bullet -->
+  <RNBullet_44Magnum_Pistol.label>TODO</RNBullet_44Magnum_Pistol.label>
+  
+  <!-- EN: .454 Casull bullet -->
+  <RNBullet_454_Revolver.label>TODO</RNBullet_454_Revolver.label>
+  
+  <!-- EN: .45 ACP bullet -->
+  <RNBullet_45ACP_Pistol.label>TODO</RNBullet_45ACP_Pistol.label>
+  
+  <!-- EN: .45 ACP bullet (AP) -->
+  <RNBullet_45ACPAP_Pistol.label>TODO</RNBullet_45ACPAP_Pistol.label>
+  
+  <!-- EN: .45 Colt bullet -->
+  <RNBullet_45Colt_Pistol.label>TODO</RNBullet_45Colt_Pistol.label>
+  
+  <!-- EN: 4.6x30mm bullet -->
+  <RNBullet_46x30_Pistol.label>TODO</RNBullet_46x30_Pistol.label>
+  
+  <!-- EN: .50 AE bullet -->
+  <RNBullet_50_Pistol.label>TODO</RNBullet_50_Pistol.label>
+  
+  <!-- EN: .50 BMG bullet -->
+  <RNBullet_50BMG_Sniper.label>TODO</RNBullet_50BMG_Sniper.label>
+  
+  <!-- EN: 5.45x39mm bullet -->
+  <RNBullet_545x39_Rifle.label>TODO</RNBullet_545x39_Rifle.label>
+  
+  <!-- EN: 5.56x45mm bullet -->
+  <RNBullet_556x45_Rifle.label>TODO</RNBullet_556x45_Rifle.label>
+  
+  <!-- EN: 5.7x28mm bullet -->
+  <RNBullet_57_Pistol.label>TODO</RNBullet_57_Pistol.label>
+  
+  <!-- EN: 5.8x42mm bullet -->
+  <RNBullet_58x42mm_DMR.label>TODO</RNBullet_58x42mm_DMR.label>
+  
+  <!-- EN: 7.62x38mmR bullet -->
+  <RNBullet_762_Revolver.label>TODO</RNBullet_762_Revolver.label>
+  
+  <!-- EN: 7.62x25mm Tokarev bullet -->
+  <RNBullet_762Tokarev_Pistol.label>TODO</RNBullet_762Tokarev_Pistol.label>
+  
+  <!-- EN: 7.62x39R bullet -->
+  <RNBullet_762x39_DMR.label>TODO</RNBullet_762x39_DMR.label>
+  
+  <!-- EN: 7.62x39R bullet -->
+  <RNBullet_762x39_Rifle.label>TODO</RNBullet_762x39_Rifle.label>
+  
+  <!-- EN: 7.62 NATO bullet -->
+  <RNBullet_762x51mm_DMR.label>TODO</RNBullet_762x51mm_DMR.label>
+  
+  <!-- EN: 7.62x51mm NATO bullet -->
+  <RNBullet_762x51mm_LMG.label>TODO</RNBullet_762x51mm_LMG.label>
+  
+  <!-- EN: 7.62 NATO bullet -->
+  <RNBullet_762x51mm_Sniper.label>TODO</RNBullet_762x51mm_Sniper.label>
+  
+  <!-- EN: 7.62x54mmR bullet -->
+  <RNBullet_762x54_DMR.label>TODO</RNBullet_762x54_DMR.label>
+  
+  <!-- EN: 7.62x54mmR bullet -->
+  <RNBullet_762x54_LMG.label>TODO</RNBullet_762x54_LMG.label>
+  
+  <!-- EN: 7.62x54mmR bullet -->
+  <RNBullet_762x54_Rifle.label>TODO</RNBullet_762x54_Rifle.label>
+  
+  <!-- EN: 7.62x54mmR bullet -->
+  <RNBullet_762x54_Sniper.label>TODO</RNBullet_762x54_Sniper.label>
+  
+  <!-- EN: 8mm Mauser bullet -->
+  <RNBullet_792x57Mauser_DMR.label>TODO</RNBullet_792x57Mauser_DMR.label>
+  
+  <!-- EN: 8mm Mauser bullet -->
+  <RNBullet_792x57Mauser_Rifle.label>TODO</RNBullet_792x57Mauser_Rifle.label>
+  
+  <!-- EN: 7x64mm bullet -->
+  <RNBullet_7x64mmBrenneke_Rifle.label>TODO</RNBullet_7x64mmBrenneke_Rifle.label>
+  
+  <!-- EN: 9x19mm Parabellum bullet -->
+  <RNBullet_9MM_Pistol.label>TODO</RNBullet_9MM_Pistol.label>
+  
+  <!-- EN: 9x19mm Parabellum bullet (AP) -->
+  <RNBullet_9MMAP_Pistol.label>TODO</RNBullet_9MMAP_Pistol.label>
+  
+  <!-- EN: 9x18mm Makarov bullet -->
+  <RNBullet_9MMMakarov_Pistol.label>TODO</RNBullet_9MMMakarov_Pistol.label>
+  
+  <!-- EN: 9x39mm SP-6 bullet -->
+  <RNBullet_9x39mmSP6_DMR.label>TODO</RNBullet_9x39mmSP6_DMR.label>
+  
+  <!-- EN: .300 AAC Blackout bullet -->
+  <RNBullet_AACBlackout_PDW.label>TODO</RNBullet_AACBlackout_PDW.label>
+  
+</LanguageData>

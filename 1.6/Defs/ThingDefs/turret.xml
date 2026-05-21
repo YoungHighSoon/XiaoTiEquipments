@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="BuildingBase">
+    <defName>XiaoTi_Light_GuardTurret</defName>
+    <label>LWT-小型野战机枪塔</label>
+    <description>一种小型、短程的便携式自动机枪塔。由于是人工智能来运行无法被直接控制，所以要小心友军误伤。</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawHighlight>true</drawHighlight>
+    <drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretMini_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.27,0.25,0.27)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Building/Security/TurretMini_MenuIcon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>3000</MaxHitPoints>
+      <IncomingDamageFactor>-0.75</IncomingDamageFactor>
+      <Flammability>0</Flammability>
+      <WorkToBuild>0</WorkToBuild>
+      <Mass>0.8</Mass>
+      <Beauty>20</Beauty>
+      <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+      <!-- <ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.7</ArmorRating_Blunt>
+      <ArmorRating_Heat>2</ArmorRating_Heat> -->
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <!-- <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-400</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li> -->
+      <!-- <li Class="CompProperties_Explosive">
+        <wickTicks>240</wickTicks>
+        <explosiveRadius>2</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+      </li> -->
+      <li Class="CompProperties_Forbiddable"/>
+      <!-- <li Class="CompProperties_Flickable"/> -->
+      <!-- <li Class="CompProperties_Breakdownable"/> -->
+      <!-- <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>80</basePowerConsumption>
+      </li> -->
+      <!-- <li Class="CompProperties_ProjectileInterceptor">
+        <radius>3</radius>
+        <interceptGroundProjectiles>true</interceptGroundProjectiles>
+        <interceptAirProjectiles>false</interceptAirProjectiles>
+        <interceptNonHostileProjectiles>false</interceptNonHostileProjectiles>
+        <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge>
+        <color>(0.4, 0.4, 0.4)</color>
+        <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+        <activeSound>BulletShield_Ambience</activeSound>
+        <hitPoints>600</hitPoints>
+        <minAlpha>0.5</minAlpha>
+        <interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
+        <disarmedByEmpForTicks>180</disarmedByEmpForTicks>
+        <chargeDurationTicks>600</chargeDurationTicks>
+        <gizmoTipKey>RemoteMechShieldTip</gizmoTipKey>
+      </li> -->
+      <li Class="XiaoTiEquipment.CompProperties_BuildingSelfRepair">
+          <repairIntervalTicks>30</repairIntervalTicks>      <!-- 修复间隔 -->
+          <repairAmount>8</repairAmount>                     <!-- 每次修复HP -->
+          <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
+          <showrepairinfo>false</showrepairinfo>
+          <!-- <showRepairEffect>true</showRepairEffect> -->
+          <minRepairCondition>0</minRepairCondition>       <!-- HP低于0%时停止修复 -->
+          <maxRepairCondition>1</maxRepairCondition>      <!-- 修复到100%HP -->
+      </li>
+    </comps>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>0.2</multiplier>
+      </li>
+      <li>
+        <damageDef>HEAT_40mm_around</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+    </damageMultipliers>
+    <passability>PassThroughOnly</passability>
+    <pathCost>40</pathCost>
+    <fillPercent>0.95</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <!-- <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>30</costStuffCount>
+    <costList>
+      <Steel>20</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList> -->
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <!-- <constructionSkillPrerequisite>1</constructionSkillPrerequisite> -->
+    <building>
+      <!-- <combatPower>45</combatPower> -->  <!-- same as a scavenger -->
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>Light_Guard_Turret_Gun</turretGunDef>
+      <turretBurstCooldownTime>1</turretBurstCooldownTime>
+      <claimable>true</claimable>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <designationHotKey>Misc2</designationHotKey>
+    <!-- <researchPrerequisites>
+      <li>GunTurrets</li>
+    </researchPrerequisites> -->
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Light_Guard_Turret_Gun</defName>
+    <label>轻型防卫机枪</label>
+    <description>安装在炮塔上的简易自动机枪。</description>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretMini_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>1</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>762x51mm_Bullet_LMG</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <range>64</range>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <burstShotCount>10</burstShotCount>
+        <soundCast>M105Stalwart_Shot</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <!-- <consumeFuelPerShot>1</consumeFuelPerShot> -->
+      </li>
+    </verbs>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase" Name="Guard_AutocannonTurret" Abstract="True"> 
+    <thingClass>XiaoTiEquipment.TurretCanForcedTarget</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawHighlight>true</drawHighlight>
+    <drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretHeavy_Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.3, 1.3)</drawSize>
+      <drawOffset>(0,0,-0.1)</drawOffset>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(1.5,0.35,1.4)</volume>
+        <offset>(0,0,-0.05)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Building/Security/TurretMini_MenuIcon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+    <minifiedDef>MinifiedThing</minifiedDef>    
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <!-- <size>(2,2)</size> -->
+    <statBases>
+      <MaxHitPoints>3600</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <WorkToBuild>0</WorkToBuild>
+      <Mass>1</Mass>
+      <Beauty>20</Beauty>
+      <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+    </statBases>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <pathCost>13</pathCost>
+    <fillPercent>0.05</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <claimable>true</claimable>
+      <turretTopDrawSize>2.3</turretTopDrawSize>
+      <turretTopOffset>(0, 0.05)</turretTopOffset>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <designationHotKey>Misc3</designationHotKey>    
+    <uiIconScale>0.95</uiIconScale>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>0.2</multiplier>
+      </li>
+      <li>
+        <damageDef>HEAT_40mm_around</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+    </damageMultipliers>
+    <!-- <comps>
+      <li Class="CompProperties_Interactable">
+        <compClass>CompGleamingMonolith</compClass>
+        <ticksToActivate>10</ticksToActivate>
+        <remainingSecondsInInspectString>true</remainingSecondsInInspectString>
+        <maintainProgress>true</maintainProgress>
+        <activateTexPath>UI/Commands/ActivateMonolith</activateTexPath>
+        <jobString>activate</jobString>
+        <targetingParameters>
+          <canTargetBuildings>true</canTargetBuildings>
+          <canTargetAnimals>true</canTargetAnimals>
+          <canTargetMechs>true</canTargetMechs>
+          <onlyTargetControlledPawns>false</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+    </comps> -->
+  </ThingDef>
+
+  <ThingDef ParentName="Guard_AutocannonTurret">
+    <defName>Archar_Medium_GuardTurret</defName>
+    <label>AMGT - “长臂管辖”</label>
+    <description>一种重型自动炮塔。它的大口径炮弹能够在可观的攻击范围内对目标造成快速且毁灭性的打击。</description>
+    <uiIconPath>Things/Building/Security/TurretAutocannon_MenuIcon</uiIconPath>
+    <!-- <statBases>
+      
+    </statBases> -->
+    <stuffCategories>
+      <!-- <li>GodIngot_Metallic</li> -->
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>1</costStuffCount>
+    <!-- <costList>
+      <Steel>35</Steel>
+      <Plasteel>10</Plasteel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList> -->
+    <comps>
+      <li Class="XiaoTiEquipment.CompProperties_BuildingSelfRepair">
+          <repairIntervalTicks>60</repairIntervalTicks>      <!-- 修复间隔 -->
+          <!-- <repairAmount>120</repairAmount> -->
+          <UsePercentRepair>true</UsePercentRepair>
+          <repairPercent>0.3</repairPercent>
+          <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
+          <showrepairinfo>false</showrepairinfo>
+          <!-- <showRepairEffect>true</showRepairEffect> -->
+          <minRepairCondition>0</minRepairCondition>       <!-- HP低于0%时停止修复 -->
+          <maxRepairCondition>1</maxRepairCondition>      <!-- 修复到100%HP -->
+      </li>
+    </comps>
+    <building>
+      <turretGunDef>Gun_Archar_Turret</turretGunDef>
+      <turretBurstCooldownTime>1</turretBurstCooldownTime>
+    </building>
+    <!-- <researchPrerequisites>
+      <li>HeavyTurrets</li>
+    </researchPrerequisites> -->
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+	<defName>Bullet_40MMHEAT_Autocannon</defName>
+    <label>40mm高爆穿甲弹-溅射</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+		<thingClass>XiaoTiEquipment.Projectile_RadiusDamage</thingClass>
+		<projectile>
+			<damageDef>HEAT_40mm_around</damageDef>
+			<damageAmountBase>90</damageAmountBase>
+			<!-- Use default damage from explosion def -->
+			<explosionRadius>1.9</explosionRadius>
+			<speed>240</speed>
+			<!-- <flyOverhead>true</flyOverhead> -->
+			<stoppingPower>8</stoppingPower>
+			<!-- <explosionDamageFalloff>true</explosionDamageFalloff> -->
+			<screenShakeFactor>0</screenShakeFactor>
+		</projectile>
+    <comps>
+        <li Class="XiaoTiEquipment.CompProperties_RadiusDamage">
+            <radius>2.0</radius>                       <!-- 伤害半径：2.5格 -->
+            <damageMultiplier>1</damageMultiplier>   <!-- 半径伤害为子弹基础伤害的50% -->
+            <damageDef>HEAT_40mm_around</damageDef>              <!-- 使用子弹伤害类型，可改为其他伤害类型如Bomb -->
+            <!-- <ignoreLineOfSight>true</ignoreLineOfSight> -->
+            <armorPenetrationMultiplier>1.0</armorPenetrationMultiplier> <!-- 护甲穿透倍数 -->
+        </li>
+    </comps>
+	</ThingDef>
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Gun_Archar_Turret</defName>
+    <label>长弓手</label>
+    <description>大口径远距离精准武器，子弹附有溅射伤害</description>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretAutocannon_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <!-- <AccuracyTouch>0.28</AccuracyTouch>
+      <AccuracyShort>0.72</AccuracyShort>
+      <AccuracyMedium>0.66</AccuracyMedium>
+      <AccuracyLong>0.5</AccuracyLong> -->
+      <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>0.2</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>Bullet_40MMHEAT_Autocannon</defaultProjectile>
+				<forcedMissRadius>0.01</forcedMissRadius>
+        <!-- <defaultProjectile>Bullet_40MMHEAT_Autocannon</defaultProjectile> -->
+        <warmupTime>0</warmupTime>
+        <!-- <minRange>2</minRange> -->
+        <range>299</range>
+        <ticksBetweenBurstShots>14</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>Shot_40mm_Autocannon</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+				<!-- <isMortar>true</isMortar> -->
+				<!-- <hasStandardCommand>true</hasStandardCommand> -->
+				<!-- <requireLineOfSight>false</requireLineOfSight> -->
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>true</canTargetPawns>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetBuildings>true</canTargetBuildings>
+        </targetParams>
+        <!-- <consumeFuelPerShot>1</consumeFuelPerShot> -->
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="Guard_AutocannonTurret">
+    <defName>Liberty_Medium_GuardTurret</defName>
+    <label>LMGT - “跨境执法”</label>
+    <description>一种重型自动炮塔。它的大口径炮弹能够在可观的攻击范围内对目标造成快速且毁灭性的打击。</description>
+    <uiIconPath>Things/Building/Security/Turret_C_UI</uiIconPath>
+    <statBases>
+      <MaxHitPoints>80000</MaxHitPoints>
+    </statBases>
+    <costList>
+      <!-- <Steel>0</Steel> -->
+      <!-- <Plasteel>1</Plasteel> -->
+      <!-- <ComponentIndustrial>6</ComponentIndustrial> -->
+    </costList>
+    <comps>
+      <li Class="XiaoTiEquipment.CompProperties_BuildingSelfRepair">
+          <repairIntervalTicks>60</repairIntervalTicks>      <!-- 修复间隔 -->
+          <!-- <repairAmount>20000</repairAmount> -->
+           <UsePercentRepair>true</UsePercentRepair>
+           <repairPercent>1</repairPercent>
+          <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
+          <showrepairinfo>false</showrepairinfo>
+          <!-- <showRepairEffect>true</showRepairEffect> -->
+      </li>
+      <!-- <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-400</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+        <shortCircuitInRain>false</shortCircuitInRain>
+      </li> -->
+    </comps>
+    <building>
+      <turretGunDef>Gun_Official_Turret</turretGunDef>
+      <turretBurstCooldownTime>0.5</turretBurstCooldownTime>
+    </building>
+    <!-- <researchPrerequisites>
+      <li>HeavyTurrets</li>
+    </researchPrerequisites> -->
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+	<defName>Bullet_40MMHEAT_Official</defName>
+    <label>40mm高爆穿甲弹-范围</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+		<thingClass>XiaoTiEquipment.Projectile_RadiusDamage</thingClass>
+		<projectile>
+			<damageDef>HEAT_40mm_around</damageDef>
+			<damageAmountBase>90</damageAmountBase>
+			<!-- Use default damage from explosion def -->
+			<explosionRadius>1.9</explosionRadius>
+			<speed>60</speed>
+			<flyOverhead>true</flyOverhead>
+			<stoppingPower>4</stoppingPower>
+			<!-- <explosionDamageFalloff>true</explosionDamageFalloff> -->
+			<screenShakeFactor>0</screenShakeFactor>
+		</projectile>
+    <comps>
+        <li Class="XiaoTiEquipment.CompProperties_RadiusDamage">
+            <radius>2.9</radius>                       <!-- 伤害半径：2.5格 -->
+            <damageMultiplier>2</damageMultiplier>   <!-- 半径伤害为子弹基础伤害的50% -->
+            <damageDef>HEAT_40mm_around</damageDef>              <!-- 使用子弹伤害类型，可改为其他伤害类型如Bomb -->
+            <!-- <ignoreLineOfSight>true</ignoreLineOfSight> -->
+            <armorPenetrationMultiplier>3.3</armorPenetrationMultiplier> <!-- 护甲穿透倍数 -->
+        </li>
+    </comps>
+	</ThingDef>
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Gun_Official_Turret</defName>
+    <label>指挥官</label>
+    <description>高速穿甲武器，射速极快</description>
+    <graphicData>
+      <texPath>Things/Building/Security/Turret_C</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <!-- <AccuracyTouch>0.28</AccuracyTouch>
+      <AccuracyShort>0.72</AccuracyShort>
+      <AccuracyMedium>0.66</AccuracyMedium>
+      <AccuracyLong>0.96</AccuracyLong> -->
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>0.2</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+				<verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>Bullet_40MMHEAT_Official</defaultProjectile>
+				<forcedMissRadius>0.01</forcedMissRadius>
+        <!-- <defaultProjectile>Bullet_40MMHEAT_Autocannon</defaultProjectile> -->
+        <warmupTime>0</warmupTime>
+        <!-- <minRange>2</minRange> -->
+        <range>36</range>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <burstShotCount>6</burstShotCount>
+        <soundCast>Shot_40mm_Autocannon</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+				<isMortar>true</isMortar>
+				<hasStandardCommand>true</hasStandardCommand>
+				<requireLineOfSight>false</requireLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>true</canTargetPawns>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetBuildings>true</canTargetBuildings>
+        </targetParams>
+        <!-- <consumeFuelPerShot>1</consumeFuelPerShot> -->
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="Guard_AutocannonTurret">
+    <defName>Liberty_Heavy_GuardTurret</defName>
+    <label>LHGT - “典礼官”</label>
+    <description>一种重型自动炮塔。原用于拦截导弹与空中目标，但火控模块受损。其具有对地单点目标造成毁灭性打击的能力。</description>
+    <uiIconPath>Things/Building/Security/Turret_D_UI</uiIconPath>
+    <statBases>
+      <MaxHitPoints>80000</MaxHitPoints>
+      <!-- <AccuracyLong>0.96</AccuracyLong> -->
+    </statBases>
+    <costList>
+    </costList>
+    <comps>
+      <li Class="XiaoTiEquipment.CompProperties_BuildingSelfRepair">
+          <repairIntervalTicks>60</repairIntervalTicks>      <!-- 修复间隔 -->
+          <!-- <repairAmount>20000</repairAmount> -->
+           <UsePercentRepair>true</UsePercentRepair>
+           <repairPercent>1</repairPercent>
+          <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
+          <showrepairinfo>false</showrepairinfo>
+          <!-- <showRepairEffect>true</showRepairEffect> -->
+      </li>
+    </comps>
+    <building>
+      <turretGunDef>Gun_Double_Mechine_Turret</turretGunDef>
+      <turretBurstCooldownTime>0.01</turretBurstCooldownTime>
+    </building>
+    <!-- <researchPrerequisites>
+      <li>HeavyTurrets</li>
+    </researchPrerequisites> -->
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Gun_Double_Mechine_Turret</defName>
+    <label>典礼官</label>
+    <description>高速穿甲武器，射速极快</description>
+    <graphicData>
+      <texPath>Things/Building/Security/Turret_D</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <RangedWeapon_Cooldown>0.01</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>0.2</Mass>
+      <Flammability>0</Flammability>
+      <AccuracyLong>0.96</AccuracyLong>
+    </statBases>
+    <verbs>
+      <li>
+				<verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>125_rifle_Bullet_sidearm</defaultProjectile>
+				<!-- <forcedMissRadius>0.01</forcedMissRadius> -->
+        <!-- <defaultProjectile>Bullet_40MMHEAT_Autocannon</defaultProjectile> -->
+        <warmupTime>0</warmupTime>
+        <!-- <forcedMissRadius>0.6</forcedMissRadius> -->
+        <!-- <minRange>2</minRange> -->
+        <range>299</range>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <burstShotCount>30</burstShotCount>
+        <soundCast>MG43_Shoot</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>2</muzzleFlashScale>
+				<!-- <isMortar>true</isMortar> -->
+				<hasStandardCommand>true</hasStandardCommand>
+				<requireLineOfSight>false</requireLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>true</canTargetPawns>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetBuildings>true</canTargetBuildings>
+        </targetParams>
+        <!-- <consumeFuelPerShot>1</consumeFuelPerShot> -->
+      </li>
+    </verbs>
+  </ThingDef>
+</Defs>

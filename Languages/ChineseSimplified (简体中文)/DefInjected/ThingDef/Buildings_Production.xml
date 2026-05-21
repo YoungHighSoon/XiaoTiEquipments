@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: SEAF machining table -->
+  <RH2Bench_SEAFMachiningBench.label>SEAF装备制作台</RH2Bench_SEAFMachiningBench.label>
+  <!-- EN: A workbench for manufacturing SEAF standard issued equipment. -->
+  <RH2Bench_SEAFMachiningBench.description>用于制造 SEAF 标准装备的工作台。</RH2Bench_SEAFMachiningBench.description>
+  
+</LanguageData>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+   <XiaoTiEquipment.Protection.Refused>{0} 拒绝了死亡</XiaoTiEquipment.Protection.Refused>
+   <XiaoTiEquipment.Protection.Refuseddespawn>{0} 拒绝了毁灭</XiaoTiEquipment.Protection.Refuseddespawn>
+   <XiaoTiEquipment.Protection.Refuseddiscard>{0} 拒绝了删除</XiaoTiEquipment.Protection.Refuseddiscard>
+   <XiaoTiEquipment.Protection.Refuseddespawn2>{0} 从毁灭的边缘回来了</XiaoTiEquipment.Protection.Refuseddespawn2>
+</LanguageData>

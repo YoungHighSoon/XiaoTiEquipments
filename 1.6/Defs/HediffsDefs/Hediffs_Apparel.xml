@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>sheildbackpack_SpiritualMeridianActivation</defName>
+    <label>Spiritual Meridian Activation</label>
+    <description>The character's meridians are influenced by their garment, enhancing the vitality of LotlQi within their body.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="Axolotl.HediffCompProperties_LotlQiGain" MayRequire="fxz.moelotlzombie.update">
+        <LotlQiGainOffset>+1.5</LotlQiGainOffset>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Cross_The_Bleach</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>超越生死</label>
+    <labelNoun>超越生死</labelNoun>
+    <description>该角色笼罩在一股超凡力量之中，不会轻易死去</description>
+    <defaultLabelColor>(0.8,0.85,0.1)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0</severityPerDay>
+        <showHoursToRecover>false</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <!-- <label>平峰</label> -->
+          <hungerRateFactor>0.4</hungerRateFactor>
+          <regeneration>350</regeneration>
+          <statFactors>
+            <RestFallRateFactor>0.8</RestFallRateFactor>
+            <RestRateMultiplier>3</RestRateMultiplier>
+			      <MeleeDodgeChance>2</MeleeDodgeChance>
+            <ArmorRating_Heat>2</ArmorRating_Heat>
+            <IncomingDamageFactor>0.8</IncomingDamageFactor>
+            <Flammability>0</Flammability>
+            <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
+            <PlantWorkSpeed>2.0</PlantWorkSpeed>
+            <WorkSpeedGlobal>4.0</WorkSpeedGlobal>
+            <GlobalLearningFactor>16.0</GlobalLearningFactor>
+            <PlantHarvestYield>1.75</PlantHarvestYield>
+            <MeleeHitChance>6</MeleeHitChance>
+            <ButcheryFleshEfficiency>1.5</ButcheryFleshEfficiency>
+            <MiningYield>1.5</MiningYield>
+            <MeleeDamageFactor>2</MeleeDamageFactor>
+          </statFactors>
+          <painFactor>0</painFactor>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.25</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>1.25</offset>
+            </li>
+            <li>
+              <capacity>Sight</capacity>
+              <offset>0.3</offset>
+            </li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>GreenPin_Repair</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>紧急修复</label>
+    <labelNoun>紧急修复</labelNoun>
+    <description>该角色笼罩在一股超凡力量之中，身体会快速恢复</description>
+    <defaultLabelColor>(0.8,0.85,0.1)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_DisappearsDisableable">
+        <disappearsAfterTicks>30000</disappearsAfterTicks> <!-- 0.5 days -->
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="XiaoTiHediffComp.HediffComps.HediffCompProperties_ClearBadhediff">
+        <repairbodypart>true</repairbodypart>
+      </li>
+      <li Class="Axolotl.HediffCompProperties_LotlQiGain" MayRequire="fxz.moelotlzombie.update">
+        <LotlQiGainOffset>+1.5</LotlQiGainOffset>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <!-- <label>平峰</label> -->
+          <hungerRateFactor>0.1</hungerRateFactor>
+          <regeneration>700</regeneration>
+          <statFactors>
+            <IncomingDamageFactor>0.8</IncomingDamageFactor>
+            <ImmunityGainSpeed>20</ImmunityGainSpeed>
+          </statFactors>
+          <painFactor>1.5</painFactor>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>-0.35</offset>
+            </li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>Combat_Stimulant</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>战斗兴奋</label>
+    <labelNoun>战斗兴奋</labelNoun>
+    <description>超凡容器破碎的后将力量灌入体内，角色在该状态下与世界绑定，且无法远征、进入空投舱或其他容器内</description>
+    <defaultLabelColor>(0.1,0.68,0.1)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <!-- <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.5</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li> -->
+      <li Class="HediffCompProperties_DisappearsDisableable">
+        <disappearsAfterTicks>360</disappearsAfterTicks> <!-- 6s -->
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <label>平峰</label>
+          <regeneration>100</regeneration>
+          <statFactors>
+            <!-- <InjuryHealingFactor>3</InjuryHealingFactor> -->
+            <!-- <Regeneration>350</Regeneration> -->
+			      <MeleeDodgeChance>1.3</MeleeDodgeChance>
+            <!-- <MedicalTendSpeed>1.5</MedicalTendSpeed>
+            <MedicalTendQuality>1.1</MedicalTendQuality> -->
+            <ArmorRating_Heat>2</ArmorRating_Heat>
+            <!-- <ImmunityGainSpeed>2</ImmunityGainSpeed> -->
+            <IncomingDamageFactor>0.8</IncomingDamageFactor>
+            <!-- <CarryingCapacity>20</CarryingCapacity> -->
+          </statFactors>
+          <!-- <painFactor>0.1</painFactor> -->
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.20</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>0.75</offset>
+            </li>
+          </capMods>
+        </li>
+        <li>
+          <label>昂扬</label>
+          <minSeverity>0.34</minSeverity>
+          <regeneration>450</regeneration>
+          <statFactors>
+            <InjuryHealingFactor>10</InjuryHealingFactor>
+            <!-- <Regeneration>350</Regeneration> -->
+			      <MeleeDodgeChance>10</MeleeDodgeChance>
+            <!-- <MedicalTendSpeed>1.5</MedicalTendSpeed>
+            <MedicalTendQuality>1.1</MedicalTendQuality> -->
+            <ArmorRating_Heat>2</ArmorRating_Heat>
+            <!-- <ImmunityGainSpeed>2</ImmunityGainSpeed> -->
+            <IncomingDamageFactor>0.1</IncomingDamageFactor>
+            <!-- <CarryingCapacity>20</CarryingCapacity> -->
+          </statFactors>
+          <painFactor>0</painFactor>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.30</offset>
+            </li>
+            <li>
+              <capacity>Sight</capacity>
+              <offset>0.2</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>1.75</offset>
+            </li>
+          </capMods>
+        </li>
+        <li>
+          <label>死斗</label>
+          <minSeverity>0.67</minSeverity>
+          <regeneration>1200</regeneration>
+          <statFactors>
+            <!-- <InjuryHealingFactor>10</InjuryHealingFactor> -->
+            <!-- <Regeneration>350</Regeneration> -->
+			      <MeleeDodgeChance>30</MeleeDodgeChance>
+            <!-- <MedicalTendSpeed>1.5</MedicalTendSpeed>
+            <MedicalTendQuality>1.1</MedicalTendQuality> -->
+            <ArmorRating_Heat>2</ArmorRating_Heat>
+            <!-- <ImmunityGainSpeed>2</ImmunityGainSpeed> -->
+            <IncomingDamageFactor>-1</IncomingDamageFactor>
+            <!-- <CarryingCapacity>20</CarryingCapacity> -->
+          </statFactors>
+          <painFactor>0</painFactor>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.50</offset>
+            </li>
+            <li>
+              <capacity>Sight</capacity>
+              <offset>0.3</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>2.25</offset>
+            </li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>Over_Drunk</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>Over_Drunk</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>醉酒</label>
+        <description>嗝！……确实没有理由不再来一杯，不是吗？</description>
+        <baseMoodEffect>24</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <HediffDef>
+    <defName>Over_Drunk</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>醉酒</label>
+    <labelNoun>醉酒</labelNoun>
+    <description>今朝有酒今朝醉！</description>
+    <defaultLabelColor>(0.1,0.68,0.1)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.6</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <!-- <minSeverity>0</minSeverity> -->
+        <label>微醺</label>
+        <statFactors>
+          <MeleeDodgeChance>1.3</MeleeDodgeChance>
+          <IncomingDamageFactor>0.9</IncomingDamageFactor>
+          <PsychicSensitivity>0.6</PsychicSensitivity>
+        </statFactors>
+        <painFactor>0.5</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>0.1</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>酩酊</label>
+        <minSeverity>0.41</minSeverity>
+        <statFactors>
+          <MeleeDodgeChance>0.6</MeleeDodgeChance>
+          <IncomingDamageFactor>1.2</IncomingDamageFactor>
+        </statFactors>
+        <painFactor>0.2</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.45</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.55</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>酒精中毒</label>
+        <minSeverity>0.8</minSeverity>
+        <statFactors>
+          <MeleeDodgeChance>0</MeleeDodgeChance>
+          <IncomingDamageFactor>1.5</IncomingDamageFactor>
+        </statFactors>
+        <painFactor>0.1</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.75</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.75</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.25</setMax>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <setMax>0.35</setMax>
+          </li>
+          <li>
+            <capacity>Metabolism</capacity>
+            <setMax>0.75</setMax>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.35</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>XiaoTiEquipment_MalevolentLimiter</defName>
+    <label>煞气固锁</label>
+    <description>锁住螈僵的煞气，使其不能超过最大值的70%</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <everCurableByItem>true</everCurableByItem>
+    <isBad>false</isBad>
+    <!-- <stages>
+      <li>
+        
+      </li>
+    </stages> -->
+    <comps>
+      <li Class="XiaoTiEquipment.HediffCompProperties_MalevolentCap">
+        <!-- 固定值模式 -->
+        <!-- <maxMalevolent>1000</maxMalevolent>
+        <usePercent>false</usePercent> -->
+        <!-- 或百分比模式 -->
+        <capacityPercent>0.7</capacityPercent>
+        <usePercent>true</usePercent>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

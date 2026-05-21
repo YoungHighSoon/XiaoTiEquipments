@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: M-105 Stalwart -->
+  <RNGun_M105_Stalwart.label>M-105“盟友”</RNGun_M105_Stalwart.label>
+  <!-- EN: The M-105 Stalwart is a compact machine gun with a high rate of fire and 250-round capacity. Designed for mobility and sustained engagements, it excels at suppressing swarms of light enemies but lacks armor penetration, making it ideal for crowd control in extended firefights. -->
+  <RNGun_M105_Stalwart.description>M-105“盟友”机枪是一款紧凑型机枪，射速极高。它专为机动性和持续作战而设计，擅长压制成群的轻型敌人，但缺乏装甲穿透力，因此非常适合在长时间交火中进行群体控制。</RNGun_M105_Stalwart.description>
+  <!-- EN: stock -->
+  <RNGun_M105_Stalwart.tools.stock.label>枪托</RNGun_M105_Stalwart.tools.stock.label>
+  <!-- EN: barrel -->
+  <RNGun_M105_Stalwart.tools.barrel.label>枪管</RNGun_M105_Stalwart.tools.barrel.label>
+  <!-- EN: M-105 Stalwart -->
+  <RNGun_M105_Stalwart.verbs.Verb_Shoot.label>M-105“盟友”</RNGun_M105_Stalwart.verbs.Verb_Shoot.label>
+  
+  <!-- EN: MG-206 Heavy Machine Gun -->
+  <RNGun_MG206_HMG.label>MG-206重机枪</RNGun_MG206_HMG.label>
+  <!-- EN: The MG-206 Heavy Machine Gun is a high-caliber, belt-fed weapon designed for sustained firepower in prolonged engagements. With its immense damage output and robust construction, it excels at suppressing enemy waves and dealing with light armored targets. A cornerstone of Helldivers fire support, it pairs overwhelming fire rate with durability for heavy combat scenarios. -->
+  <RNGun_MG206_HMG.description>MG-206重机枪是一款由大口径弹链供弹的支援武器，专为长时间交战提供持续火力而设计。凭借强大的伤害输出和坚固的结构，它擅长压制敌方人群并有效打击装甲目标。作为绝地潜兵火力支援的基石，它兼具强大的射速和耐用性，适合在激烈的战斗中使用。\n\n译者注：在HD2中它要持久没持久要输出没输出要可控性没可控性，纯纯的牢九门。</RNGun_MG206_HMG.description>
+  <!-- EN: stock -->
+  <RNGun_MG206_HMG.tools.stock.label>枪托</RNGun_MG206_HMG.tools.stock.label>
+  <!-- EN: barrel -->
+  <RNGun_MG206_HMG.tools.barrel.label>枪管</RNGun_MG206_HMG.tools.barrel.label>
+  <!-- EN: MG-206 Heavy Machine Gun -->
+  <RNGun_MG206_HMG.verbs.Verb_Shoot.label>MG-206重机枪</RNGun_MG206_HMG.verbs.Verb_Shoot.label>
+  
+  <!-- EN: MG-43 Machine Gun -->
+  <RNGun_MG43_GPMG.label>MG-43机枪</RNGun_MG43_GPMG.label>
+  <!-- EN: The MG-43 Machine Gun is a belt-fed support weapon with adjustable fire rates and moderate armor penetration. Best used stationary, it excels in suppressing enemy swarms with sustained firepower, making it a reliable choice for Helldivers in heavy combat scenarios. -->
+  <RNGun_MG43_GPMG.description>MG-43 机枪是一款由弹链供弹的支援武器，射速可调，穿甲能力适中。它最适合固定使用，能够以持续火力压制敌方集群，是绝地潜兵在激烈的战场环境中的可靠之选。</RNGun_MG43_GPMG.description>
+  <!-- EN: stock -->
+  <RNGun_MG43_GPMG.tools.stock.label>枪托</RNGun_MG43_GPMG.tools.stock.label>
+  <!-- EN: barrel -->
+  <RNGun_MG43_GPMG.tools.barrel.label>枪管</RNGun_MG43_GPMG.tools.barrel.label>
+  <!-- EN: MG-43 Machine Gun -->
+  <RNGun_MG43_GPMG.verbs.Verb_Shoot.label>MG-43机枪</RNGun_MG43_GPMG.verbs.Verb_Shoot.label>
+  
+</LanguageData>

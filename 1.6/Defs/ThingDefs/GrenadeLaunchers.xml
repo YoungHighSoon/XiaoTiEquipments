@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  		<!-- Projectile -->
+
+	<ThingDef ParentName="BaseBullet">
+	<defName>AC8_Proj</defName>
+    <label>穿甲高爆弹</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<drawSize>1.4</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(255, 255, 255)</color>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>AC8_BOMB</damageDef>
+			<damageAmountBase>120</damageAmountBase>
+			<!-- Use default damage from explosion def -->
+			<explosionRadius>6.0</explosionRadius>
+			<speed>80</speed>
+			<flyOverhead>true</flyOverhead>
+			<stoppingPower>2</stoppingPower>
+			<explosionDamageFalloff>true</explosionDamageFalloff>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="XiaoTiRangedWeaponBase">
+		<defName>XiaoTi_AC8_Autocannon</defName>
+		<label>AC-8 机炮</label>
+		<description>AC-8 机炮是一款全自动加农炮，发射穿甲高爆曳光弹。这些特殊弹药能够对装甲目标造成毁灭性的穿透力，并在命中时造成爆炸。凭借其高精准度和毁灭性的火力，AC-8是绝地潜兵对抗重装敌人的顶级选择。过于轮椅的强度令大部分老玩家为了保持难度而不愿意携带。</description>
+		<tickerType>Normal</tickerType>
+
+		<equippedAngleOffset>40</equippedAngleOffset>
+
+		<graphicData>
+			<texPath>Things/Weapons/Support/HD2_Autocannon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.10</drawSize>
+		</graphicData>
+		<statBases>
+      	<!-- <MaxHitPoints>1000</MaxHitPoints> -->
+			<!-- <MarketValue>1800</MarketValue> -->
+			<WorkToMake>48000</WorkToMake>
+			<Mass>0.5</Mass>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+		</statBases>
+    	<equippedStatOffsets>
+      		<ShootingAccuracyPawn>12</ShootingAccuracyPawn>
+    	</equippedStatOffsets>
+		<techLevel>Industrial</techLevel>
+		<weaponTags Inherit="False">
+			<!-- <li>AC8_Autocannon</li>
+			<li>SEAF_AC</li>
+			<li>Helldivers_AT</li> -->
+		</weaponTags>
+
+		<recipeMaker>
+			<researchPrerequisite>GasOperation</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>2</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>25</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+
+		<!-- <tradeTags>
+		</tradeTags> -->
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>AC8_Proj</defaultProjectile>
+				<forcedMissRadius>9</forcedMissRadius>
+				<warmupTime>2.0</warmupTime>
+				<ai_AvoidFriendlyFireRadius>12</ai_AvoidFriendlyFireRadius>
+				<range>150</range>
+				<isMortar>true</isMortar>
+				<requireLineOfSight>false</requireLineOfSight>
+				<ticksBetweenBurstShots>35</ticksBetweenBurstShots>
+				<burstShotCount>8</burstShotCount>
+				<soundCast>AC8shoot</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<onlyManualCast>false</onlyManualCast><!-- Changed due to 1.1 -->
+				<stopBurstWithoutLos>true</stopBurstWithoutLos>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<muzzleFlashScale>18</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>27</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="XiaoTiRangedWeaponBase">
+		<defName>XiaoTi_AC8_Autocannon_burst</defName>
+		<label>AC-8 机炮（爆发）</label>
+		<description>爆发版机炮会一次打出多发弹药，随后进入较长冷却</description>
+		<tickerType>Normal</tickerType>
+
+		<equippedAngleOffset>40</equippedAngleOffset>
+
+		<graphicData>
+			<texPath>Things/Weapons/Support/HD2_Autocannon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.10</drawSize>
+		</graphicData>
+		<statBases>
+      	<!-- <MaxHitPoints>1000</MaxHitPoints> -->
+			<!-- <MarketValue>1800</MarketValue> -->
+			<WorkToMake>48000</WorkToMake>
+			<Mass>0.5</Mass>
+			<RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
+		</statBases>
+    	<equippedStatOffsets>
+      		<ShootingAccuracyPawn>12</ShootingAccuracyPawn>
+    	</equippedStatOffsets>
+		<techLevel>Industrial</techLevel>
+		<weaponTags Inherit="False">
+			<!-- <li>AC8_Autocannon</li>
+			<li>SEAF_AC</li>
+			<li>Helldivers_AT</li> -->
+		</weaponTags>
+
+		<recipeMaker>
+			<researchPrerequisite>GasOperation</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>1</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>25</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+
+		<!-- <tradeTags>
+		</tradeTags> -->
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>AC8_Proj</defaultProjectile>
+				<forcedMissRadius>20</forcedMissRadius>
+				<warmupTime>3.0</warmupTime>
+				<ai_AvoidFriendlyFireRadius>15</ai_AvoidFriendlyFireRadius>
+				<range>150</range>
+				<isMortar>true</isMortar>
+				<requireLineOfSight>false</requireLineOfSight>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<burstShotCount>24</burstShotCount>
+				<soundCast>AC8shoot</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<onlyManualCast>false</onlyManualCast><!-- Changed due to 1.1 -->
+				<stopBurstWithoutLos>true</stopBurstWithoutLos>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<muzzleFlashScale>18</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>27</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+		</comps>
+	</ThingDef>
+
+	<!-- <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Shell_AntigrainWarhead</defName>
+    <label>antigrain warhead</label>
+    <graphicData>
+      <texPath>Things/Projectile/ShellAntigrainWarhead</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>BombSuper</damageDef>
+      <speed>41</speed>
+      <explosionRadius>14.9</explosionRadius>
+      <explosionChanceToStartFire>0.22</explosionChanceToStartFire>
+      <explosionDamageFalloff>true</explosionDamageFalloff>
+      <explosionEffect>GiantExplosion</explosionEffect>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <soundExplode>Explosion_GiantBomb</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+      <preExplosionSpawnSingleThingDef>CraterMedium</preExplosionSpawnSingleThingDef>
+    </projectile>
+  </ThingDef> -->
+  
+	<ThingDef ParentName="BaseBullet">
+		<defName>400mm_HUGE_Bullet</defName>
+		<label>纯粹恶意</label>
+		<graphicData>
+			<texPath>Things/Projectile/RR_85mm_HEAT</texPath>
+			<drawSize>4.0</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>XiaoTiEquipment.Projectile_RadiusDamage</thingClass>
+		<projectile>
+			<damageDef>400mm_HUGE_artillerry</damageDef>
+			<explosionRadius>36.0</explosionRadius>
+			<speed>45</speed>
+			<explosionChanceToStartFire>1</explosionChanceToStartFire>
+			<screenShakeFactor>1.5</screenShakeFactor>
+			<explosionDamageFalloff>true</explosionDamageFalloff>
+			<explosionEffect>GiantExplosion</explosionEffect>
+			<flyOverhead>true</flyOverhead>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>Explosion_GiantBomb</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+			<preExplosionSpawnSingleThingDef>CraterMedium</preExplosionSpawnSingleThingDef>
+			<!-- <projectileClass>XiaoTiEquipment.Projectile_RadiusDamage</projectileClass> -->
+		</projectile>
+        <comps>
+            <li Class="XiaoTiEquipment.CompProperties_RadiusDamage">
+                <radius>24.0</radius>                       <!-- 伤害半径：2.5格 -->
+                <damageMultiplier>1</damageMultiplier>   <!-- 半径伤害为子弹基础伤害的50% -->
+                <damageDef>Blunt</damageDef>              <!-- 使用子弹伤害类型，可改为其他伤害类型如Bomb -->
+                <!-- <ignoreLineOfSight>true</ignoreLineOfSight> -->
+                <armorPenetrationMultiplier>1.0</armorPenetrationMultiplier> <!-- 护甲穿透倍数 -->
+            </li>
+        </comps>
+	</ThingDef>
+
+  <ThingDef ParentName="XiaoTiRangedWeaponBase">
+		<defName>GR8_400mm_RecoillessRifle</defName>
+		<label>GR8 400MM 巨型肩抗式迫击炮</label>
+		<description>采用特殊的超巨型爆炸函数，会对内圈（24m）的所有目标造成一次不可回避的伤害。
+			没有人知道一枚400mm巨型炮弹是怎么塞进这个小炮管里的。</description>
+		<tickerType>Normal</tickerType>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<graphicData>
+			<texPath>Things/Weapons/Support/HD2_RecoillesRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.10</drawSize>
+		</graphicData>
+		<statBases>
+			<!-- <MarketValue>200</MarketValue> -->
+			<WorkToMake>5000</WorkToMake>
+			<Mass>1.75</Mass>
+			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<!-- <weaponTags Inherit="False">
+			<li>RN_GR8_RecoillessRifle</li>
+			<li>RN_SEAF_AT</li>
+			<li>RN_SEAF</li>
+			<li>RN_Helldivers_AT</li>
+			<li>RN_Helldivers</li>
+		</weaponTags> -->
+
+		<recipeMaker>
+			<researchPrerequisite>GasOperation</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>130</Steel>
+			<!-- <ComponentIndustrial>1</ComponentIndustrial> -->
+		</costList>
+		
+		<equippedStatOffsets>
+		<ShootingAccuracyPawn>12</ShootingAccuracyPawn>
+		</equippedStatOffsets>
+		<!-- <tradeTags>
+			<li>RN_SEAF_Exotic</li>
+		</tradeTags> -->
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>400mm_HUGE_Bullet</defaultProjectile>
+				<warmupTime>7</warmupTime>
+				<ai_AvoidFriendlyFireRadius>25</ai_AvoidFriendlyFireRadius>
+				<range>240</range>
+				<forcedMissRadius>0.1</forcedMissRadius>
+				<isMortar>true</isMortar>
+				<requireLineOfSight>false</requireLineOfSight>
+				<ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>GR8_400mm_RecoillessRifleShot</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<onlyManualCast>false</onlyManualCast><!-- Changed due to 1.1 -->
+				<stopBurstWithoutLos>true</stopBurstWithoutLos>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<muzzleFlashScale>15</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>42</power>
+				<cooldownTime>3.0</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_Ultimatum_Bomb</defName>
+		<label>大型榴弹</label>
+		<graphicData>
+			<texPath>Things/Projectile/GP-31_Ultimatum_Projectile</texPath>
+			<drawSize>1.50</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(255, 255, 255)</color>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>Ultimatum_BombBlast</damageDef>
+			<!-- Use default damage from explosion def -->
+			<explosionRadius>8</explosionRadius>
+			<speed>30</speed>
+			<flyOverhead>true</flyOverhead>
+			<damageAmountBase>320</damageAmountBase>
+			<stoppingPower>6</stoppingPower>
+			<armorPenetrationBase>1.0</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="XiaoTiRangedWeaponBase">
+		<defName>G31_Ultimatum_AVRE</defName>
+		<label>G-31 清障专家</label>
+		<description>这是一款前端加装单颗强力射弹的手枪，体积小巧，火力强大。其强大的破坏力使其能够有效对抗建筑物和重装甲目标。由于弹药有限，因此需要谨慎管理弹药。对于需要强力副武器应对关键威胁的绝地潜兵来说，它是理想之选。</description>
+		<tickerType>Normal</tickerType>
+
+		<equippedAngleOffset>40</equippedAngleOffset>
+
+		<graphicData>
+			<texPath>Things/Weapons/GP-31_Ultimatum</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.0</drawSize>
+		</graphicData>
+		<statBases>
+			<!-- <MarketValue>1250</MarketValue> -->
+			<WorkToMake>48000</WorkToMake>
+			<Mass>1</Mass>
+			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<!-- <weaponTags>
+			<li>SEAF_GunHeavy</li>
+			<li>RN_G31</li>
+		</weaponTags> -->
+
+		<recipeMaker>
+			<researchPrerequisite>GasOperation</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>2</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>10</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<!-- <tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags> -->
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_Ultimatum_Bomb</defaultProjectile>
+				<forcedMissRadius>0.1</forcedMissRadius>
+				<warmupTime>2</warmupTime>
+				<ai_AvoidFriendlyFireRadius>12</ai_AvoidFriendlyFireRadius>
+				<range>120</range>
+				<minRange>10</minRange>
+				<ticksBetweenBurstShots>40</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>G31_Ultimatum_SHOT</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<onlyManualCast>false</onlyManualCast><!-- Changed due to 1.1 -->
+				<isMortar>true</isMortar>
+				<requireLineOfSight>false</requireLineOfSight>
+				<stopBurstWithoutLos>true</stopBurstWithoutLos>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<muzzleFlashScale>15</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>27</power>
+				<cooldownTime>0.6</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+			<!--<li Class="CompProperties_Explosive">
+        <explosiveRadius>5</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>-->
+		</comps>
+	</ThingDef>
+	<ThingDef>
+		<defName>Grenade_Deadlife_Releasing</defName>
+		<label>deadlife capsule</label>
+		<selectable>false</selectable>
+		<tickerType>Normal</tickerType>
+		<thingClass>ThingWithComps</thingClass>
+		<useHitPoints>false</useHitPoints>
+		<graphicData>
+		<texPath>Things/Projectile/LandedDeadlifeShell</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<shaderType>Transparent</shaderType>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<comps>
+		<li Class="CompProperties_ReleaseGas">
+			<gasType>DeadlifeDust</gasType>
+			<cellsToFill>2</cellsToFill>
+			<durationSeconds>10</durationSeconds>
+			<effecterReleasing>DeadlifeReleasing</effecterReleasing>
+		</li>
+		<li Class="CompProperties_DestroyAfterDelay">
+			<delayTicks>20</delayTicks>
+		</li>
+		</comps>
+  	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_40mm_Grenade</defName>
+		<label>40x46mm 榴弹炮_死灵弹</label>
+		<graphicData>
+			<texPath>Things/Projectile/LauncherShot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<color>(248, 202, 116)</color>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<!-- <comps>
+		<li Class="CompProperties_Explosive">
+			<explosiveDamageType>DeadlifeDust</explosiveDamageType>
+			<explosiveRadius>8</explosiveRadius>
+			<postExplosionGasType>DeadlifeDust</postExplosionGasType>
+			<wickTicks>60~80</wickTicks>
+		</li>
+		</comps> -->
+		<projectile>
+			<damageDef>Bomb_spearDeadlifeDust</damageDef>
+			<damageAmountBase>60</damageAmountBase>
+			<explosionRadius>12</explosionRadius>
+			<speed>60</speed>
+			<flyOverhead>true</flyOverhead>
+			<stoppingPower>4</stoppingPower>
+      		<postExplosionSpawnThingDef>Grenade_Deadlife_Releasing</postExplosionSpawnThingDef>
+		</projectile>
+	</ThingDef>
+
+  	<ThingDef ParentName="XiaoTiRangedWeaponBase">
+		<defName>G21_GrenadeLauncher_DeadlifeDust</defName>
+		<label>G-21 死灵弹发射器</label>
+		<description>虽然是爆炸武器，但作为3号位仅有3级穿甲，反重能力几乎没有，较大的爆炸范围又使得使用者难以处理近处的敌人，6发的弹容以及3个弹夹的备弹又让其续航成为十分致命的问题。
+这样看，榴弹发射器并不能算一把足够强力的武器。
+什么叫环世界的武器无限弹药？</description>
+		<tickerType>Normal</tickerType>
+
+		<equippedAngleOffset>40</equippedAngleOffset>
+
+		<graphicData>
+			<texPath>Things/Weapons/Support/G21_GL</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.90</drawSize>
+		</graphicData>
+		<statBases>
+			<!-- <MarketValue>50</MarketValue> -->
+			<WorkToMake>38000</WorkToMake>
+			<Mass>0.5</Mass>
+			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<weaponTags>
+			<!-- <li>SEAF_GunHeavy</li>
+			<li>RN_G21</li> -->
+		</weaponTags>
+
+		<recipeMaker>
+			<researchPrerequisite>GasOperation</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<costList>
+			<Steel>10</Steel>
+			<!-- <ComponentIndustrial>5</ComponentIndustrial> -->
+		</costList>
+		<!-- <tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags> -->
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_40mm_Grenade</defaultProjectile>
+				<forcedMissRadius>0.1</forcedMissRadius>
+				<warmupTime>1</warmupTime>
+				<ai_AvoidFriendlyFireRadius>12</ai_AvoidFriendlyFireRadius>
+				<range>120</range>
+				<ticksBetweenBurstShots>25</ticksBetweenBurstShots>
+				<burstShotCount>6</burstShotCount>
+				<soundCast>XiaoTi_G21GrenadeLauncher</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<onlyManualCast>false</onlyManualCast><!-- Changed due to 1.1 -->
+				<isMortar>true</isMortar>
+				<requireLineOfSight>false</requireLineOfSight>
+				<stopBurstWithoutLos>true</stopBurstWithoutLos>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<muzzleFlashScale>15</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11.7</power>
+				<cooldownTime>0.6</cooldownTime>
+			</li>
+		</tools>
+		<comps>
+		</comps>
+	</ThingDef>	
+</Defs>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: jet-assisted shell -->
+  <RNBullet_Eruptor_JetAssistedShell.label>导弹</RNBullet_Eruptor_JetAssistedShell.label>
+  
+  <!-- EN: scorcher plasm -->
+  <RNBullet_PLAS1Scorcher_Plasm.label>“焦土”等离子弹</RNBullet_PLAS1Scorcher_Plasm.label>
+  
+  <!-- EN: Quasar charge -->
+  <RNBullet_Quasar_Charge.label>类星体能量炮</RNBullet_Quasar_Charge.label>
+  
+  <!-- EN: railgun charge -->
+  <RNBullet_RS422Railgun_Charge.label>磁轨炮子弹</RNBullet_RS422Railgun_Charge.label>
+  
+  <!-- EN: 40x46mm grenade round -->
+  <RNBullet_SEAF40mm_Grenade.label>40x46mm手榴弹</RNBullet_SEAF40mm_Grenade.label>
+  
+  <!-- EN: 85mm HEAT -->
+  <RNBullet_SEAF85mm_HEAT.label>85mm高爆反坦克炮弹</RNBullet_SEAF85mm_HEAT.label>
+  
+  <!-- EN: APHET round -->
+  <AC8_Proj.label>穿甲高爆弹</AC8_Proj.label>
+  
+  <!-- EN: ultimatum bomb -->
+  <RNBullet_SEAFUltimatum_Bomb.label>“最后通牒”榴弹</RNBullet_SEAFUltimatum_Bomb.label>
+  
+  <!-- EN: AC-8 Autocannon -->
+   
+  <!-- EN: The AC-8 Autocannon is a semi-automatic heavy weapon that fires APHET (Armor-Piercing High-Explosive Tracer) rounds. These specialized rounds deliver devastating penetration against armored targets while causing explosive damage upon impact. With its precision and destructive firepower, the AC-8 is a top-tier choice for Helldivers taking on heavily fortified enemies. -->
+   
+  <!-- EN: barrel -->
+  <RNGun_AC8_Autocannon.tools.barrel.label>枪管</RNGun_AC8_Autocannon.tools.barrel.label>
+  <!-- EN: AC-8 Autocannon -->
+  
+  <!-- EN: GR-8 Recoilless Rifle -->
+  <RNGun_GR8_RecoillessRifle.label>GR-8无后座力步枪</RNGun_GR8_RecoillessRifle.label>
+  <!-- EN: The GR-8 Recoilless Rifle is a portable, shoulder-fired heavy weapon designed for anti-armor and fortification breaching. It fires 85mm HEAT (High-Explosive Anti-Tank) shells with devastating impact. Engineered for versatility and ease of use, it’s a trusted tool for Helldivers tackling heavily armored targets and hardened enemy defenses. -->
+  <RNGun_GR8_RecoillessRifle.description>GR-8无后坐力步枪是一款便携式肩扛式重武器，专为反装甲和破坏防御工事而设计。它发射 85 毫米高爆反坦克炮弹，威力惊人。其多功能性和易用性使其成为绝地潜兵应对载具装甲目标和坚固敌方防御工事的可靠武器。</RNGun_GR8_RecoillessRifle.description>
+  <!-- EN: barrel -->
+  <RNGun_GR8_RecoillessRifle.tools.barrel.label>炮管</RNGun_GR8_RecoillessRifle.tools.barrel.label>
+  <!-- EN: GR-8 Recoilless Rifle -->
+  <RNGun_GR8_RecoillessRifle.verbs.Verb_LaunchProjectile.label>GR-8无后座力步枪</RNGun_GR8_RecoillessRifle.verbs.Verb_LaunchProjectile.label>
+  
+  <!-- EN: LAS-99 Quasar Cannon -->
+  <RNGun_LAS99_QuasarCannon.label>LAS-99类星体加农炮</RNGun_LAS99_QuasarCannon.label>
+  <!-- EN: The LAS-99 Quasar Cannon is a high-energy, charge-based laser weapon designed for overwhelming firepower. It delivers concentrated beams capable of piercing armor and disintegrating groups of enemies. With its devastating power and long range, it’s a Helldivers’ heavy weapon of choice for annihilating high-priority targets and clearing the battlefield. -->
+  <RNGun_LAS99_QuasarCannon.description>LAS-99类星体加农炮充能后可发射爆炸性的强力能量炮，旨在提供压倒性的火力。它发射的能量炮能够穿透装甲，瓦解成群的敌人。凭借其强大的威力和较远的射程，它成为了绝地潜兵歼灭高优先级目标和清理战场的首选重武器。</RNGun_LAS99_QuasarCannon.description>
+  <!-- EN: barrel -->
+  <RNGun_LAS99_QuasarCannon.tools.barrel.label>炮管</RNGun_LAS99_QuasarCannon.tools.barrel.label>
+  <!-- EN: LAS-99 Quasar Cannon -->
+  <RNGun_LAS99_QuasarCannon.verbs.Verb_LaunchProjectile.label>LAS-99类星体加农炮</RNGun_LAS99_QuasarCannon.verbs.Verb_LaunchProjectile.label>
+  
+  <!-- EN: PLAS-1 Scorcher -->
+  <RNGun_PLAS1_Scorcher.label>PLAS-1“焦土”</RNGun_PLAS1_Scorcher.label>
+  <!-- EN: The PLAS-1 Scorcher is a plasma-based heavy weapon designed for devastating area-of-effect attacks. Equipped with a high-capacity plasma generator and reinforced cooling systems, it excels in melting through armor and overwhelming enemy formations. A go-to choice for Helldivers in high-intensity engagements. -->
+  <RNGun_PLAS1_Scorcher.description>PLAS-1“焦土”是一款等离子步枪，专为毁灭性的范围攻击而设计。它配备大容量的等离子发生器和强大的冷却系统，擅长穿透装甲并压制敌方阵型。是绝地潜兵在高强度交战中的首选。\n\n译者注：在HD2里焦土是主手武器，没有作者说得这么夸张，就是一把稍微有点范围伤害的步枪。</RNGun_PLAS1_Scorcher.description>
+  <!-- EN: barrel -->
+  <RNGun_PLAS1_Scorcher.tools.barrel.label>枪管</RNGun_PLAS1_Scorcher.tools.barrel.label>
+  <!-- EN: PLAS-1 Scorcher -->
+  <RNGun_PLAS1_Scorcher.verbs.Verb_Shoot.label>PLAS-1“焦土”</RNGun_PLAS1_Scorcher.verbs.Verb_Shoot.label>
+  
+  <!-- EN: R-36 Eruptor -->
+  <RNGun_R36_Eruptor.label>R-36爆裂铳</RNGun_R36_Eruptor.label>
+  <!-- EN: The R-36 Eruptor is a bolt-action, anti materiel rifle that fires jet-assisted shells, delivering unparalleled explosive power with extended range. Engineered for precision and devastation, it excels at neutralizing armored targets and entrenched foes. Its advanced payload makes it a go-to choice for Helldivers facing heavily fortified threats. -->
+  <RNGun_R36_Eruptor.description>R-36爆裂铳是一款栓动式步枪，通过喷气辅助发射炮弹，拥有无与伦比的爆炸威力和极远的射程。它以其精准度和毁灭性著称，擅长摧毁装甲目标和固守阵地的敌人。其先进的爆炸威力使其成为绝地潜兵面对重兵把守的据点时的首选。</RNGun_R36_Eruptor.description>
+  <!-- EN: barrel -->
+  <RNGun_R36_Eruptor.tools.barrel.label>枪管</RNGun_R36_Eruptor.tools.barrel.label>
+  <!-- EN: R-36 Eruptor -->
+  <RNGun_R36_Eruptor.verbs.Verb_Shoot.label>R-36爆裂铳</RNGun_R36_Eruptor.verbs.Verb_Shoot.label>
+  
+  <!-- EN: RS-422 Railgun -->
+  <RNGun_RS422_Railgun.label>RS-422磁轨炮</RNGun_RS422_Railgun.label>
+  <!-- EN: The RS-422 Railgun is a cutting-edge electromagnetic weapon designed for extreme precision and penetration. Firing hyper-velocity projectiles, it excels at bypassing heavy armor and striking targets at incredible ranges. Its pinpoint accuracy and sheer destructive power make it a premier choice for Helldivers in long-range engagements against heavily fortified foes. -->
+  <RNGun_RS422_Railgun.description>RS-422磁轨炮是一款强大的试验性武器，专为极致的精准度和穿透力而设计。它发射高速射弹，能够有效地穿透装甲，并能在极远距离打击目标。其精准度和强大的破坏力使其成为绝地潜兵远程对抗重装敌人的首选。</RNGun_RS422_Railgun.description>
+  <!-- EN: barrel -->
+  <RNGun_RS422_Railgun.tools.barrel.label>枪管</RNGun_RS422_Railgun.tools.barrel.label>
+  <!-- EN: RS-422 Railgun -->
+  <RNGun_RS422_Railgun.verbs.Verb_LaunchProjectile.label>RS-422磁轨炮</RNGun_RS422_Railgun.verbs.Verb_LaunchProjectile.label>
+  
+  <!-- EN: G-21 Grenade launcher -->
+  <RNGun_SEAFG21_GrenadeLauncher.label>GL-21榴弹发射器</RNGun_SEAFG21_GrenadeLauncher.label>
+  <!-- EN: A semi-automatic 40mm support weapon designed for rapid indirect fire. Capable of launching high-explosive grenades at 160 RPM, it excels at clearing groups of lightly armored enemies and destroying enemy structures. With a 10-round capacity and three spare magazines, it provides sustained explosive firepower. While effective against medium armor, it struggles against heavily armored targets. Ideal for area denial and crowd control in hostile environments. -->
+  <RNGun_SEAFG21_GrenadeLauncher.description>这是一款专为快速射击而设计的半自动40毫米榴弹支援武器。它擅长清除成群的轻装甲敌人并摧毁敌方建筑可提供持续的爆炸火力。虽然它可以有效对付装甲步兵，但不适合用于攻击载具装甲和防卫森严的建筑。它非常适合在敌对环境中进行区域控制和人群控制。</RNGun_SEAFG21_GrenadeLauncher.description>
+  <!-- EN: barrel -->
+  <RNGun_SEAFG21_GrenadeLauncher.tools.barrel.label>炮管</RNGun_SEAFG21_GrenadeLauncher.tools.barrel.label>
+  <!-- EN: G-21 Grenade launcher -->
+  <RNGun_SEAFG21_GrenadeLauncher.verbs.Verb_Shoot.label>GL-21榴弹发射器</RNGun_SEAFG21_GrenadeLauncher.verbs.Verb_Shoot.label>
+  
+  <!-- EN: G-31 Ultimatum -->
+  <RNGun_SEAFG31_Ultimatum.label>GP-31“最后通牒”</RNGun_SEAFG31_Ultimatum.label>
+  <!-- EN: A single-shot, handheld grenade launcher delivering devastating firepower in a compact form. Firing 80mm explosive rounds, it inflicts 3,500 direct damage and 1,000 explosive damage, with armor penetration up to Anti-Tank IV. Its high demolition force makes it effective against structures and heavily armored targets. Limited to one round loaded and one spare, it requires careful ammo management. Ideal for Helldivers needing a powerful secondary weapon for critical threats. -->
+  <RNGun_SEAFG31_Ultimatum.description>这是一款前端加装单颗强力射弹的手枪，体积小巧，火力强大。其强大的破坏力使其能够有效对抗建筑物和重装甲目标。由于弹药有限，因此需要谨慎管理弹药。对于需要强力副武器应对关键威胁的绝地潜兵来说，它是理想之选。</RNGun_SEAFG31_Ultimatum.description>
+  <!-- EN: barrel -->
+  <RNGun_SEAFG31_Ultimatum.tools.barrel.label>枪管（？）</RNGun_SEAFG31_Ultimatum.tools.barrel.label>
+  <!-- EN: G-31 Ultimatum -->
+  <RNGun_SEAFG31_Ultimatum.verbs.Verb_Shoot.label>GP-31“最后通牒”</RNGun_SEAFG31_Ultimatum.verbs.Verb_Shoot.label>
+  
+</LanguageData>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 10 Gauge buckblast -->
+  <RNBullet_SEAF10Gauge_Shotgun.label>10号铅弹</RNBullet_SEAF10Gauge_Shotgun.label>
+  
+  <!-- EN: 10 Gauge Flechette -->
+  <RNBullet_SEAF10GaugeFlechette_Shotgun.label>10号箭弹</RNBullet_SEAF10GaugeFlechette_Shotgun.label>
+  
+  <!-- EN: 12 Gauge IE shotgun blast -->
+  <RNBullet_SEAF12GaugeIE_Shotgun.label>12号眩晕弹</RNBullet_SEAF12GaugeIE_Shotgun.label>
+  
+  <!-- EN: 12mm bullet -->
+  <RNBullet_SEAF12mm_Reprimand.label>12mm子弹</RNBullet_SEAF12mm_Reprimand.label>
+  
+  <!-- EN: SG-20 Halt -->
+  <RNGun_SG20Halt_Shotgun.label>SG-20“止息”</RNGun_SG20Halt_Shotgun.label>
+  <!-- EN: A dual-tube, semi-automatic shotgun designed for tactical versatility. It features two separate magazines: one loaded with medium-armor-penetrating flechette rounds, and the other with light-armor-penetrating stun rounds. The flechette rounds deliver substantial damage, while the stun rounds incapacitate targets, allowing for strategic crowd control. With an 8-round capacity per tube and a shared ammo pool of 60 rounds, the SG-20 Halt is ideal for Helldivers requiring adaptable firepower in dynamic combat scenarios. -->
+  <RNGun_SG20Halt_Shotgun.description>这是一款专为战术多功能性而设计的双管半自动霰弹枪。它配备两个独立的弹匣：一个装有穿甲飞镖霰弹，另一个装备眩晕弹。飞镖弹可造成巨大伤害，而眩晕弹则可使目标丧失行动能力，从而实现战略性群体控制。\nSG-20“止息”每管8发弹容量，共用60发备弹，是需要在复杂战斗场景中灵活调整火力的绝地潜兵的理想之选。</RNGun_SG20Halt_Shotgun.description>
+  <!-- EN: stock -->
+  <RNGun_SG20Halt_Shotgun.tools.stock.label>枪托</RNGun_SG20Halt_Shotgun.tools.stock.label>
+  <!-- EN: barrel -->
+  <RNGun_SG20Halt_Shotgun.tools.barrel.label>枪管</RNGun_SG20Halt_Shotgun.tools.barrel.label>
+  <!-- EN: SG-20 Halt -->
+  <RNGun_SG20Halt_Shotgun.verbs.Verb_Shoot.label>SG-20“止息”</RNGun_SG20Halt_Shotgun.verbs.Verb_Shoot.label>
+  
+  <!-- EN: SG-225IE Breaker Incendiary -->
+  <RNGun_SG225IEBreakerIncendiary_Shotgun.label>SG-225IE高燃“破裂者”</RNGun_SG225IEBreakerIncendiary_Shotgun.label>
+  <!-- EN: The SG-225IE Breaker Incendiary is a pump-action shotgun specialized for close-quarters combat. It fires incendiary shells, combining immense stopping power with fire-based area denial. Durable and devastating, it’s a top choice for Helldivers breaching enemy defenses and clearing fortified positions. -->
+  <RNGun_SG225IEBreakerIncendiary_Shotgun.description>SG-225IE高燃“破裂者”是一款专为近战设计的连发霰弹枪。可发射燃烧弹，兼具强大的制止力和基于其强大火力的区域控制能力。它坚固耐用，杀伤力惊人，是绝地潜兵突破敌方防御、清除防御工事的首选。</RNGun_SG225IEBreakerIncendiary_Shotgun.description>
+  <!-- EN: stock -->
+  <RNGun_SG225IEBreakerIncendiary_Shotgun.tools.stock.label>枪托</RNGun_SG225IEBreakerIncendiary_Shotgun.tools.stock.label>
+  <!-- EN: barrel -->
+  <RNGun_SG225IEBreakerIncendiary_Shotgun.tools.barrel.label>枪管</RNGun_SG225IEBreakerIncendiary_Shotgun.tools.barrel.label>
+  <!-- EN: SG-225IE Breaker Incendiary -->
+  <RNGun_SG225IEBreakerIncendiary_Shotgun.verbs.Verb_Shoot.label>SG-225IE高燃“破裂者”</RNGun_SG225IEBreakerIncendiary_Shotgun.verbs.Verb_Shoot.label>
+  
+  <!-- EN: SG-22 Bushwhacker -->
+  <RNGun_SG22Bushwhacker_Shotgun.label>SG-22“游击兵”</RNGun_SG22Bushwhacker_Shotgun.label>
+  <!-- EN: A triple-barreled, break-action sawed-off shotgun engineered for close-quarters combat. Its compact design allows for rapid deployment, offering two firing modes: single-barrel shots for controlled engagements and an all-barrels mode for overwhelming force. Ideal for Helldivers needing a powerful secondary weapon to handle sudden threats at point-blank range.​ -->
+  <RNGun_SG22Bushwhacker_Shotgun.description>专为近战设计的三管中折式短管霰弹枪。其紧凑的设计使其能够快速拔出，单管射击用于控制交战，可将开火模式切换为同时使用三枪管开火，用于火力压制。对于需要强大的副武器来应对近距离突然出现的威胁的绝地潜兵来说，它是理想之选。</RNGun_SG22Bushwhacker_Shotgun.description>
+  <!-- EN: stock -->
+  <RNGun_SG22Bushwhacker_Shotgun.tools.stock.label>枪托</RNGun_SG22Bushwhacker_Shotgun.tools.stock.label>
+  <!-- EN: barrel -->
+  <RNGun_SG22Bushwhacker_Shotgun.tools.barrel.label>枪管</RNGun_SG22Bushwhacker_Shotgun.tools.barrel.label>
+  <!-- EN: SG-22 Bushwhacker -->
+  <RNGun_SG22Bushwhacker_Shotgun.verbs.Verb_Shoot.label>SG-22“游击兵”</RNGun_SG22Bushwhacker_Shotgun.verbs.Verb_Shoot.label>
+  
+  <!-- EN: SG-8 Punisher -->
+  <RNGun_SG8Punisher_Shotgun.label>SG-8“制裁者”</RNGun_SG8Punisher_Shotgun.label>
+  <!-- EN: The SG-8 Punisher is a pump-action shotgun designed for devastating close-range encounters. Built with rugged reliability, it delivers powerful blasts capable of staggering medium-sized foes. Its precision and raw stopping power make it a staple for Helldivers in tight combat scenarios. -->
+  <RNGun_SG8Punisher_Shotgun.description>SG-8“制裁者”是一款专为近距离战斗而设计的泵动式霰弹枪。它坚固可靠，能够发射威力强大的子弹，足以击退中等体型的敌人。其精准度和强大的制止力使其成为绝地潜兵在激烈的短兵相接中的必备武器。</RNGun_SG8Punisher_Shotgun.description>
+  <!-- EN: stock -->
+  <RNGun_SG8Punisher_Shotgun.tools.stock.label>枪托</RNGun_SG8Punisher_Shotgun.tools.stock.label>
+  <!-- EN: barrel -->
+  <RNGun_SG8Punisher_Shotgun.tools.barrel.label>枪管</RNGun_SG8Punisher_Shotgun.tools.barrel.label>
+  <!-- EN: SG-8 Punisher -->
+  <RNGun_SG8Punisher_Shotgun.verbs.Verb_Shoot.label>SG-8“制裁者”</RNGun_SG8Punisher_Shotgun.verbs.Verb_Shoot.label>
+  
+  <!-- EN: SMG-32 Reprimand -->
+  <RNGun_SMG32Reprimand_SMG.label>SMG-32“训斥”</RNGun_SMG32Reprimand_SMG.label>
+  <!-- EN: A heavy-duty submachine gun that fires large-caliber rounds, designed for close to medium-range engagements. It delivers 125 ballistic damage per shot with a fire rate of 490 RPM and a 25-round magazine. The Reprimand offers medium armor penetration, making it effective against armored targets. However, its high recoil and limited magazine capacity require careful handling. Ideal for Helldivers seeking a balance between firepower and maneuverability in tight combat scenarios. -->
+  <RNGun_SMG32Reprimand_SMG.description>重型冲锋枪，可发射大口径子弹，专为近距离和中距离交战而设计。SMG-32“训斥”拥有中甲穿透，可有效对抗装甲目标。但由于后坐力较大，弹匣较小，需要谨慎操作。对于在激烈交火中寻求火力与机动性平衡的绝地潜兵来说，SMG-32“训斥”是理想之选。</RNGun_SMG32Reprimand_SMG.description>
+  <!-- EN: grip -->
+  <RNGun_SMG32Reprimand_SMG.tools.grip.label>握把</RNGun_SMG32Reprimand_SMG.tools.grip.label>
+  <!-- EN: barrel -->
+  <RNGun_SMG32Reprimand_SMG.tools.barrel.label>枪管</RNGun_SMG32Reprimand_SMG.tools.barrel.label>
+  <!-- EN: SMG-32 Reprimand -->
+  <RNGun_SMG32Reprimand_SMG.verbs.Verb_Shoot.label>SMG-32“训斥”</RNGun_SMG32Reprimand_SMG.verbs.Verb_Shoot.label>
+  
+</LanguageData>

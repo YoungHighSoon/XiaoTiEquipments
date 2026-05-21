@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="DrugBase">
+		<defName>Compress_StrawberryBeer</defName>
+		<label>草莓精酿</label>
+		<description>用鼠族传统秘法制成的草莓精酿。酒精含量非常高，容易喝醉。</description>
+		<!-- <descriptionHyperlinks>
+			<HediffDef>AlcoholHigh</HediffDef>
+			<HediffDef>AlcoholTolerance</HediffDef>
+			<HediffDef>Hangover</HediffDef>
+			<HediffDef>AlcoholAddiction</HediffDef>
+			<HediffDef>Cirrhosis</HediffDef>
+			<HediffDef>ChemicalDamageModerate</HediffDef>
+		</descriptionHyperlinks> -->
+        <!-- <recipeMaker>
+            <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+            <workSkill>Intellectual</workSkill>
+            <effectWorking>Cook</effectWorking>
+            <soundWorking>Recipe_CookMeal</soundWorking>
+            <bulkRecipeCount>4</bulkRecipeCount>
+        </recipeMaker> -->
+		<graphicData>
+			<texPath>Things/Item/Resource/Beer</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<equippedAngleOffset>-15</equippedAngleOffset>
+		<rotatable>false</rotatable>
+		<stackLimit>30</stackLimit>
+		<statBases>
+			<MarketValue>49</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>0.0</Flammability>
+			<Nutrition>0.15</Nutrition>
+			<SellPriceFactor>1.50</SellPriceFactor>
+		</statBases>
+		<ingestible>
+			<foodType>Fluid, Processed, Liquor</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.4</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(-0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>饮用 {0}</ingestCommandString>
+			<ingestReportString>正在喝 {0}.</ingestReportString>
+			<chairSearchRadius>25</chairSearchRadius>
+			<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+			<tableDesired>false</tableDesired>
+            <outcomeDoers>
+				<!-- <li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AlcoholHigh</hediffDef>
+					<severity>0.075</severity>
+					<toleranceChemical>Alcohol</toleranceChemical>
+				</li> -->
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>Over_Drunk</hediffDef>
+					<severity>0.3</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<equipmentType>Primary</equipmentType>
+		<techLevel>Neolithic</techLevel>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Alcohol</chemical>
+				<addictiveness>0</addictiveness>
+				<minToleranceToAddict>2</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+                <!-- <AddictionSeverityInitial>1</AddictionSeverityInitial> -->
+				<listOrder>10</listOrder>
+			</li>
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+		</comps>
+		<weaponClasses>
+			<li>Melee</li>
+			<li>MeleeBlunt</li>
+		</weaponClasses>
+		<tools>
+			<li>
+				<label>bottle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>27</power>
+				<cooldownTime>0.8</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+    <RecipeDef>
+		<defName>ToMake_StrawberryBeertwice</defName>
+		<label>制作草莓精酿 x2</label>
+		<description>制作草莓精酿 x2</description>
+		<jobString>制作草莓精酿 x2</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>1000</workAmount>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawBerries</li>
+					</thingDefs>
+				</filter>
+				<count>7</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Beer</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RawBerries</li>
+				<li>Beer</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Compress_StrawberryBeer>2</Compress_StrawberryBeer>
+		</products>
+	</RecipeDef>
+	<RecipeDef>
+		<defName>ToMake_StrawberryBeertwice_Bulk</defName>
+		<label>制作草莓精酿 x8</label>
+		<description>制作草莓精酿 x8</description>
+		<jobString>制作草莓精酿 x8</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>2400</workAmount>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawBerries</li>
+					</thingDefs>
+				</filter>
+				<count>28</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Beer</li>
+					</thingDefs>
+				</filter>
+				<count>16</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RawBerries</li>
+				<li>Beer</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Compress_StrawberryBeer>8</Compress_StrawberryBeer>
+		</products>
+	</RecipeDef>
+  <ThingDef ParentName="MedicineBase">
+    <defName>Repair_GreenPin</defName>
+    <label>强效针剂</label>
+    <description>一种令人不安颜色的药剂，但能救人命。</description>
+    <thingClass>Medicine</thingClass>
+    <!-- <thingClass>ThingWithComps</thingClass> -->
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <possessionCount>5</possessionCount>
+    <!-- <thingSetMakerTags><li>RewardStandardCore</li></thingSetMakerTags>
+    <allowedArchonexusCount>5</allowedArchonexusCount> -->
+
+    <graphicData>
+      <texPath>Things/Item/Resource/GreenPin</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    
+    <equippedAngleOffset>-15</equippedAngleOffset>
+    <!-- <rotatable>false</rotatable> -->
+    <stackLimit>300</stackLimit>
+    <statBases>
+		<Beauty>6</Beauty>
+		<MarketValue>500</MarketValue>
+		<Mass>0.01</Mass>
+		<Flammability>0.0</Flammability>
+		<Nutrition>0.15</Nutrition>
+		<MedicalPotency>1.60</MedicalPotency>
+		<MedicalQualityMax>2.00</MedicalQualityMax>
+		<SellPriceFactor>1</SellPriceFactor>
+    </statBases>
+    <useHitPoints>False</useHitPoints>
+
+    <costList>
+      <MedicineHerbal>1</MedicineHerbal>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <researchPrerequisite>MedicineProduction</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>1</Crafting>
+      </skillRequirements>
+      <bulkRecipeCount>5</bulkRecipeCount>
+      <displayPriority>1500</displayPriority>
+    </recipeMaker>
+    
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+      <foodType>Fluid, Processed, Liquor</foodType>
+      <nurseable>true</nurseable>
+      <drugCategory>Medical</drugCategory>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(-0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>注射 {0}</ingestCommandString>
+      <ingestReportString>正在扎 {0}.</ingestReportString>
+      <chairSearchRadius>25</chairSearchRadius>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      <tableDesired>false</tableDesired>
+      
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>GreenPin_Repair</hediffDef>
+          <severity>1</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    
+    <comps>
+      <li Class="CompProperties_Forbiddable"></li>
+      
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>注射 {0_label}</useLabel>
+        <useDuration>240</useDuration>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="CompProperties_UseEffectAddHediff">
+        <hediffDef>GreenPin_Repair</hediffDef>
+        <allowRepeatedUse>true</allowRepeatedUse>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechSerumUsed</soundOnUsed>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+      
+      <li Class="CompProperties_Drug">
+        <addictiveness>0</addictiveness>
+        <listOrder>1000</listOrder>
+      </li>
+    </comps>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    
+    <techLevel>Neolithic</techLevel>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef Name="XiaoTi_MeleeWeapon_Sharp" ParentName="BaseMeleeWeapon" Abstract="True">
+    <weaponClasses>
+      <li>MeleePiercer</li>
+    </weaponClasses>
+    <recipeMaker>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <disallowedThingDefs>
+          <li>Silver</li>
+          <li>Gold</li>
+          <li>WoodLog</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
+    </recipeMaker>
+    <statBases>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <useHitPoints>False</useHitPoints>
+  </ThingDef>
+
+  <ThingDef Name="XiaoTi_MeleeWeapon_Blunt" ParentName="BaseMeleeWeapon" Abstract="True">
+    <weaponClasses>
+      <li>MeleeBlunt</li>
+    </weaponClasses>
+    <recipeMaker>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <disallowedThingDefs>
+          <li>Silver</li>
+          <li>Gold</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
+    </recipeMaker>
+  </ThingDef>
+
+  <ToolCapacityDef>
+    <defName>Demolish_Cut</defName>
+    <label>破墙斩</label>
+  </ToolCapacityDef>
+
+  <ManeuverDef Name="Demolish_Cut">
+    <defName>Demolish_Cut</defName>
+    <requiredCapacity>Demolish_Cut</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>Demolish_Cut</meleeDamageDef>
+      <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Smash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Smash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Smash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Smash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+
+  <ThingDef Name="XiaoTi_MeleeWeapon_Sharp_Quality" Abstract="True" ParentName="XiaoTi_MeleeWeapon_Sharp">
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+  </ThingDef>
+
+    <ThingDef ParentName="XiaoTi_MeleeWeapon_Sharp_Quality">
+    <defName>XiaoTi_CQC5_CombatHatchet</defName>
+    <label>CQC-5 战斗短柄斧</label>
+    <description>CQC-5战斗短柄斧是一款坚固耐用的单手近战武器，使用者能在狭窄的环境中有效杀伤轻甲敌人。其紧凑的设计使其能够快速挥舞且易于操作，在弹药匮乏或需要潜行时是绝地潜兵们的可靠的伙伴。</description>
+    <graphicData>
+      <texPath>Things/Weapons/CQC-5_CombatHatchet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>0.9</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <!--<costStuffCount>50</costStuffCount>-->
+    <weaponTags>
+      <!-- <li>MedievalMeleeDecent</li> -->
+      <li>Bladelink</li>
+    </weaponTags>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <!-- <MaxHitPoints>1000</MaxHitPoints> -->
+      <Mass>0.60</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>8000</Beauty>
+      <MeditationFocusStrength>0.72</MeditationFocusStrength>
+    </statBases>
+    <equippedAngleOffset>-40</equippedAngleOffset>
+    <!--<stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>-->
+	
+	<equippedStatOffsets>
+	  <!-- <PlantWorkSpeed>1.0</PlantWorkSpeed>
+    <WorkSpeedGlobal>3.0</WorkSpeedGlobal>
+    <GlobalLearningFactor>15.0</GlobalLearningFactor>
+    <PlantHarvestYield>0.75</PlantHarvestYield>
+    <MeleeHitChance>5</MeleeHitChance>
+    <ButcheryFleshEfficiency>0.5</ButcheryFleshEfficiency>
+    <MiningYield>0.5</MiningYield>
+    <MeleeDamageFactor>0.5</MeleeDamageFactor> -->
+  </equippedStatOffsets>
+	
+	<costList>
+      <Steel>55</Steel>
+  </costList>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>27</power>
+        <cooldownTime>0.6</cooldownTime>
+        <armorPenetration>2</armorPenetration>
+      </li>
+      <!-- <li>
+        <label>spike</label>
+        <capacities>
+          <li>Demolish_Cut</li>
+        </capacities>
+        <power>45</power>
+        <cooldownTime>1</cooldownTime>
+        <armorPenetration>3</armorPenetration>
+      </li> -->
+      <li>
+        <label>axe head</label>
+        <capacities>
+          <li>Demolish_Cut</li>
+        </capacities>
+        <power>64</power>
+        <cooldownTime>0.5</cooldownTime>
+        <armorPenetration>3</armorPenetration>
+      </li>
+    </tools>
+    <recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>1</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingCategories>
+	  <li>XiaoTiApparel_Weaopn</li>
+    </thingCategories>
+    <!-- <tradeTags>
+    </tradeTags> -->
+    <comps>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Artistic</li>
+        </focusTypes>
+        <offsets>
+          <li Class="FocusStrengthOffset_OccupiedHoldingPlatform">
+            <offset>0.45</offset>
+          </li>
+        </offsets>
+      </li>
+    <li Class="RigorMortis.CompProperties_LightningSword" MayRequire="fxz.moelotlzombie.update">
+    <cooldown>6</cooldown>
+    </li>
+    </comps>
+	  <modExtensions>
+      <li Class="RigorMortis.ModExtension_TaoistArtifact" MayRequire="fxz.moelotlzombie.update">
+      <level>1</level>
+      <energyCost>2</energyCost>
+      <malevolentDamage>50</malevolentDamage>
+      <damageCount>4</damageCount>
+      <damage>25</damage>
+      <killCountRequire>100</killCountRequire>
+      <selectSound>Axolotl_LightningSword_OnCamera</selectSound>
+	  </li>
+    </modExtensions>
+  </ThingDef>
+  <!-- <ThingDef ParentName="XiaoTi_MeleeWeapon_Sharp_Quality">
+    <defName>XiaoTi_CQC5_CombatHatchet_moelotle</defName>
+    <label>CQC-5 战斗短柄斧_螈</label>
+    <description>CQC-5战斗短柄斧是一款坚固耐用的单手近战武器，使用者能在狭窄的环境中有效杀伤轻甲敌人。其紧凑的设计使其能够快速挥舞且易于操作，在弹药匮乏或需要潜行时是绝地潜兵们的可靠的伙伴。</description>
+    <graphicData>
+      <texPath>Things/Weapons/CQC-5_CombatHatchet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>0.9</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <weaponTags>
+      <li>Bladelink</li>
+    </weaponTags>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Mass>0.60</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>6.6</Beauty>
+    </statBases>
+    <equippedAngleOffset>-40</equippedAngleOffset>
+	
+	<equippedStatOffsets>
+	  <PlantWorkSpeed>1.0</PlantWorkSpeed>
+    <WorkSpeedGlobal>3.0</WorkSpeedGlobal>
+    <GlobalLearningFactor>15.0</GlobalLearningFactor>
+    <PlantHarvestYield>0.75</PlantHarvestYield>
+    <MeleeHitChance>2</MeleeHitChance>
+    <ButcheryFleshEfficiency>0.5</ButcheryFleshEfficiency>
+    <MiningYield>0.5</MiningYield>
+    <MeleeDamageFactor>0.3</MeleeDamageFactor>
+    <RM_MalevolentQiCapacity>6000</RM_MalevolentQiCapacity>
+    <RM_MalevolentFactor>0.3</RM_MalevolentFactor>
+  </equippedStatOffsets>
+	
+	<costList>
+      <Steel>55</Steel>
+  </costList>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>27</power>
+        <cooldownTime>1</cooldownTime>
+        <armorPenetration>0.6</armorPenetration>
+      </li>
+      <li>
+        <label>axe head</label>
+        <capacities>
+          <li>Demolish_Cut</li>
+        </capacities>
+        <power>48</power>
+        <cooldownTime>1.1</cooldownTime>
+        <armorPenetration>3</armorPenetration>
+      </li>
+    </tools>
+    <recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>1</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingCategories>
+	  <li>XiaoTiApparel_Weaopn</li>
+    </thingCategories>
+  <comps>
+    <li Class="RigorMortis.CompProperties_LightningSword">
+    <cooldown>6</cooldown>
+    </li>
+  </comps>
+	  <modExtensions>
+      <li Class="RigorMortis.ModExtension_TaoistArtifact">
+      <level>1</level>
+      <energyCost>2</energyCost>
+      <malevolentDamage>75</malevolentDamage>
+      <damageCount>4</damageCount>
+      <damage>30</damage>
+      <killCountRequire>100</killCountRequire>
+      <selectSound>Axolotl_LightningSword_OnCamera</selectSound>
+	  </li>
+    </modExtensions>
+  </ThingDef> -->
+</Defs>

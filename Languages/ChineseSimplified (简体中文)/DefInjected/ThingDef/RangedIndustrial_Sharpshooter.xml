@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 7.62x51mm SEAF bullet -->
+  <RNBullet_SEAF762x51mm_DiligenceCS.label>7.62x51mm SEAF子弹</RNBullet_SEAF762x51mm_DiligenceCS.label>
+  
+  <!-- EN: 12.5mm round -->
+  <RNBullet_SEAFAMR_Round.label>12.5mm子弹</RNBullet_SEAFAMR_Round.label>
+  
+  <!-- EN: APW-1 Anti-Materiel Rifle -->
+  <RNGun_APW1_AMR.label>APW-1反器材步枪</RNGun_APW1_AMR.label>
+  <!-- EN: The APW-1 Anti-Materiel Rifle is a semi-automatic precision weapon chambered in 12.5mm, designed for long-range engagements against armored targets. Featuring adjustable optics and powerful armor-penetrating rounds, it excels at neutralizing vehicles and heavy enemies. Reliable and versatile, it’s a critical tool for Helldivers in tactical combat scenarios. -->
+  <RNGun_APW1_AMR.description>APW-1反器材步枪是一款大口径狙击步枪，它配备可调节光学瞄准镜和强大的穿甲弹，在远程距离可有效对付轻型载具装甲。它性能可靠，用途广泛，是绝地潜兵在作战中的关键武器。</RNGun_APW1_AMR.description>
+  <!-- EN: stock -->
+  <RNGun_APW1_AMR.tools.stock.label>枪托</RNGun_APW1_AMR.tools.stock.label>
+  <!-- EN: barrel -->
+  <RNGun_APW1_AMR.tools.barrel.label>枪管</RNGun_APW1_AMR.tools.barrel.label>
+  <!-- EN: APW-1 Anti-Materiel Rifle -->
+  <RNGun_APW1_AMR.verbs.Verb_Shoot.label>APW-1反器材步枪</RNGun_APW1_AMR.verbs.Verb_Shoot.label>
+  
+  <!-- EN: R-63CS Diligence Counter Sniper -->
+  <RNGun_R63CSDiligenceCounterSniper_DMR.label>R-63CS反狙击“勤勉”</RNGun_R63CSDiligenceCounterSniper_DMR.label>
+  <!-- EN: The R-63CS Diligence Counter Sniper is a precision marksman rifle designed to neutralize enemy snipers and high-value targets at long range. Typically chambered in 7.62×51mm AP SEAF rounds, it features a semi-automatic action, an advanced optics suite, and minimal recoil for rapid, accurate follow-up shots. Its reliability and pinpoint accuracy make it a vital tool for Helldivers in ranged engagements. -->
+  <RNGun_R63CSDiligenceCounterSniper_DMR.description>R-63CS反狙击“勤勉”是一款精准射手步枪，旨在远距离击杀敌方狙击手和高价值目标。它采用半自动枪机设计，配备先进的光学系统，后坐力极小，可快速精准地进行后续射击。其可靠性和精准度使其成为绝地潜兵在远程作战中的重要武器。</RNGun_R63CSDiligenceCounterSniper_DMR.description>
+  <!-- EN: stock -->
+  <RNGun_R63CSDiligenceCounterSniper_DMR.tools.stock.label>枪托</RNGun_R63CSDiligenceCounterSniper_DMR.tools.stock.label>
+  <!-- EN: barrel -->
+  <RNGun_R63CSDiligenceCounterSniper_DMR.tools.barrel.label>枪管</RNGun_R63CSDiligenceCounterSniper_DMR.tools.barrel.label>
+  <!-- EN: R-63CS Diligence Counter Sniper -->
+  <RNGun_R63CSDiligenceCounterSniper_DMR.verbs.Verb_Shoot.label>R-63CS反狙击“勤勉”</RNGun_R63CSDiligenceCounterSniper_DMR.verbs.Verb_Shoot.label>
+  
+  <!-- EN: R-63 Diligence -->
+  <RNGun_R63Diligence_DMR.label>R-63“勤勉”</RNGun_R63Diligence_DMR.label>
+  <!-- EN: The R-63 Diligence is a semi-automatic marksman rifle designed for mid-to-long-range engagements. Chambered in 7.62×51mm rounds, it delivers a balance of precision and firepower, making it effective against lightly armored targets. With a 20-round magazine and a fire rate of 350 RPM, it allows for sustained accurate fire. Its manageable recoil and reliable performance make it a favored choice among Helldivers for versatile combat scenarios.​ -->
+  <RNGun_R63Diligence_DMR.description>R-63“勤勉”是一款专为中远距离作战而设计的半自动精准射手步枪。它使在精度和火力方面达到了平衡，能够持续精准射击，有效打击轻甲目标。其可控的后坐力和可靠的性能使其成为绝地潜兵在各种作战场景中的首选。</RNGun_R63Diligence_DMR.description>
+  <!-- EN: stock -->
+  <RNGun_R63Diligence_DMR.tools.stock.label>枪托</RNGun_R63Diligence_DMR.tools.stock.label>
+  <!-- EN: barrel -->
+  <RNGun_R63Diligence_DMR.tools.barrel.label>枪管</RNGun_R63Diligence_DMR.tools.barrel.label>
+  <!-- EN: R-63 Diligence -->
+  <RNGun_R63Diligence_DMR.verbs.Verb_Shoot.label>R-63“勤勉”</RNGun_R63Diligence_DMR.verbs.Verb_Shoot.label>
+  
+</LanguageData>

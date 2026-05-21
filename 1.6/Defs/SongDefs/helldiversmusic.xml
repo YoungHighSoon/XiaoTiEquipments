@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+   <SongDef>
+      <defName>Hellpods_Primed</defName>
+      <clipPath>[Helldivers 2] Hellpods Primed</clipPath>
+      <volume>1.2</volume>
+      <tense>true</tense>
+   </SongDef>
+
+   <!-- <SongDef>
+      <defName>Ship_1</defName>
+      <clipPath>[Helldivers] Ship 1</clipPath>
+      <volume>1.1</volume>
+   </SongDef> -->
+   
+   <!-- <SongDef>
+      <defName>Ship_2</defName>
+      <clipPath>[Helldivers] Ship 2</clipPath>
+      <volume>1.1</volume>
+   </SongDef> -->
+   
+   <SongDef>
+      <defName>Drop_Point</defName>
+      <clipPath>[Helldivers 2] Drop Point</clipPath>
+      <volume>1.2</volume>
+      <allowedTimeOfDay>Day</allowedTimeOfDay>
+   </SongDef>
+   
+   <SongDef>
+      <defName>The_Super_Destroyer</defName>
+      <clipPath>[Helldivers 2] The Super Destroyer</clipPath>
+      <volume>1.2</volume>
+   </SongDef>
+   
+   <!-- <SongDef>
+      <defName>Ode_to_Liberty</defName>
+      <clipPath>[Helldivers 2] Ode to Liberty</clipPath>
+      <volume>1.2</volume>
+      <allowedTimeOfDay>Day</allowedTimeOfDay>
+   </SongDef> -->
+   
+   <SongDef>
+      <defName>Welcome_to_the_Fight</defName>
+      <clipPath>[Helldivers 2] Welcome To The Fight</clipPath>
+      <volume>1.2</volume>
+      <!-- <allowedTimeOfDay>Day</allowedTimeOfDay> -->
+   </SongDef>
+   
+   <SongDef>
+      <defName>Super_Earth_Anthem</defName>
+      <clipPath>[Helldivers 2] Super Earth Anthem</clipPath>
+      <volume>1.2</volume>
+      <!-- <allowedTimeOfDay>Day</allowedTimeOfDay> -->
+   </SongDef>
+   
+   <!-- <SongDef>
+      <defName>Undetected_1</defName>
+      <clipPath>[Helldivers] Undetected 1</clipPath>
+      <volume>1.1</volume>
+   </SongDef>
+   
+   <SongDef>
+      <defName>Undetected_2</defName>
+      <clipPath>[Helldivers] Undetected 2</clipPath>
+      <volume>1.1</volume>
+   </SongDef> -->
+   
+   <SongDef>
+      <defName>Bile_Titan</defName>
+      <clipPath>[Helldivers 2] Bile Titan</clipPath>
+      <volume>1.2</volume>
+      <tense>true</tense>
+   </SongDef>
+   
+   <!-- <SongDef>
+      <defName>Bugs</defName>
+      <clipPath>[Helldivers] Bugs</clipPath>
+      <volume>1.1</volume>
+      <tense>true</tense>
+   </SongDef>
+   
+   <SongDef>
+      <defName>Cyborgs</defName>
+      <clipPath>[Helldivers] Cyborgs</clipPath>
+      <volume>1.1</volume>
+      <tense>true</tense>
+   </SongDef>
+   
+   <SongDef>
+      <defName>Illuminate</defName>
+      <clipPath>[Helldivers] Illuminate</clipPath>
+      <volume>1.1</volume>
+      <tense>true</tense>
+   </SongDef> -->
+   
+      <!-- <SongDef>
+      <defName>Harvester</defName>
+      <clipPath>[Helldivers 2] Harvester</clipPath>
+      <volume>1.2</volume>
+      <tense>true</tense>
+   </SongDef> -->
+   
+      <SongDef>
+      <defName>Cyberstan_Combat</defName>
+      <clipPath>[Helldivers 2] Cyberstan Combat</clipPath>
+      <volume>1.2</volume>
+      <tense>true</tense>
+   </SongDef>
+   
+   <SongDef>
+      <defName>No_Diver_Left_Behind</defName>
+      <clipPath>[Helldivers 2] No Diver Left Behind</clipPath>
+      <volume>1.2</volume>
+      <tense>true</tense>
+   </SongDef>
+</Defs>

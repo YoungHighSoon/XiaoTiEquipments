@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: bomb -->
+  <RN2_SEAFAPHET.label>爆炸</RN2_SEAFAPHET.label>
+  <!-- EN: {0} has died in an explosion. -->
+  <RN2_SEAFAPHET.deathMessage>{0} 在爆炸中丧生。</RN2_SEAFAPHET.deathMessage>
+  
+  <!-- EN: bomb -->
+  <RN2_SEAFEnergyBomb.label>爆炸</RN2_SEAFEnergyBomb.label>
+  <!-- EN: {0} has died in an explosion. -->
+  <RN2_SEAFEnergyBomb.deathMessage>{0} 在爆炸中丧生。</RN2_SEAFEnergyBomb.deathMessage>
+  
+  <!-- EN: bomb -->
+  <RN2_SEAFGrenadeBlast.label>爆炸</RN2_SEAFGrenadeBlast.label>
+  <!-- EN: {0} has died in an explosion. -->
+  <RN2_SEAFGrenadeBlast.deathMessage>{0} 在爆炸中丧生。</RN2_SEAFGrenadeBlast.deathMessage>
+  
+  <!-- EN: bomb -->
+  <RN2_SEAFJetAssistedShell.label>爆炸</RN2_SEAFJetAssistedShell.label>
+  <!-- EN: {0} has died in an explosion. -->
+  <RN2_SEAFJetAssistedShell.deathMessage>{0} 在爆炸中丧生。</RN2_SEAFJetAssistedShell.deathMessage>
+  
+  <!-- EN: bomb -->
+  <RN2_SEAFQuasarBlast.label>爆炸</RN2_SEAFQuasarBlast.label>
+  <!-- EN: {0} has died in an explosion. -->
+  <RN2_SEAFQuasarBlast.deathMessage>{0} 在爆炸中丧生。</RN2_SEAFQuasarBlast.deathMessage>
+  
+  <!-- EN: bomb -->
+  <RN2_SEAFRocketBlast.label>爆炸</RN2_SEAFRocketBlast.label>
+  <!-- EN: {0} has died in an explosion. -->
+  <RN2_SEAFRocketBlast.deathMessage>{0} 在爆炸中丧生。</RN2_SEAFRocketBlast.deathMessage>
+  
+  <!-- EN: bomb -->
+  <RN2_SEAFRRHEAT.label>爆炸</RN2_SEAFRRHEAT.label>
+  <!-- EN: {0} has died in an explosion. -->
+  <RN2_SEAFRRHEAT.deathMessage>{0} 在爆炸中丧生。</RN2_SEAFRRHEAT.deathMessage>
+  
+  <!-- EN: bomb -->
+  <RN2_SEAFUltimatumBlast.label>爆炸</RN2_SEAFUltimatumBlast.label>
+  <!-- EN: {0} has died in an explosion. -->
+  <RN2_SEAFUltimatumBlast.deathMessage>{0} 在爆炸中丧生。</RN2_SEAFUltimatumBlast.deathMessage>
+  
+</LanguageData>

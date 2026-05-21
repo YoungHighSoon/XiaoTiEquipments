@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BaseBullet">
+		<defName>MG43_Bullet</defName>
+		<label>8mm Mauser bullet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>MG43_Bullet</damageDef>
+			<damageAmountBase>48</damageAmountBase>
+			<stoppingPower>8.0</stoppingPower>
+      		<armorPenetrationBase>0.8</armorPenetrationBase>
+			<speed>90</speed>
+		</projectile>
+	</ThingDef>
+  <!---->
+	<ThingDef ParentName="BaseBullet">
+		<defName>125_rifle_Bullet</defName>
+		<label>12.5mm 反器材步枪弹</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>125_rifle_Bullet</damageDef>
+			<damageAmountBase>480</damageAmountBase>
+			<armorPenetrationBase>2.1</armorPenetrationBase>
+			<stoppingPower>12.0</stoppingPower>
+			<speed>250</speed>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>XiaoTi_50_mgbullet</defName>
+		<label>.50重机枪弹</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>MG43_Bullet</damageDef>
+			<damageAmountBase>90</damageAmountBase>
+			<armorPenetrationBase>1.3</armorPenetrationBase>
+			<stoppingPower>12.0</stoppingPower>
+			<speed>120</speed>
+		</projectile>
+	</ThingDef>
+    
+	<ThingDef ParentName="BaseBullet">
+		<defName>125_rifle_Bullet_sidearm</defName>
+		<label>12.5mm 步枪弹</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>125_rifle_Bullet</damageDef>
+			<damageAmountBase>32</damageAmountBase>
+			<armorPenetrationBase>0.75</armorPenetrationBase>
+			<stoppingPower>4.0</stoppingPower>
+			<speed>70</speed>
+		</projectile>
+        
+	</ThingDef><ThingDef ParentName="BaseBullet">
+		<defName>762x51mm_Bullet_LMG</defName>
+		<label>7.62x51mm 北约制式子弹</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>21</damageAmountBase>
+			<armorPenetrationBase>0.6</armorPenetrationBase>
+			<stoppingPower>4.0</stoppingPower>
+			<speed>90</speed>
+		</projectile>
+	</ThingDef>
+</Defs>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BuildingBase" Name="Wall">
+    <defName>Dynamic_Wall</defName>
+    <label>纳米修复墙体</label>
+    <description>一种特制的墙体，更加坚硬而且会自动修复</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <noRightClickDraftAttack>true</noRightClickDraftAttack>
+    <replaceTags>
+      <li>Wall</li>
+    </replaceTags>
+    <graphicData>
+      <texPath>Things/Building/Linked/Wall</texPath>
+      <graphicClass>Graphic_Appearances</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+    <uiIconPathsStuff>
+      <li>
+        <appearance>Planks</appearance>
+        <iconPath>Things/Building/Linked/WallPlanks_MenuIcon</iconPath>
+      </li>
+      <li>
+        <appearance>Bricks</appearance>
+        <iconPath>Things/Building/Linked/WallBricks_MenuIcon</iconPath>
+      </li>
+    </uiIconPathsStuff>
+    <statBases>
+      <MaxHitPoints>1500</MaxHitPoints>
+      <WorkToBuild>250</WorkToBuild>
+      <Flammability>0</Flammability>
+      <MeditationFocusStrength>0.6</MeditationFocusStrength>
+    </statBases>
+    <costStuffCount>1</costStuffCount>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.99</fillPercent>
+    <coversFloor>true</coversFloor>
+    <drawStyleCategory>Walls</drawStyleCategory>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <useStuffTerrainAffordance>true</useStuffTerrainAffordance>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded> <!-- Best affordance needed for stone -->
+    <holdsRoof>true</holdsRoof>
+    <designationCategory>Structure</designationCategory>
+    <uiOrder>2000</uiOrder>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>false</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <fertility>0</fertility>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <building>
+      <paintable>true</paintable>
+      <isInert>true</isInert>
+      <isWall>true</isWall>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
+      <ai_chillDestination>false</ai_chillDestination>
+      <supportsWallAttachments>true</supportsWallAttachments>
+      <isStuffableAirtight>false</isStuffableAirtight>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+      <relatedBuildCommands>
+        <li>Door</li>
+        <li>Autodoor</li>
+        <li>OrnateDoor</li>
+        <li MayRequire="Ludeon.RimWorld.Anomaly">SecurityDoor</li>
+        <li MayRequire="Ludeon.RimWorld.Odyssey">VacBarrier</li>
+        <li>Cooler</li>
+        <li>Vent</li>
+      </relatedBuildCommands>
+    </building>
+    <comps>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Minimal</li>
+        </focusTypes>
+      </li>
+      <li Class="XiaoTiEquipment.CompProperties_BuildingSelfRepair">
+          <repairIntervalTicks>60</repairIntervalTicks>      <!-- 每 1 tick修复一次 -->
+          <repairAmount>600</repairAmount>                     <!-- 每次修复5点HP -->
+          <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
+          <showrepairinfo>false</showrepairinfo>
+          <!-- <showRepairEffect>true</showRepairEffect> -->
+          <minRepairCondition>0</minRepairCondition>       <!-- HP低于0%时停止修复 -->
+          <maxRepairCondition>1</maxRepairCondition>      <!-- 修复到100%HP -->
+      </li>
+    </comps>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>0.5</multiplier>
+      </li>
+      <!-- <li>
+        <damageDef>Bullet</damageDef>
+        <multiplier>0.4</multiplier>
+      </li> -->
+      <li>
+        <damageDef>HEAT_40mm_around</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+    </damageMultipliers>
+    <designationHotKey>Misc3</designationHotKey>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>CellofPowerguard</defName>
+    <label>CP23-“峦障”</label>
+    <description>一种超凡科技产生的虚空能量电池，其存在就是一种奇迹。</description>
+    <size>(1,1)</size>
+
+    <altitudeLayer>Building</altitudeLayer>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <drawerType>MapMeshOnly</drawerType>
+    <repairEffect>ConstructMetal</repairEffect>
+    <forceDebugSpawnable>true</forceDebugSpawnable>
+    <receivesSignals>true</receivesSignals>
+    <building>
+      <roofCollapseDamageMultiplier>0</roofCollapseDamageMultiplier>
+    </building>
+    <damageMultipliers>
+      <li>
+        <damageDef>Flame</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+    </damageMultipliers>
+
+    <passability>Standable</passability>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    
+    <designationCategory>Security</designationCategory>
+    <stealable>false</stealable>
+    <fillPercent>0.95</fillPercent>
+    <pathCost>13</pathCost>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <MaxHitPoints>6000</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Mass>0.1</Mass>
+      <Beauty>20</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Building/Mech/UnstablePowerCell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <shadowData>
+        <volume>(0.6, 0.4, 0.6)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.2, 0.2, 0.6, 0.6)</rect>
+      </damageData>
+    </graphicData>
+    <thingCategories>
+      <li>BuildingsSpecial</li>
+    </thingCategories>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <comps>
+      <!-- <li Class="CompProperties_Flickable"/> -->
+      <!-- <li Class="CompProperties_Breakdownable"/> -->
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-48000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <powerUpgrades>
+          <li>
+            <researchProject>ColoredLights</researchProject>
+            <factor>0.5</factor>
+          </li>
+        </powerUpgrades>
+      </li>
+      <li Class="CompProperties_Styleable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>32</glowRadius>
+        <glowColor>(350,350,350,0)</glowColor>
+      </li>
+      <li Class="XiaoTiEquipment.CompProperties_BuildingSelfRepair">
+          <repairIntervalTicks>60</repairIntervalTicks>      <!-- 修复间隔 -->
+          <repairAmount>150</repairAmount>                     <!-- 每次修复HP -->
+          <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
+          <showrepairinfo>false</showrepairinfo>
+          <!-- <showRepairEffect>true</showRepairEffect> -->
+          <minRepairCondition>0</minRepairCondition>       <!-- HP低于0%时停止修复 -->
+          <maxRepairCondition>1</maxRepairCondition>      <!-- 修复到100%HP -->
+      </li>
+      <li Class="CompProperties_ProjectileInterceptor">
+        <radius>60</radius>
+        <interceptGroundProjectiles>true</interceptGroundProjectiles>
+        <interceptAirProjectiles>true</interceptAirProjectiles>
+        <interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+        <interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
+        <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+        <activeSound>BulletShield_Ambience</activeSound>
+        <!-- <hitPoints>80000</hitPoints> -->
+        <drawWithNoSelection>false</drawWithNoSelection>
+        <color>(0.4, 0.4, 0.4)</color>
+        <minAlpha>0.1</minAlpha>
+        <idlePulseSpeed>0.4</idlePulseSpeed>
+        <disarmedByEmpForTicks>1</disarmedByEmpForTicks>
+        <!-- <cooldownTicks>0</cooldownTicks> -->
+        <!-- <rechargeHitPointsIntervalTicks>true</rechargeHitPointsIntervalTicks> -->
+        <chargeIntervalTicks>0</chargeIntervalTicks>
+        <chargeDurationTicks>6000</chargeDurationTicks>
+        <!-- <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge> -->
+        <!-- <startWithMaxHitPoints>true</startWithMaxHitPoints> -->
+        <gizmoTipKey>RemoteMechShieldTip</gizmoTipKey>
+      </li>
+    </comps>
+    <costList>
+      <Steel>2</Steel>
+    </costList>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>CellofPowerlight</defName>
+    <label>CP17-“太阳炉”</label>
+    <description>一种超凡科技产生的虚空能量电池，其存在就是一种奇迹。</description>
+    <thingClass>Building_SunLamp</thingClass>
+    <size>(1,1)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <drawerType>MapMeshOnly</drawerType>
+    <repairEffect>ConstructMetal</repairEffect>
+    <forceDebugSpawnable>true</forceDebugSpawnable>
+    <receivesSignals>true</receivesSignals>
+    <building>
+      <roofCollapseDamageMultiplier>0</roofCollapseDamageMultiplier>
+    </building>
+    <damageMultipliers>
+      <li>
+        <damageDef>Flame</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+    </damageMultipliers>
+    <passability>Standable</passability>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <designationCategory>Structure</designationCategory>
+    <stealable>false</stealable>
+    <fillPercent>0.95</fillPercent>
+    <pathCost>13</pathCost>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <MaxHitPoints>6000</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Mass>0.1</Mass>
+      <Beauty>20</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Building/Mech/UnstablePowerCell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <shadowData>
+        <volume>(0.6, 0.4, 0.6)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.2, 0.2, 0.6, 0.6)</rect>
+      </damageData>
+    </graphicData>
+    <thingCategories>
+      <li>BuildingsSpecial</li>
+    </thingCategories>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <comps>
+      <!-- <li Class="CompProperties_Flickable"/> -->
+      <!-- <li Class="CompProperties_Breakdownable"/> -->
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-48000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <powerUpgrades>
+          <li>
+            <researchProject>ColoredLights</researchProject>
+            <factor>0.5</factor>
+          </li>
+        </powerUpgrades>
+      </li>
+      <li Class="CompProperties_Styleable" />
+      <li Class="CompProperties_Glower">
+        <overlightRadius>24</overlightRadius>
+        <glowRadius>32</glowRadius>
+        <glowColor>(350,350,350,0)</glowColor>
+      </li>
+      <li Class="XiaoTiEquipment.CompProperties_BuildingSelfRepair">
+          <repairIntervalTicks>60</repairIntervalTicks>      <!-- 修复间隔 -->
+          <repairAmount>150</repairAmount>                     <!-- 每次修复HP -->
+          <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
+          <showrepairinfo>false</showrepairinfo>
+          <!-- <showRepairEffect>true</showRepairEffect> -->
+          <minRepairCondition>0</minRepairCondition>       <!-- HP低于0%时停止修复 -->
+          <maxRepairCondition>1</maxRepairCondition>      <!-- 修复到100%HP -->
+      </li>
+      <li Class="CompProperties_Schedule">
+        <!-- Match plant growing times -->
+        <startTime>0</startTime>
+        <endTime>1</endTime>
+        <!-- <offMessage>Off for plant resting period</offMessage> -->
+      </li>
+    </comps>
+    <costList>
+      <!-- <ComponentIndustrial>2</ComponentIndustrial> -->
+    </costList>
+  </ThingDef>
+</Defs>

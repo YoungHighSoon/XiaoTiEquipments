@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?><Defs>
+    
+    <DamageDef Name="AC8BOMB">
+    <defName>AC8_BOMB</defName>
+    <label>bomb</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>true</isExplosive>
+    <deathMessage>{0} has died in an explosion.</deathMessage>
+    <!-- <hediff>Shredded</hediff> -->
+    <hediff>Stab</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <minDamageToFragment>15</minDamageToFragment>
+    <defaultDamage>90</defaultDamage>
+    <defaultStoppingPower>5</defaultStoppingPower>
+    <defaultArmorPenetration>1.0</defaultArmorPenetration>
+    <!-- <buildingDamageFactor>0.8</buildingDamageFactor> -->
+    <plantDamageFactor>0.5</plantDamageFactor>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <!-- <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastDry</explosionCellFleck> -->
+    <explosionColorCenter>(255, 229, 130)</explosionColorCenter>
+    <explosionColorEdge>(254, 247, 218)</explosionColorEdge>
+    <soundExplosion>AC8_Explode</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+    <!-- <expolosionPropagationSpeed>0.6</expolosionPropagationSpeed> -->
+  </DamageDef>
+
+  <DamageDef Name="CutBase">
+    <defName>Demolish_Cut</defName>
+    <label>破墙斩</label>
+    <workerClass>DamageWorker_Cut</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been cut to death.</deathMessage>
+    <hediff>Cut</hediff>
+    <hediffSkin>Cut</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <buildingDamageFactor>100</buildingDamageFactor>
+    <buildingDamageFactorImpassable>0.75</buildingDamageFactorImpassable>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
+    <cutExtraTargetsCurve>
+      <points>
+        <li>0, 0</li>
+        <li>0.6, 1</li>
+        <li>0.9, 2</li>
+        <li>1, 3</li>
+      </points>
+    </cutExtraTargetsCurve>
+    <cutCleaveBonus>1.4</cutCleaveBonus>
+  </DamageDef>
+
+  <DamageDef Name="HEAT_40mm_around">
+    <defName>HEAT_40mm_around</defName>
+    <label>40mm高爆弹-溅射</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>true</isExplosive>
+    <deathMessage>{0} has died in an explosion.</deathMessage>
+    <!-- <hediff>Shredded</hediff> -->
+    <hediff>Stab</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <minDamageToFragment>41</minDamageToFragment>
+    <defaultDamage>100</defaultDamage>
+    <defaultStoppingPower>8</defaultStoppingPower>
+    <defaultArmorPenetration>2.10</defaultArmorPenetration>
+    <buildingDamageFactor>0.3</buildingDamageFactor>
+    <plantDamageFactor>0.1</plantDamageFactor>
+    <corpseDamageFactor>0</corpseDamageFactor>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <!-- <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastDry</explosionCellFleck> -->
+    <explosionColorCenter>(255, 229, 130)</explosionColorCenter>
+    <explosionColorEdge>(254, 247, 218)</explosionColorEdge>
+    <soundExplosion>HEAT_40mm_BOMB</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+    <!-- <expolosionPropagationSpeed>0.6</expolosionPropagationSpeed> -->
+  </DamageDef>
+
+  <DamageDef Name="MG43_Hit">
+    <defName>MG43_Bullet</defName>
+    <label>mg43机枪弹</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been shot to death.</deathMessage>
+    <hediff>Gunshot</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
+    <defaultStoppingPower>2</defaultStoppingPower>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <buildingDamageFactor>0.1</buildingDamageFactor>
+  </DamageDef>
+
+  <DamageDef Name="400mm_HUGE_artillerry">
+    <defName>400mm_HUGE_artillerry</defName>
+    <label>400mm巨型炮击</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <canInterruptJobs>true</canInterruptJobs>
+    <externalViolence>true</externalViolence>
+    <isExplosive>true</isExplosive>
+    <deathMessage>{0} has died in an explosion.</deathMessage>
+    <hediff>Shredded</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <minDamageToFragment>50</minDamageToFragment>
+    <defaultDamage>2048</defaultDamage>
+    <defaultStoppingPower>8.0</defaultStoppingPower>
+    <defaultArmorPenetration>3.00</defaultArmorPenetration>
+    <buildingDamageFactorImpassable>4</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>2</buildingDamageFactorPassable>
+    <plantDamageFactor>4</plantDamageFactor>
+    <corpseDamageFactor>0.1</corpseDamageFactor>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+    <expolosionPropagationSpeed>1</expolosionPropagationSpeed>
+    <explosionCellFleck>BlastDry</explosionCellFleck>
+    <explosionColorCenter>(1, 0.5, 0.3)</explosionColorCenter>
+    <explosionColorEdge>(0.6, 0.5, 0.4)</explosionColorEdge>
+    <soundExplosion>400mm_HUGE_artillerry_explosion</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+  </DamageDef>
+
+  <DamageDef Name="125_rifle_Hit">
+    <defName>125_rifle_Bullet</defName>
+    <label>12.5mm步枪弹</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been shot to death.</deathMessage>
+    <hediff>Gunshot</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <defaultDamage>70</defaultDamage>
+    <defaultArmorPenetration>0.4</defaultArmorPenetration>
+    <overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
+    <defaultStoppingPower>2</defaultStoppingPower>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <buildingDamageFactor>1.2</buildingDamageFactor>
+  </DamageDef>
+
+  <DamageDef Name="Ultimatum_BombBlast">
+    <defName>Ultimatum_BombBlast</defName>
+    <label>清障专家</label>
+    <canInterruptJobs>false</canInterruptJobs>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>true</isExplosive>
+    <deathMessage>{0} has died in an explosion.</deathMessage>
+    <hediff>Shredded</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <minDamageToFragment>50</minDamageToFragment>
+    <defaultDamage>180</defaultDamage>
+    <defaultStoppingPower>5</defaultStoppingPower>
+    <defaultArmorPenetration>2</defaultArmorPenetration>
+    <buildingDamageFactor>3</buildingDamageFactor>
+    <!-- <plantDamageFactor>2</plantDamageFactor> -->
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastDry</explosionCellFleck>
+    <explosionColorCenter>(254, 243, 201)</explosionColorCenter>
+    <explosionColorEdge>(255, 103, 1)</explosionColorEdge>
+    <soundExplosion>Ultimatum_Explosion_Sound</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+  </DamageDef>
+  <DamageDef>
+    <defName>Bomb_spearDeadlifeDust</defName>
+    <label>爆散死灵尘</label>
+    <externalViolence>true</externalViolence>
+    <isExplosive>true</isExplosive>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <deathMessage>{0} has died in an explosion.</deathMessage>
+    <canInterruptJobs>true</canInterruptJobs>
+    <hediff>Stab</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <minDamageToFragment>50</minDamageToFragment>
+    <defaultArmorPenetration>0.5</defaultArmorPenetration>
+    <hediffSolid>Crack</hediffSolid>
+    <makesBlood>false</makesBlood>
+    <defaultDamage>240</defaultDamage>
+    <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+    <explosionColorEdge>(0.706, 0.839, 0.09, 0.05)</explosionColorEdge>
+    <harmsHealth>false</harmsHealth>
+    <soundExplosion>Explosion_Smoke</soundExplosion>
+    <combatLogRules>Damage_Smoke</combatLogRules>
+  </DamageDef>
+  <!-- <AbilityDef>
+    <defName>Bomb_spearDeadlifeDust</defName>
+    <label>释放死灵尘</label>
+    <description>Release a cloud of dust-like substance that will settle on nearby corpses and raise them as shamblers. The shamblers will only attack your enemies. Deadlife dust is made of nano-scale archites that penetrate and reanimate dead tissue at the cellular level.</description>
+    <iconPath>UI/Abilities/ReleaseDeadlifeDust</iconPath>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <showPsycastEffects>false</showPsycastEffects>
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <hotKey>Misc1</hotKey>
+    <hostile>false</hostile>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <label>release deadlife dust</label>
+      <drawAimPie>false</drawAimPie>
+      <warmupTime>0.5</warmupTime>
+      <violent>false</violent>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+      <soundCast>DeadlifeRelease</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityReleaseGas">
+        <gasType>DeadlifeDust</gasType>
+        <cellsToFill>15</cellsToFill>
+      </li>
+    </comps>
+  </AbilityDef> -->
+</Defs>

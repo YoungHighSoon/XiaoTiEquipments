@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 5.56x45mm bullet -->
+  <RNBullet_556x45_SEAFPenetrator.label>5.56x45mm子弹</RNBullet_556x45_SEAFPenetrator.label>
+  
+  <!-- EN: Sickle plasm -->
+  <RNBullet_SicklePlasm_Rifle.label>“镰刀”激光弹</RNBullet_SicklePlasm_Rifle.label>
+  
+  <!-- EN: AR-23A Liberator Carbine -->
+  <RNGun_AR23ALiberatorCarbine_Rifle.label>AR-23A“解放者”卡宾枪</RNGun_AR23ALiberatorCarbine_Rifle.label>
+  <!-- EN: The AR-23 Liberator is a 5.56x45mm SEAF, gas-operated, magazine-fed assault rifle with a 16.5 in barrel and adjustable stock. Known for its durability and stopping power, it’s a Helldivers favorite for its adaptability in harsh combat conditions. The Mk2 variant features reinforced internals and a quick-swap barrel system. -->
+  <RNGun_AR23ALiberatorCarbine_Rifle.description>便携版“解放者”，该型号设计目的是提升近距离交战的生存能力，射速提高，但散射更广。</RNGun_AR23ALiberatorCarbine_Rifle.description>
+  <!-- EN: stock -->
+  <RNGun_AR23ALiberatorCarbine_Rifle.tools.stock.label>枪托</RNGun_AR23ALiberatorCarbine_Rifle.tools.stock.label>
+  <!-- EN: barrel -->
+  <RNGun_AR23ALiberatorCarbine_Rifle.tools.barrel.label>枪口</RNGun_AR23ALiberatorCarbine_Rifle.tools.barrel.label>
+  <!-- EN: AR-23A Liberator Carbine -->
+  <RNGun_AR23ALiberatorCarbine_Rifle.verbs.Verb_Shoot.label>AR-23A“解放者”卡宾枪</RNGun_AR23ALiberatorCarbine_Rifle.verbs.Verb_Shoot.label>
+  
+  <!-- EN: AR-23 Chaos Liberator -->
+  <RNGun_AR23ChaosLiberator_Rifle.label>AR-23“混沌解放者”</RNGun_AR23ChaosLiberator_Rifle.label>
+  <!-- EN: The AR-23 Liberator (Repainted and renamed by Chaos Divers to "Chaos Liberator") is a 5.56x45mm SEAF, gas-operated, magazine-fed assault rifle with a 16.5 in barrel and adjustable stock. Known for its durability and stopping power, it’s a Helldivers favorite for its adaptability in harsh combat conditions. The Mk2 variant features reinforced internals and a quick-swap barrel system. -->
+  <RNGun_AR23ChaosLiberator_Rifle.description>AR-23“混沌解放者”（由ChaosDivers重新涂装并更名为混沌解放者”）以其耐用性和强大的制动力而闻名，并因其在严酷战斗条件下的适应性而深受绝地潜兵的青睐。</RNGun_AR23ChaosLiberator_Rifle.description>
+  <!-- EN: stock -->
+  <RNGun_AR23ChaosLiberator_Rifle.tools.stock.label>枪托</RNGun_AR23ChaosLiberator_Rifle.tools.stock.label>
+  <!-- EN: barrel -->
+  <RNGun_AR23ChaosLiberator_Rifle.tools.barrel.label>枪管</RNGun_AR23ChaosLiberator_Rifle.tools.barrel.label>
+  <!-- EN: AR-23 Chaos Liberator -->
+  <RNGun_AR23ChaosLiberator_Rifle.verbs.Verb_Shoot.label>AR-23“混沌解放者”</RNGun_AR23ChaosLiberator_Rifle.verbs.Verb_Shoot.label>
+  
+  <!-- EN: AR-23 Liberator -->
+  <RNGun_AR23Liberator_Rifle.label>AR-23“解放者”</RNGun_AR23Liberator_Rifle.label>
+  <!-- EN: The AR-23 Liberator is a 5.56x45mm SEAF, gas-operated, magazine-fed assault rifle with a 16.5 in barrel and adjustable stock. Known for its durability and stopping power, it’s a Helldivers favorite for its adaptability in harsh combat conditions. The Mk2 variant features reinforced internals and a quick-swap barrel system. -->
+  <RNGun_AR23Liberator_Rifle.description>AR-23“解放者”以其耐用性和制动力而闻名，并因其在严酷战斗条件下的适应性而深受绝地潜兵的青睐。</RNGun_AR23Liberator_Rifle.description>
+  <!-- EN: stock -->
+  <RNGun_AR23Liberator_Rifle.tools.stock.label>枪托</RNGun_AR23Liberator_Rifle.tools.stock.label>
+  <!-- EN: barrel -->
+  <RNGun_AR23Liberator_Rifle.tools.barrel.label>枪管</RNGun_AR23Liberator_Rifle.tools.barrel.label>
+  <!-- EN: AR-23 Liberator -->
+  <RNGun_AR23Liberator_Rifle.verbs.Verb_Shoot.label>AR-23“解放者”</RNGun_AR23Liberator_Rifle.verbs.Verb_Shoot.label>
+  
+  <!-- EN: AR-23 Liberator Penetrator -->
+  <RNGun_AR23LiberatorPenetrator_Rifle.label>AR-23P穿甲“解放者”</RNGun_AR23LiberatorPenetrator_Rifle.label>
+  <!-- EN: The AR-23 Liberator Penetrator is a 5.56×45mm SEAF assault rifle modified for increased armor penetration. Featuring a reinforced barrel, tuned gas system, and hardened bolt assembly, the Penetrator trades some fire rate for superior punch-through against medium armor. Field-proven and reliable, it’s a trusted upgrade for Helldivers expecting heavier resistance. -->
+  <RNGun_AR23LiberatorPenetrator_Rifle.description>改装后的AR-23P穿甲“解放者”搭配瞄准镜，可发射穿甲弹，助力使用者击倒装备护甲的目标。</RNGun_AR23LiberatorPenetrator_Rifle.description>
+  <!-- EN: stock -->
+  <RNGun_AR23LiberatorPenetrator_Rifle.tools.stock.label>TODO</RNGun_AR23LiberatorPenetrator_Rifle.tools.stock.label>
+  <!-- EN: barrel -->
+  <RNGun_AR23LiberatorPenetrator_Rifle.tools.barrel.label>TODO</RNGun_AR23LiberatorPenetrator_Rifle.tools.barrel.label>
+  <!-- EN: AR-23 Liberator Penetrator -->
+  <RNGun_AR23LiberatorPenetrator_Rifle.verbs.Verb_Shoot.label>TODO</RNGun_AR23LiberatorPenetrator_Rifle.verbs.Verb_Shoot.label>
+  
+  <!-- EN: LAS-16 Sickle -->
+  <RNGun_LAS16Sickle_Rifle.label>LAS-16“镰刀”</RNGun_LAS16Sickle_Rifle.label>
+  <!-- EN: The LAS-16 Sickle is a high-energy laser rifle designed for precision and sustained fire. It features a compact frame, advanced cooling systems, and adjustable optics for versatility in various combat scenarios. Reliable and efficient, the LAS-16 is a preferred choice for Helldivers facing energy-resistant threats. -->
+  <RNGun_LAS16Sickle_Rifle.description>LAS-16镰刀是一款专为精准射击和持续射击而设计的可瞬间喷射高能激光束的激光步枪。它拥有紧凑的枪身、先进的冷却系统和可调节的光学元件，可在各种战斗场景中灵活运用。LAS-16“镰刀”可靠高效，是绝地潜兵面对轻甲威胁的首选。</RNGun_LAS16Sickle_Rifle.description>
+  <!-- EN: stock -->
+  <RNGun_LAS16Sickle_Rifle.tools.stock.label>枪托</RNGun_LAS16Sickle_Rifle.tools.stock.label>
+  <!-- EN: barrel -->
+  <RNGun_LAS16Sickle_Rifle.tools.barrel.label>枪管</RNGun_LAS16Sickle_Rifle.tools.barrel.label>
+  <!-- EN: LAS-16 Sickle -->
+  <RNGun_LAS16Sickle_Rifle.verbs.Verb_Shoot.label>LAS-16“镰刀”</RNGun_LAS16Sickle_Rifle.verbs.Verb_Shoot.label>
+  
+</LanguageData>

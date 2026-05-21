@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<UseJetPack>Use jump pack</UseJetPack>
+	<UseJetPackDesc>fly to a destination with the jump pack</UseJetPackDesc>
+	<NotEnoughFuelForJetPackDesc>Not to enough fuel</NotEnoughFuelForJetPackDesc>
+	<CurrentFuelAmount>jump pack fuel amount: {0}</CurrentFuelAmount>
+	<RefuelJetPack>Refuel jump pack</RefuelJetPack>
+	<RefuelJetPackDesc>Use chemfuel to refuel jump pack</RefuelJetPackDesc>
+	<EnoughFuelForJetPackDesc>Not enough fuel for the jump pack</EnoughFuelForJetPackDesc>
+
+</LanguageData>

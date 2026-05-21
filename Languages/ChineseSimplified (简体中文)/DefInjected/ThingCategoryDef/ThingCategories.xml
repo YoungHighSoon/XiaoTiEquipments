@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: super AMR -->
+  <RH2SEAF_AMR.label>超级地球AMR</RH2SEAF_AMR.label>
+  
+  <!-- EN: super assault rifle -->
+  <RH2SEAF_AssaultRifle.label>超级地球突击步枪</RH2SEAF_AssaultRifle.label>
+  
+  <!-- EN: super DMR -->
+  <RH2SEAF_DMR.label>超级地球DMR</RH2SEAF_DMR.label>
+  
+  <!-- EN: super melee -->
+  <RH2SEAF_MeleeMain.label>超级地球近战武器</RH2SEAF_MeleeMain.label>
+  
+  <!-- EN: super PDW -->
+  <RH2SEAF_PDWMain.label>超级地球单兵自卫武器</RH2SEAF_PDWMain.label>
+  
+  <!-- EN: super handguns -->
+  <RH2SEAF_Pistols.label>超级地球手枪</RH2SEAF_Pistols.label>
+  
+  <!-- EN: super firearms -->
+  <RH2SEAF_RangedMain.label>超级地球枪械</RH2SEAF_RangedMain.label>
+  
+  <!-- EN: super shotgun -->
+  <RH2SEAF_ShotgunsMain.label>超级地球霰弹枪</RH2SEAF_ShotgunsMain.label>
+  
+  <!-- EN: super support weapons -->
+  <RH2SEAF_SupportMain.label>超级地球支援武器</RH2SEAF_SupportMain.label>
+  
+  <!-- EN: accessories -->
+  <RNApparel_Belts.label>超级地球附件</RNApparel_Belts.label>
+  
+  <!-- EN: body armor -->
+  <RNApparel_BodyArmor.label>超级地球防弹衣</RNApparel_BodyArmor.label>
+  
+  <!-- EN: casual -->
+  <RNApparel_Casual.label>便装</RNApparel_Casual.label>
+  
+  <!-- EN: combat uniform -->
+  <RNApparel_Combat.label>作战服</RNApparel_Combat.label>
+  
+  <!-- EN: formal -->
+  <RNApparel_Formal.label>正装</RNApparel_Formal.label>
+  
+  <!-- EN: Rimmu-Nation apparel -->
+  <RNApparel_Main.label>边缘国度服装</RNApparel_Main.label>
+  
+  <!-- EN: powered armor -->
+  <RNApparel_PoweredArmor.label>动力装甲</RNApparel_PoweredArmor.label>
+  
+  <!-- EN: casual jackets -->
+  <RNApparel_ShellCasual.label>便装夹克O</RNApparel_ShellCasual.label>
+  
+  <!-- EN: combat jackets -->
+  <RNApparel_ShellCombat.label>战斗夹克</RNApparel_ShellCombat.label>
+  
+  <!-- EN: formal jackets -->
+  <RNApparel_ShellFormal.label>正装夹克</RNApparel_ShellFormal.label>
+  
+  <!-- EN: hats -->
+  <RNHeadgear_Hats.label>帽子</RNHeadgear_Hats.label>
+  
+  <!-- EN: helmets -->
+  <RNHeadgear_Helmets.label>头盔</RNHeadgear_Helmets.label>
+  
+  <!-- EN: Rimmu-Nation headgear -->
+  <RNHeadgear_Main.label>边缘国度帽子</RNHeadgear_Main.label>
+  
+  <!-- EN: masks -->
+  <RNHeadgear_Masks.label>面具</RNHeadgear_Masks.label>
+  
+  <!-- EN: powered armor helmets -->
+  <RNHeadgear_PoweredArmorHelmets.label>动力头盔</RNHeadgear_PoweredArmorHelmets.label>
+  
+</LanguageData>
