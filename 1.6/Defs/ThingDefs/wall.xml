@@ -41,7 +41,7 @@
       </li>
     </uiIconPathsStuff>
     <statBases>
-      <MaxHitPoints>1500</MaxHitPoints>
+      <MaxHitPoints>2500</MaxHitPoints>
       <WorkToBuild>250</WorkToBuild>
       <Flammability>0</Flammability>
       <MeditationFocusStrength>0.6</MeditationFocusStrength>
@@ -102,13 +102,15 @@
         </focusTypes>
       </li>
       <li Class="XiaoTiEquipment.CompProperties_BuildingSelfRepair">
-          <repairIntervalTicks>60</repairIntervalTicks>      <!-- 每 1 tick修复一次 -->
-          <repairAmount>600</repairAmount>                     <!-- 每次修复5点HP -->
+          <UsePercentRepair>true</UsePercentRepair>
+          <repairPercent>1</repairPercent>
+          <repairIntervalTicks>60</repairIntervalTicks>
+          <!-- <repairAmount>600</repairAmount> -->
           <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
           <showrepairinfo>false</showrepairinfo>
           <!-- <showRepairEffect>true</showRepairEffect> -->
-          <minRepairCondition>0</minRepairCondition>       <!-- HP低于0%时停止修复 -->
-          <maxRepairCondition>1</maxRepairCondition>      <!-- 修复到100%HP -->
+          <minRepairCondition>0</minRepairCondition>
+          <maxRepairCondition>1</maxRepairCondition>
       </li>
     </comps>
     <damageMultipliers>
@@ -142,9 +144,6 @@
     <repairEffect>ConstructMetal</repairEffect>
     <forceDebugSpawnable>true</forceDebugSpawnable>
     <receivesSignals>true</receivesSignals>
-    <building>
-      <roofCollapseDamageMultiplier>0</roofCollapseDamageMultiplier>
-    </building>
     <damageMultipliers>
       <li>
         <damageDef>Flame</damageDef>
@@ -182,6 +181,12 @@
       <li>BuildingsSpecial</li>
     </thingCategories>
     <minifiedDef>MinifiedThing</minifiedDef>
+    <building>
+      <roofCollapseDamageMultiplier>0</roofCollapseDamageMultiplier>
+      <relatedTerrain>
+        <li>Substructure</li>
+      </relatedTerrain>
+    </building>
     <comps>
       <!-- <li Class="CompProperties_Flickable"/> -->
       <!-- <li Class="CompProperties_Breakdownable"/> -->
@@ -232,6 +237,22 @@
         <!-- <hitPointsRestoreInstantlyAfterCharge>true</hitPointsRestoreInstantlyAfterCharge> -->
         <!-- <startWithMaxHitPoints>true</startWithMaxHitPoints> -->
         <gizmoTipKey>RemoteMechShieldTip</gizmoTipKey>
+      </li>
+      <!-- <li Class="CompProperties_SubstructureFootprint" MayRequire="Ludeon.RimWorld.Odyssey">
+        <radius>58.9</radius>
+      </li> -->
+      <!-- <li Class="CompProperties_Facility" MayRequire="Ludeon.RimWorld.Odyssey">
+          <maxDistance>18.9</maxDistance> 
+      </li> -->
+      <li Class="CompProperties_GravshipFacility" MayRequire="Ludeon.RimWorld.Odyssey">
+        <statOffsets>
+          <SubstructureSupport>1000</SubstructureSupport>
+          <GravshipRange>5</GravshipRange>
+        </statOffsets>
+        <requiresLOS>false</requiresLOS>
+        <maxSimultaneous>8</maxSimultaneous>
+        <maxDistance>18.9</maxDistance>
+        <onlyRequiresLooseConnection>true</onlyRequiresLooseConnection> <!-- Extends the support so may support itself -->
       </li>
     </comps>
     <costList>
@@ -292,8 +313,6 @@
     </thingCategories>
     <minifiedDef>MinifiedThing</minifiedDef>
     <comps>
-      <!-- <li Class="CompProperties_Flickable"/> -->
-      <!-- <li Class="CompProperties_Breakdownable"/> -->
       <li Class="CompProperties_Power">
         <compClass>CompPowerPlant</compClass>
         <basePowerConsumption>-48000</basePowerConsumption>
@@ -305,6 +324,11 @@
             <factor>0.5</factor>
           </li>
         </powerUpgrades>
+      </li>
+      <li Class="XiaoTiEquipment.CompProperties_HeatPusherThermostat">
+        <heatPerSecond>45</heatPerSecond>
+        <heatPerSecond>42</heatPerSecond>
+        <tempTolerance>1</tempTolerance>
       </li>
       <li Class="CompProperties_Styleable" />
       <li Class="CompProperties_Glower">
@@ -331,5 +355,76 @@
     <costList>
       <!-- <ComponentIndustrial>2</ComponentIndustrial> -->
     </costList>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>VoidTemperController</defName>
+    <label>恒温器</label>
+    <description>可以将室内温度控制在一定范围内的建筑</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/Misc/PassiveCooler</texPath>
+      <color>(120,120,120,250)</color>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <allowFlip>false</allowFlip>
+      <addTopAltitudeBias>true</addTopAltitudeBias>
+      <shadowData>
+        <volume>(0.9,0.3,0.9)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0,0.6,0.1)</rect>
+      </damageData>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <pathCost>0</pathCost>
+    <constructEffect>ConstructDirt</constructEffect>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.40</fillPercent>
+    <statBases>
+      <MaxHitPoints>800</MaxHitPoints>
+      <WorkToBuild>800</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+    <costList>
+      <WoodLog>5</WoodLog>
+    </costList>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+    </building>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+    <placeWorkers>
+      <li>PlaceWorker_CoolerSimple</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_TempControl">
+        <energyPerSecond>1</energyPerSecond>
+      </li>
+      <li Class="XiaoTiEquipment.CompProperties_HeatPusherThermostat">
+        <heatPerSecond>45</heatPerSecond>
+        <heatPerSecond>42</heatPerSecond>
+        <tempTolerance>1</tempTolerance>
+      </li>
+      <li Class="XiaoTiEquipment.CompProperties_BuildingSelfRepair">
+        <repairIntervalTicks>600</repairIntervalTicks>
+          <UsePercentRepair>true</UsePercentRepair>
+          <repairPercent>1</repairPercent>
+          <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
+          <showrepairinfo>false</showrepairinfo>
+          <minRepairCondition>0</minRepairCondition>
+          <maxRepairCondition>1</maxRepairCondition>
+      </li>
+    </comps>
+    <designationCategory>Temperature</designationCategory>
+    <designationHotKey>Misc4</designationHotKey>
+    <researchPrerequisites>
+      <li>PassiveCooler</li>
+    </researchPrerequisites>
   </ThingDef>
 </Defs>

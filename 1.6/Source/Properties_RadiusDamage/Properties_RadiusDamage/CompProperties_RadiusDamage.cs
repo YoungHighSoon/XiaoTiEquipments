@@ -10,6 +10,12 @@ namespace XiaoTiEquipment
         public DamageDef damageDef = null; // 伤害类型，如果为null则使用子弹的伤害类型
         public bool ignoreLineOfSight = true; // 是否忽略视线遮挡（无视建筑遮挡）
         public float armorPenetrationMultiplier = 1.0f; // 护甲穿透倍数
+        public int applytimes = 1;
+        public float dmgtoitem = 1.0f;
+        public float dmgtobuilding = 1.0f;
+        public float dmgtoplant = 1.0f;
+        public bool nofriendlyfire = false;
+        public bool onlydmghostile = false;
 
         public CompProperties_RadiusDamage()
         {

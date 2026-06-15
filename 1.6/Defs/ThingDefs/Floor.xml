@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <TerrainDef ParentName="FloorBase">
+    <defName>Automent_CleaningFloor</defName>
+    <label>极净地板</label>
+    <renderPrecedence>243</renderPrecedence>
+    <layerable>true</layerable>
+    <description>神奇地板</description>
+    <texturePath>Terrain/Surfaces/Concrete</texturePath>
+    <bridgePropsPath>Terrain/Misc/HeavyBridgeProps</bridgePropsPath>
+    <spaceBridgePropsPath>Terrain/Misc/HeavyBridgeSpaceProps</spaceBridgePropsPath>
+    <color>(0.95, 0.95, 0.95)</color>
+    <pollutionTintColor>(0.95, 0.95, 0.93, 1)</pollutionTintColor>
+    <drawStyleCategory>Floors</drawStyleCategory>
+    <designationCategory>Floors</designationCategory>
+    <pollutionShaderType MayRequire="Ludeon.RimWorld.Biotech">TerrainFadeRoughLinearBurn</pollutionShaderType>
+    <pollutionOverlayTexturePath>Terrain/Surfaces/PollutionFloorSmooth</pollutionOverlayTexturePath>
+    <pollutionColor>(1, 1, 1, 0.8)</pollutionColor>
+    <pollutionOverlayScale>(0.75, 0.75)</pollutionOverlayScale>
+    <canEverTerraform>false</canEverTerraform>
+    <isPaintable>true</isPaintable>
+    <terrainAffordanceNeeded>Walkable</terrainAffordanceNeeded>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>Walkable</li>
+    </affordances>
+    <tags>
+      <li>Ground</li>
+    </tags>
+    <statBases>
+      <WorkToBuild>1600</WorkToBuild>
+      <Cleanliness>2</Cleanliness>
+      <CleaningTimeFactor>0.1</CleaningTimeFactor>
+      <FilthMultiplier>0.05</FilthMultiplier>
+      <Beauty>6</Beauty>
+    </statBases>
+    <costList>
+      <Steel>3</Steel>
+    </costList>
+    <fertility>5.6</fertility>
+    <constructEffect>ConstructMetal</constructEffect>
+    <designationHotKey>Misc4</designationHotKey>
+    <constructionSkillPrerequisite>1</constructionSkillPrerequisite>
+    <uiOrder>2030</uiOrder>
+  </TerrainDef>
+</Defs>

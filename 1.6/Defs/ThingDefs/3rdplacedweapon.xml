@@ -2,6 +2,7 @@
 <Defs>
 	
 	<ThingDef Name="XiaoTiRangedWeaponBase" Abstract="True">
+		<genericMarketSellable>false</genericMarketSellable>
 		<thingClass>ThingWithComps</thingClass>
 		<category>Item</category>
 		<drawerType>MapMeshOnly</drawerType>
@@ -87,7 +88,7 @@
 		<statBases>
 			<!-- <MaxHitPoints>1000</MaxHitPoints> -->
 			<WorkToMake>33000</WorkToMake>
-			<Mass>2</Mass>
+			<Mass>0.5</Mass>
 			<Flammability>0</Flammability>
 			<Beauty>6.6</Beauty>
 			<RangedWeapon_Cooldown>0</RangedWeapon_Cooldown>
@@ -164,7 +165,7 @@
       <!-- <MaxHitPoints>1000</MaxHitPoints> -->
 	  <MarketValue>1500</MarketValue>
       <WorkToMake>60000</WorkToMake>
-      <Mass>1</Mass>
+      <Mass>0.1</Mass>
       <!-- <AccuracyTouch>0.47</AccuracyTouch>
       <AccuracyShort>0.71</AccuracyShort>
       <AccuracyMedium>0.94</AccuracyMedium>
@@ -284,7 +285,7 @@
     </thingCategories> -->
 	<statBases>
 		<WorkToMake>33000</WorkToMake>
-		<Mass>2</Mass>
+		<Mass>0.5</Mass>
 		<!-- <MaxHitPoints>1000</MaxHitPoints> -->
 		<!-- <AccuracyTouch>0.56</AccuracyTouch>
 		<AccuracyShort>0.54</AccuracyShort>

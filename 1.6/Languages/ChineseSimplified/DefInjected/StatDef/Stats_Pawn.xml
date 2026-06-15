@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <XiaoTi_ExtraCaravanCarryCapacity.label>额外载重</XiaoTi_ExtraCaravanCarryCapacity.label>
+  <XiaoTi_ExtraCaravanCarryCapacity.description>这个生物在远行队中能够提供的额外载重。</XiaoTi_ExtraCaravanCarryCapacity.description>
+  <XiaoTi_ExtraCaravanCarryCapacity.formatString>{0}千克</XiaoTi_ExtraCaravanCarryCapacity.formatString>
+</LanguageData>

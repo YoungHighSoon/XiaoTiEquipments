@@ -26,33 +26,35 @@
     <statBases>
       <WorkToMake>12000</WorkToMake>
       <Mass>0.6</Mass>
-      <!-- <AccuracyTouch>0.80</AccuracyTouch>
-      <AccuracyShort>0.85</AccuracyShort>
-      <AccuracyMedium>0.9</AccuracyMedium>
-      <AccuracyLong>0.40</AccuracyLong> -->
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.8</AccuracyShort>
+      <AccuracyMedium>0.7</AccuracyMedium>
+      <AccuracyLong>0.6</AccuracyLong>
       <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+      <MarketValue>450</MarketValue>
+      <SellPriceFactor>4.00</SellPriceFactor>
     </statBases>
     <costList>
       <Steel>25</Steel>
       <!-- <ComponentIndustrial>1</ComponentIndustrial> -->
     </costList>
-    <equippedStatOffsets>
-    </equippedStatOffsets>
+    <!-- <equippedStatOffsets>
+    </equippedStatOffsets> -->
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>125_rifle_Bullet_sidearm</defaultProjectile>
-        <warmupTime>2</warmupTime>
-        <range>30</range>
-		<ticksBetweenBurstShots>38</ticksBetweenBurstShots>
+        <warmupTime>1</warmupTime>
+        <range>36</range>
+		    <ticksBetweenBurstShots>48</ticksBetweenBurstShots>
         <burstShotCount>6</burstShotCount>
         <soundCast>P4PeaceKeeper_Shot</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-		<targetParams>
-			<canTargetLocations>true</canTargetLocations>
-		</targetParams>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
       </li>
     </verbs>
     <tools>
@@ -75,9 +77,10 @@
       </li>
     </tools>
 	
-		<!-- <tradeTags>
-			<li>RN_SEAF_Weapon</li>
-		</tradeTags> -->
+		<tradeTags>
+			<li>WeaponRanged</li>
+      <li>ExoticMisc</li>
+		</tradeTags>
 		
   </ThingDef>  
 

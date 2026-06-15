@@ -20,8 +20,8 @@
     <!-- <buildingDamageFactor>0.8</buildingDamageFactor> -->
     <plantDamageFactor>0.5</plantDamageFactor>
     <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
-    <!-- <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
-    <explosionCellFleck>BlastDry</explosionCellFleck> -->
+    <!-- <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell> -->
+    <explosionCellFleck>BlastDry</explosionCellFleck>
     <explosionColorCenter>(255, 229, 130)</explosionColorCenter>
     <explosionColorEdge>(254, 247, 218)</explosionColorEdge>
     <soundExplosion>AC8_Explode</soundExplosion>
@@ -76,8 +76,8 @@
     <plantDamageFactor>0.1</plantDamageFactor>
     <corpseDamageFactor>0</corpseDamageFactor>
     <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
-    <!-- <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
-    <explosionCellFleck>BlastDry</explosionCellFleck> -->
+    <!-- <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell> -->
+    <explosionCellFleck>BlastDry</explosionCellFleck>
     <explosionColorCenter>(255, 229, 130)</explosionColorCenter>
     <explosionColorEdge>(254, 247, 218)</explosionColorEdge>
     <soundExplosion>HEAT_40mm_BOMB</soundExplosion>

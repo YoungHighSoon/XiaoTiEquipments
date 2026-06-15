@@ -2,19 +2,26 @@
   <PropertyGroup>
     <AssemblyName>XiaoTiEquipment</AssemblyName>
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
   <PropertyGroup>
     <LangVersion>14.0</LangVersion>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
   </PropertyGroup>
-  <PropertyGroup />
-  <ItemGroup />
+  <PropertyGroup>
+    <BaseOutputPath>..\..\..\Assemblies</BaseOutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\..\steam-Luanch\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\Assemblies\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\..\..\steam-Luanch\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

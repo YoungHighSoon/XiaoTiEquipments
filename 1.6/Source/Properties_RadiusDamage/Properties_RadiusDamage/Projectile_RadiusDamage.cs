@@ -111,12 +111,17 @@ namespace XiaoTiEquipment
                 List<Thing> thingsCopy = new List<Thing>(things);
                 foreach (Thing thing in thingsCopy)
                 {
-
                     if (thing == null || thing.Destroyed || thing.def == null)
                         continue;
-                    ApplyDamageToThing(thing, radiusDamage, damageDef, instigator,
-                            armorPenetration, equipmentDef, intendedTarget, props);
-
+                    for (int i = 0; i < props.applytimes; ++i)
+                    {
+                        //if (props.onlydmghostile && (thing.Faction == null || !thing.Faction.HostileTo(Faction.OfPlayer)))
+                        if (props.onlydmghostile && !thing.HostileTo(Faction.OfPlayer))
+                            continue;
+                        if (props.nofriendlyfire && thing.Faction != null && !thing.Faction.HostileTo(Faction.OfPlayer))
+                            continue;
+                        ApplyDamageToThing(thing, radiusDamage, damageDef, instigator, armorPenetration, equipmentDef, intendedTarget, props);
+                    }
                 }
             }
         }
@@ -148,9 +153,21 @@ namespace XiaoTiEquipment
         private void ApplyDamageToThing(Thing thing, int damageAmount, DamageDef damageDef, Thing instigator,
             float armorPenetration, ThingDef equipmentDef, LocalTargetInfo intendedTarget, CompProperties_RadiusDamage props)
         {
-            if (damageAmount <= 0 || thing.Destroyed)
+            if (thing.Destroyed) return;
+            if (thing.def.category == ThingCategory.Item)
+            {
+                damageAmount = Mathf.FloorToInt(damageAmount * props.dmgtoitem);
+            }
+            if (thing is Building)
+            {
+                damageAmount = Mathf.FloorToInt(damageAmount * props.dmgtobuilding);
+            }
+            if (thing is Plant)
+            {
+                damageAmount = Mathf.FloorToInt(damageAmount * props.dmgtoplant);
+            }
+            if (damageAmount <= 0)
                 return;
-
             try
             {
                 // 创建伤害信息

@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <ThingDef ParentName="BaseBullet">
+	<ThingDef Name="XiaoTi_BaseBullet" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <label>bullet</label>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+  </ThingDef>
+
+    <ThingDef ParentName="XiaoTi_BaseBullet">
 		<defName>MG43_Bullet</defName>
 		<label>8mm Mauser bullet</label>
 		<graphicData>
@@ -16,7 +29,7 @@
 		</projectile>
 	</ThingDef>
   <!---->
-	<ThingDef ParentName="BaseBullet">
+	<ThingDef ParentName="XiaoTi_BaseBullet">
 		<defName>125_rifle_Bullet</defName>
 		<label>12.5mm 反器材步枪弹</label>
 		<graphicData>
@@ -33,7 +46,7 @@
 	</ThingDef>
 
 
-	<ThingDef ParentName="BaseBullet">
+	<ThingDef ParentName="XiaoTi_BaseBullet">
 		<defName>XiaoTi_50_mgbullet</defName>
 		<label>.50重机枪弹</label>
 		<graphicData>
@@ -49,34 +62,52 @@
 		</projectile>
 	</ThingDef>
     
-	<ThingDef ParentName="BaseBullet">
+	<ThingDef ParentName="XiaoTi_BaseBullet">
 		<defName>125_rifle_Bullet_sidearm</defName>
 		<label>12.5mm 步枪弹</label>
+		<thingClass>XiaoTiEquipment.ExtraDamageBullet</thingClass>
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Big</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>
 			<damageDef>125_rifle_Bullet</damageDef>
-			<damageAmountBase>32</damageAmountBase>
+			<damageAmountBase>3</damageAmountBase>
 			<armorPenetrationBase>0.75</armorPenetrationBase>
 			<stoppingPower>4.0</stoppingPower>
 			<speed>70</speed>
 		</projectile>
-        
-	</ThingDef><ThingDef ParentName="BaseBullet">
+		<comps>
+			<li Class="XiaoTiEquipment.CompProperties_ExtraDamageBullet">
+				<Damage>5</Damage>
+				<forcedDmg>true</forcedDmg>
+				<onlydmghostile>true</onlydmghostile>
+				<!-- <preferredHitPart>Heart</preferredHitPart> -->
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="XiaoTi_BaseBullet">
 		<defName>762x51mm_Bullet_LMG</defName>
 		<label>7.62x51mm 北约制式子弹</label>
+		<thingClass>XiaoTiEquipment.ExtraDamageBullet</thingClass>
 		<graphicData>
 			<texPath>Things/Projectile/Bullet_Small</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>
 			<damageDef>Bullet</damageDef>
-			<damageAmountBase>21</damageAmountBase>
-			<armorPenetrationBase>0.6</armorPenetrationBase>
+			<damageAmountBase>17</damageAmountBase>
+			<armorPenetrationBase>0.7</armorPenetrationBase>
 			<stoppingPower>4.0</stoppingPower>
 			<speed>90</speed>
 		</projectile>
+		<comps>
+			<li Class="XiaoTiEquipment.CompProperties_ExtraDamageBullet">
+				<Damage>3</Damage>
+				<forcedDmg>false</forcedDmg>
+				<onlydmghostile>true</onlydmghostile>
+				<preferredHitPart>Heart</preferredHitPart>
+			</li>
+		</comps>
 	</ThingDef>
 </Defs>

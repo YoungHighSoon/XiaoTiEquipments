@@ -172,9 +172,9 @@
     </comps>
 	  <modExtensions>
       <li Class="RigorMortis.ModExtension_TaoistArtifact" MayRequire="fxz.moelotlzombie.update">
-      <level>1</level>
-      <energyCost>2</energyCost>
-      <malevolentDamage>50</malevolentDamage>
+      <level>0</level>
+      <energyCost>0</energyCost>
+      <malevolentDamage>200</malevolentDamage>
       <damageCount>4</damageCount>
       <damage>25</damage>
       <killCountRequire>100</killCountRequire>

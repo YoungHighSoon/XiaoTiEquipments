@@ -3,29 +3,6 @@
 
   		<!-- Projectile -->
 
-	<ThingDef ParentName="BaseBullet">
-	<defName>AC8_Proj</defName>
-    <label>穿甲高爆弹</label>
-		<graphicData>
-			<texPath>Things/Projectile/Bullet_Big</texPath>
-			<drawSize>1.4</drawSize>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
-			<color>(255, 255, 255)</color>
-		</graphicData>
-		<thingClass>Projectile_Explosive</thingClass>
-		<projectile>
-			<damageDef>AC8_BOMB</damageDef>
-			<damageAmountBase>120</damageAmountBase>
-			<!-- Use default damage from explosion def -->
-			<explosionRadius>6.0</explosionRadius>
-			<speed>80</speed>
-			<flyOverhead>true</flyOverhead>
-			<stoppingPower>2</stoppingPower>
-			<explosionDamageFalloff>true</explosionDamageFalloff>
-		</projectile>
-	</ThingDef>
-
 	<ThingDef ParentName="XiaoTiRangedWeaponBase">
 		<defName>XiaoTi_AC8_Autocannon</defName>
 		<label>AC-8 机炮</label>
@@ -185,68 +162,6 @@
 		</comps>
 	</ThingDef>
 
-	<!-- <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_Shell_AntigrainWarhead</defName>
-    <label>antigrain warhead</label>
-    <graphicData>
-      <texPath>Things/Projectile/ShellAntigrainWarhead</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-    </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
-    <projectile>
-      <damageDef>BombSuper</damageDef>
-      <speed>41</speed>
-      <explosionRadius>14.9</explosionRadius>
-      <explosionChanceToStartFire>0.22</explosionChanceToStartFire>
-      <explosionDamageFalloff>true</explosionDamageFalloff>
-      <explosionEffect>GiantExplosion</explosionEffect>
-      <flyOverhead>true</flyOverhead>
-      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
-      <soundExplode>Explosion_GiantBomb</soundExplode>
-      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
-      <soundAmbient>MortarRound_Ambient</soundAmbient>
-      <preExplosionSpawnSingleThingDef>CraterMedium</preExplosionSpawnSingleThingDef>
-    </projectile>
-  </ThingDef> -->
-  
-	<ThingDef ParentName="BaseBullet">
-		<defName>400mm_HUGE_Bullet</defName>
-		<label>纯粹恶意</label>
-		<graphicData>
-			<texPath>Things/Projectile/RR_85mm_HEAT</texPath>
-			<drawSize>4.0</drawSize>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
-		</graphicData>
-		<thingClass>XiaoTiEquipment.Projectile_RadiusDamage</thingClass>
-		<projectile>
-			<damageDef>400mm_HUGE_artillerry</damageDef>
-			<explosionRadius>36.0</explosionRadius>
-			<speed>45</speed>
-			<explosionChanceToStartFire>1</explosionChanceToStartFire>
-			<screenShakeFactor>1.5</screenShakeFactor>
-			<explosionDamageFalloff>true</explosionDamageFalloff>
-			<explosionEffect>GiantExplosion</explosionEffect>
-			<flyOverhead>true</flyOverhead>
-			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
-			<soundExplode>Explosion_GiantBomb</soundExplode>
-			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
-			<soundAmbient>MortarRound_Ambient</soundAmbient>
-			<preExplosionSpawnSingleThingDef>CraterMedium</preExplosionSpawnSingleThingDef>
-			<!-- <projectileClass>XiaoTiEquipment.Projectile_RadiusDamage</projectileClass> -->
-		</projectile>
-        <comps>
-            <li Class="XiaoTiEquipment.CompProperties_RadiusDamage">
-                <radius>24.0</radius>                       <!-- 伤害半径：2.5格 -->
-                <damageMultiplier>1</damageMultiplier>   <!-- 半径伤害为子弹基础伤害的50% -->
-                <damageDef>Blunt</damageDef>              <!-- 使用子弹伤害类型，可改为其他伤害类型如Bomb -->
-                <!-- <ignoreLineOfSight>true</ignoreLineOfSight> -->
-                <armorPenetrationMultiplier>1.0</armorPenetrationMultiplier> <!-- 护甲穿透倍数 -->
-            </li>
-        </comps>
-	</ThingDef>
-
   <ThingDef ParentName="XiaoTiRangedWeaponBase">
 		<defName>GR8_400mm_RecoillessRifle</defName>
 		<label>GR8 400MM 巨型肩抗式迫击炮</label>
@@ -262,7 +177,7 @@
 		<statBases>
 			<!-- <MarketValue>200</MarketValue> -->
 			<WorkToMake>5000</WorkToMake>
-			<Mass>1.75</Mass>
+			<Mass>0.75</Mass>
 			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
 		</statBases>
 		<techLevel>Industrial</techLevel>
@@ -328,29 +243,6 @@
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_Ultimatum_Bomb</defName>
-		<label>大型榴弹</label>
-		<graphicData>
-			<texPath>Things/Projectile/GP-31_Ultimatum_Projectile</texPath>
-			<drawSize>1.50</drawSize>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
-			<color>(255, 255, 255)</color>
-		</graphicData>
-		<thingClass>Projectile_Explosive</thingClass>
-		<projectile>
-			<damageDef>Ultimatum_BombBlast</damageDef>
-			<!-- Use default damage from explosion def -->
-			<explosionRadius>8</explosionRadius>
-			<speed>30</speed>
-			<flyOverhead>true</flyOverhead>
-			<damageAmountBase>320</damageAmountBase>
-			<stoppingPower>6</stoppingPower>
-			<armorPenetrationBase>1.0</armorPenetrationBase>
-		</projectile>
-	</ThingDef>
-
 	<ThingDef ParentName="XiaoTiRangedWeaponBase">
 		<defName>G31_Ultimatum_AVRE</defName>
 		<label>G-31 清障专家</label>
@@ -367,7 +259,7 @@
 		<statBases>
 			<!-- <MarketValue>1250</MarketValue> -->
 			<WorkToMake>48000</WorkToMake>
-			<Mass>1</Mass>
+			<Mass>0.1</Mass>
 			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
 		</statBases>
 		<techLevel>Industrial</techLevel>
@@ -398,7 +290,7 @@
 				<warmupTime>2</warmupTime>
 				<ai_AvoidFriendlyFireRadius>12</ai_AvoidFriendlyFireRadius>
 				<range>120</range>
-				<minRange>10</minRange>
+				<minRange>9</minRange>
 				<ticksBetweenBurstShots>40</ticksBetweenBurstShots>
 				<burstShotCount>1</burstShotCount>
 				<soundCast>G31_Ultimatum_SHOT</soundCast>
@@ -456,35 +348,7 @@
 		</li>
 		</comps>
   	</ThingDef>
-	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_40mm_Grenade</defName>
-		<label>40x46mm 榴弹炮_死灵弹</label>
-		<graphicData>
-			<texPath>Things/Projectile/LauncherShot</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
-			<color>(248, 202, 116)</color>
-		</graphicData>
-		<thingClass>Projectile_Explosive</thingClass>
-		<!-- <comps>
-		<li Class="CompProperties_Explosive">
-			<explosiveDamageType>DeadlifeDust</explosiveDamageType>
-			<explosiveRadius>8</explosiveRadius>
-			<postExplosionGasType>DeadlifeDust</postExplosionGasType>
-			<wickTicks>60~80</wickTicks>
-		</li>
-		</comps> -->
-		<projectile>
-			<damageDef>Bomb_spearDeadlifeDust</damageDef>
-			<damageAmountBase>60</damageAmountBase>
-			<explosionRadius>12</explosionRadius>
-			<speed>60</speed>
-			<flyOverhead>true</flyOverhead>
-			<stoppingPower>4</stoppingPower>
-      		<postExplosionSpawnThingDef>Grenade_Deadlife_Releasing</postExplosionSpawnThingDef>
-		</projectile>
-	</ThingDef>
-
+	
   	<ThingDef ParentName="XiaoTiRangedWeaponBase">
 		<defName>G21_GrenadeLauncher_DeadlifeDust</defName>
 		<label>G-21 死灵弹发射器</label>
@@ -527,7 +391,7 @@
 		</tradeTags> -->
 		<verbs>
 			<li>
-				<verbClass>Verb_Shoot</verbClass>
+				<verbClass>Verb_LaunchProjectile</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_40mm_Grenade</defaultProjectile>
 				<forcedMissRadius>0.1</forcedMissRadius>

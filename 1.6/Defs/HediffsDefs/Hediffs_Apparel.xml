@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <HediffDef>
+  <HediffDef MayRequire="fxz.moelotlzombie.update">
     <defName>sheildbackpack_SpiritualMeridianActivation</defName>
     <label>Spiritual Meridian Activation</label>
     <description>The character's meridians are influenced by their garment, enhancing the vitality of LotlQi within their body.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <comps>
-      <li Class="Axolotl.HediffCompProperties_LotlQiGain" MayRequire="fxz.moelotlzombie.update">
+      <li Class="Axolotl.HediffCompProperties_LotlQiGain">
         <LotlQiGainOffset>+1.5</LotlQiGainOffset>
       </li>
     </comps>
@@ -29,28 +29,34 @@
         <severityPerDay>0</severityPerDay>
         <showHoursToRecover>false</showHoursToRecover>
       </li>
+      <li Class="XiaoTiHediffComp.HediffComps.HediffCompProperties_ClearMentalState">
+        <intervalTicks>600</intervalTicks>
+        <intervalTicks MayRequire="fxz.moelotlzombie.update">60</intervalTicks>
+        <clearwhenadd>false</clearwhenadd>
+      </li>
     </comps>
       <stages>
         <li>
           <!-- <label>平峰</label> -->
           <hungerRateFactor>0.4</hungerRateFactor>
-          <regeneration>350</regeneration>
+          <regeneration>150</regeneration>
           <statFactors>
             <RestFallRateFactor>0.8</RestFallRateFactor>
-            <RestRateMultiplier>3</RestRateMultiplier>
+            <RestRateMultiplier>1.8</RestRateMultiplier>
 			      <MeleeDodgeChance>2</MeleeDodgeChance>
-            <ArmorRating_Heat>2</ArmorRating_Heat>
-            <IncomingDamageFactor>0.8</IncomingDamageFactor>
+            <!-- <ArmorRating_Heat>2</ArmorRating_Heat> -->
+            <!-- <IncomingDamageFactor>0.8</IncomingDamageFactor> -->
             <Flammability>0</Flammability>
             <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
             <PlantWorkSpeed>2.0</PlantWorkSpeed>
-            <WorkSpeedGlobal>4.0</WorkSpeedGlobal>
+            <WorkSpeedGlobal>2.0</WorkSpeedGlobal>
             <GlobalLearningFactor>16.0</GlobalLearningFactor>
             <PlantHarvestYield>1.75</PlantHarvestYield>
             <MeleeHitChance>6</MeleeHitChance>
             <ButcheryFleshEfficiency>1.5</ButcheryFleshEfficiency>
             <MiningYield>1.5</MiningYield>
-            <MeleeDamageFactor>2</MeleeDamageFactor>
+            <!-- <MeleeDamageFactor>2</MeleeDamageFactor> -->
+            <StaggerDurationFactor>0</StaggerDurationFactor>
           </statFactors>
           <painFactor>0</painFactor>
           <capMods>
@@ -70,6 +76,20 @@
         </li>
       </stages>
   </HediffDef>
+  <ThoughtDef>
+    <defName>GreenPin_Repair</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>GreenPin_Repair</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>接受修复</label>
+        <description>Not Today! ! !</description>
+        <baseMoodEffect>24</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
   <HediffDef>
     <defName>GreenPin_Repair</defName>
     <hediffClass>HediffWithComps</hediffClass>
@@ -82,7 +102,7 @@
     <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_DisappearsDisableable">
-        <disappearsAfterTicks>30000</disappearsAfterTicks> <!-- 0.5 days -->
+        <disappearsAfterTicks>15000</disappearsAfterTicks> <!-- 8 hours -->
         <showRemainingTime>true</showRemainingTime>
       </li>
       <li Class="XiaoTiHediffComp.HediffComps.HediffCompProperties_ClearBadhediff">
@@ -104,7 +124,7 @@
           <painFactor>1.5</painFactor>
           <capMods>
             <li>
-              <capacity>Consciousness</capacity>
+              <capacity>Moving</capacity>
               <offset>-0.35</offset>
             </li>
           </capMods>
@@ -300,15 +320,15 @@
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
-            <offset>-0.45</offset>
+            <offset>-0.35</offset>
           </li>
           <li>
             <capacity>Sight</capacity>
-            <offset>-0.4</offset>
+            <offset>-0.45</offset>
           </li>
           <li>
             <capacity>Moving</capacity>
-            <offset>-0.55</offset>
+            <offset>-0.45</offset>
           </li>
           <li>
             <capacity>Breathing</capacity>
@@ -365,10 +385,10 @@
       </li>
     </stages>
   </HediffDef>
-  <HediffDef>
+  <HediffDef MayRequire="fxz.moelotlzombie.update">
     <defName>XiaoTiEquipment_MalevolentLimiter</defName>
     <label>煞气固锁</label>
-    <description>锁住螈僵的煞气，使其不能超过最大值的70%</description>
+    <description>锁住螈僵的煞气，使其不能超过最大值的45%</description>
     <hediffClass>HediffWithComps</hediffClass>
     <everCurableByItem>true</everCurableByItem>
     <isBad>false</isBad>
@@ -383,7 +403,7 @@
         <!-- <maxMalevolent>1000</maxMalevolent>
         <usePercent>false</usePercent> -->
         <!-- 或百分比模式 -->
-        <capacityPercent>0.7</capacityPercent>
+        <capacityPercent>0.3</capacityPercent>
         <usePercent>true</usePercent>
       </li>
     </comps>

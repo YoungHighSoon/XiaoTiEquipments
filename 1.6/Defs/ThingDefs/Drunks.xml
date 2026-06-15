@@ -27,11 +27,11 @@
 		<rotatable>false</rotatable>
 		<stackLimit>30</stackLimit>
 		<statBases>
-			<MarketValue>49</MarketValue>
+			<MarketValue>36</MarketValue>
 			<Mass>0.1</Mass>
 			<Flammability>0.0</Flammability>
 			<Nutrition>0.15</Nutrition>
-			<SellPriceFactor>1.50</SellPriceFactor>
+			<SellPriceFactor>3.00</SellPriceFactor>
 		</statBases>
 		<ingestible>
 			<foodType>Fluid, Processed, Liquor</foodType>
@@ -199,13 +199,13 @@
     <stackLimit>300</stackLimit>
     <statBases>
 		<Beauty>6</Beauty>
-		<MarketValue>500</MarketValue>
+		<MarketValue>250</MarketValue>
 		<Mass>0.01</Mass>
 		<Flammability>0.0</Flammability>
 		<Nutrition>0.15</Nutrition>
 		<MedicalPotency>1.60</MedicalPotency>
 		<MedicalQualityMax>2.00</MedicalQualityMax>
-		<SellPriceFactor>1</SellPriceFactor>
+		<SellPriceFactor>9.00</SellPriceFactor>
     </statBases>
     <useHitPoints>False</useHitPoints>
 

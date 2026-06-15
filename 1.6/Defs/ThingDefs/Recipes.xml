@@ -36,7 +36,7 @@
       <li>BuildingsProduction</li>
     </thingCategories>
     <statBases>
-      <Mass>50</Mass>
+      <Mass>5</Mass>
     </statBases>
     <interactionCellIcon>DiningChair</interactionCellIcon>
     <comps>
@@ -134,7 +134,11 @@
         <li>Steel_ToMake_Neutroamine</li>
         <li>Steel_ToMake_Gold</li>
         <li>Steel_ToMake_PsychicAmplifier</li>
-        <li>Steel_ToMake_Mechlink</li>
+        <li MayRequire="Ludeon.RimWorld.Biotech">Steel_ToMake_Mechlink</li>
+		<li>Steel_ToMake_Uranium</li>
+		<li>Void_ToMake_MedicineUltratech</li>
+		<li>Steel_ToMake_GoldGodsilk</li>
+		<li MayRequire="miho.fortifiedoutremer">Steel_ToMake_Miho_ExoticMatter</li>
     </recipes>
   </ThingDef>
 
@@ -165,7 +169,69 @@
             <li>XiaoTi_workstationA</li>
         </recipeUsers> -->
     </RecipeDef>
-
+	
+    <RecipeDef>
+		<defName>ToMake_GodGolen_IngotFromSteel</defName>
+		<label>虚空嬗变-神金</label>
+		<description>虚空嬗变-神金</description>
+		<jobString>虚空嬗变-神金</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>400</workAmount>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<!-- <fixedIngredientFilter>
+			<thingDefs>
+				<li>GodGolen_Ingot</li>
+			</thingDefs>
+		</fixedIngredientFilter> -->
+		<products>
+			<GodGolen_Ingot>200</GodGolen_Ingot>
+		</products>
+	</RecipeDef>
+    <RecipeDef>
+		<defName>ToMake_SteelFromGodGolen_Ingot</defName>
+		<label>虚空嬗变-钢铁</label>
+		<description>虚空嬗变-钢铁</description>
+		<jobString>虚空嬗变-钢铁</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>400</workAmount>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GodGolen_Ingot</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<!-- <fixedIngredientFilter>
+			<thingDefs>
+				<li>GodGolen_Ingot</li>
+			</thingDefs>
+		</fixedIngredientFilter> -->
+		<products>
+			<Steel>400</Steel>
+		</products>
+	</RecipeDef>
     <RecipeDef ParentName="XiaoTi_VoidToMake">
 		<defName>Steel_ToMake_Plasteel</defName>
 		<label>虚空编造 - 玻璃钢</label>
@@ -189,7 +255,33 @@
 			</li>
 		</ingredients>
 		<products>
-			<Plasteel>20</Plasteel>
+			<Plasteel>40</Plasteel>
+		</products>
+	</RecipeDef>
+    <RecipeDef ParentName="XiaoTi_VoidToMake">
+		<defName>Steel_ToMake_GoldGodsilk</defName>
+		<label>虚空编造 - 神金纤维</label>
+		<description>编造神金纤维</description>
+		<jobString>编造神金纤维</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>800</workAmount>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<Resource_GodGolen_Silk>200</Resource_GodGolen_Silk>
 		</products>
 	</RecipeDef>
     <RecipeDef ParentName="XiaoTi_VoidToMake">
@@ -215,7 +307,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<Gold>20</Gold>
+			<Gold>40</Gold>
 		</products>
 	</RecipeDef>
     <RecipeDef ParentName="XiaoTi_VoidToMake">
@@ -244,7 +336,7 @@
 			<PsychicAmplifier>1</PsychicAmplifier>
 		</products>
 	</RecipeDef>
-    <RecipeDef ParentName="XiaoTi_VoidToMake">
+    <RecipeDef ParentName="XiaoTi_VoidToMake" MayRequire="Ludeon.RimWorld.Biotech">
 		<defName>Steel_ToMake_Mechlink</defName>
 		<label>虚空编造 - 机控中枢</label>
 		<description>编造机控中枢</description>
@@ -297,6 +389,32 @@
 		</products>
 	</RecipeDef>
     <RecipeDef ParentName="XiaoTi_VoidToMake">
+		<defName>Steel_ToMake_Jade</defName>
+		<label>虚空编造 - 翡翠</label>
+		<description>编造翡翠</description>
+		<jobString>编造翡翠</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>800</workAmount>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<Jade>20</Jade>
+		</products>
+	</RecipeDef>
+    <RecipeDef ParentName="XiaoTi_VoidToMake">
 		<defName>Steel_ToMake_Neutroamine</defName>
 		<label>虚空编造 - 中性胺</label>
 		<description>编造中性胺</description>
@@ -345,7 +463,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<MedicineUltratech>2</MedicineUltratech>
+			<MedicineUltratech>4</MedicineUltratech>
 		</products>
 	</RecipeDef>
     <RecipeDef ParentName="XiaoTi_VoidToMake">
@@ -371,7 +489,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<Uranium>20</Uranium>
+			<Uranium>25</Uranium>
 		</products>
 	</RecipeDef>
     <RecipeDef ParentName="XiaoTi_VoidToMake" MayRequire="miho.fortifiedoutremer">
