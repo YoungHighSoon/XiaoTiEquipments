@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<LanguageData>
+  <XiaoTi_AcceleratorTorch.label>Accelerator Torch</XiaoTi_AcceleratorTorch.label>
+  <XiaoTi_AcceleratorTorch.description>Accelerates everything around it through spacetime distortion. All objects within range have their CompTick executed additional times at the configured multiplier. Multiple Accelerator Torches' effects stack (up to 16× total).\nIt self-repairs every second.</XiaoTi_AcceleratorTorch.description>
+</LanguageData>

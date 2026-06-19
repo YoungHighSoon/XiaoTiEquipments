@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>XiaoTiEquipment</RootNamespace>
     <AssemblyName>Properties_RadiusDamage</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,10 +46,16 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\..\..\..\..\steam-Luanch\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="XiaoTiEquipment, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Assemblies\Debug\net48\XiaoTiEquipment.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompProperties_RadiusDamage.cs" />
+    <Compile Include="CompProperties_ExtraDamageBullet.cs" />
     <Compile Include="CompRadiusDamage.cs" />
+    <Compile Include="ExtraDamageBullet.cs" />
     <Compile Include="Projectile_RadiusDamage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

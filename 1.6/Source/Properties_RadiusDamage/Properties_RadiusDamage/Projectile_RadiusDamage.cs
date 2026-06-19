@@ -1,69 +1,45 @@
-using RimWorld;
 using System;
 using System.Collections.Generic;
+using RimWorld;
 using UnityEngine;
 using Verse;
-using Verse.Noise;
 
 namespace XiaoTiEquipment
 {
     public class Projectile_RadiusDamage : Projectile_Explosive
     {
         private CompProperties_RadiusDamage cachedCompProps = null;
+        private HashSet<Thing> _radiusThings = new HashSet<Thing>();
 
-        private CompProperties_RadiusDamage RadiusDamageProps
+        private CompProperties_RadiusDamage Props
         {
             get
             {
                 if (cachedCompProps == null)
-                {
-                    // 从子弹的ThingDef中获取组件属性
-                    var comp = def.GetCompProperties<CompProperties_RadiusDamage>();
-                    cachedCompProps = comp;
-                }
+                    cachedCompProps = def.GetCompProperties<CompProperties_RadiusDamage>();
                 return cachedCompProps;
             }
-        }
-        public static void MakePowerBeamMote(IntVec3 cell, Map map)
-        {
-            Mote obj = (Mote)ThingMaker.MakeThing(ThingDefOf.Mote_PowerBeam);
-            obj.exactPosition = cell.ToVector3Shifted();
-            obj.Scale = 45f;
-            obj.rotationRate = 1.2f;
-            GenSpawn.Spawn(obj, cell, map);
-        }
-        public void Explosioneffecter(IntVec3 cell, Map map, CompProperties_RadiusDamage props)
-        {
-            if (map == null || !cell.InBounds(map)) return;
-            //MakePowerBeamMote(cell, map);
-            FleckMaker.Static(cell.ToVector3Shifted(), map, FleckDefOf.ExplosionFlash, props.radius);
-            Effecter effecter = EffecterDefOf.Vaporize_Heatwave.Spawn();
-            effecter.Trigger(new TargetInfo(cell, map), TargetInfo.Invalid);
-            effecter.Cleanup();
         }
 
         protected override void Impact(Thing hitThing, bool blockedByShield = false)
         {
-            // 在执行任何操作前保存所有必要状态，因为子弹可能在基类Impact中被销毁
             Map map = Map;
             IntVec3 position = Position;
             Thing launcher = this.launcher;
-            int damageAmount = DamageAmount;
+            int damageAmount = Mathf.FloorToInt(Props.Damage <= 0 ? DamageAmount : Props.Damage);
             DamageDef projectileDamageDef = DamageDef;
             float armorPenetration = ArmorPenetration;
             ThingDef equipmentDef = this.equipmentDef;
             LocalTargetInfo intendedTarget = this.intendedTarget;
 
-            var radiusProps = RadiusDamageProps;
+            var radiusProps = Props;
 
-            // 如果子弹有半径伤害组件，先执行半径伤害
             if (radiusProps != null)
             {
                 ApplyRadiusDamage(map, position, launcher, damageAmount, projectileDamageDef,
                     armorPenetration, equipmentDef, intendedTarget, radiusProps);
             }
 
-            // 然后调用基类Impact进行正常子弹伤害
             base.Impact(hitThing, blockedByShield);
         }
 
@@ -71,123 +47,107 @@ namespace XiaoTiEquipment
             DamageDef projectileDamageDef, float armorPenetration, ThingDef equipmentDef,
             LocalTargetInfo intendedTarget, CompProperties_RadiusDamage props)
         {
-
-            if (props.radius <= 0f)
+            if (props.radius <= 0f || map == null)
                 return;
 
-            if (map == null)
-                return;
-
-            // 计算伤害
             int radiusDamage = Mathf.RoundToInt(baseDamage * props.damageMultiplier);
             if (radiusDamage <= 0)
                 return;
 
-            // 确定伤害类型
             DamageDef damageDef = props.damageDef ?? projectileDamageDef;
             if (damageDef == null)
                 return;
 
-            // 确定责任方（谁造成的伤害）
             Thing instigator = launcher ?? this;
+            float finalArmorPenetration = Mathf.Max(0f, armorPenetration * props.armorPenetrationMultiplier);
 
-            // 获取半径内的所有单元格
-            IEnumerable<IntVec3> cells = GetRadiusCells(map, position, props.radius, props.ignoreLineOfSight);
-            //爆炸中心特效
-            //Explosioneffecter(position, map, props);
-            // 对每个单元格内的东西造成伤害
-            foreach (IntVec3 cell in cells)
+            // 用HashSet收集半径内所有不重复的Thing，避免跨格重复处理和每格List拷贝
+            _radiusThings.Clear();
+            float effectiveRadius = Mathf.Min(props.radius, GenRadial.MaxRadialPatternRadius - 0.01f);
+            int numCells = GenRadial.NumCellsInRadius(effectiveRadius);
+            for (int i = 0; i < numCells; i++)
             {
-                
+                IntVec3 cell = GenRadial.RadialPattern[i] + position;
                 if (!cell.InBounds(map))
                     continue;
 
-                // 获取单元格内的所有东西（创建副本避免枚举时列表被修改）
                 List<Thing> things = map.thingGrid.ThingsListAt(cell);
-                if (things.Count == 0)
+                for (int j = 0, count = things.Count; j < count; j++)
+                {
+                    Thing thing = things[j];
+                    if (thing != null && !thing.Destroyed)
+                        _radiusThings.Add(thing);
+                }
+            }
+
+            // 对每个去重后的Thing施加伤害
+            foreach (Thing thing in _radiusThings)
+            {
+                if (thing.Destroyed || !thing.Spawned)
                     continue;
 
-                // 创建副本以避免在遍历时列表被修改（当物体被销毁时会从原列表中移除）
-                List<Thing> thingsCopy = new List<Thing>(things);
-                foreach (Thing thing in thingsCopy)
+                if (props.onlydmghostile && !thing.HostileTo(Faction.OfPlayer))
+                    continue;
+                if (props.nofriendlyfire && thing.Faction != null && !thing.Faction.HostileTo(Faction.OfPlayer))
+                    continue;
+
+                int finalDamage = radiusDamage;
+                if (thing.def.category == ThingCategory.Item)
+                    finalDamage = Mathf.FloorToInt(radiusDamage * props.dmgtoitem);
+                else if (thing is Building)
+                    finalDamage = Mathf.FloorToInt(radiusDamage * props.dmgtobuilding);
+                else if (thing is Plant)
+                    finalDamage = Mathf.FloorToInt(radiusDamage * props.dmgtoplant);
+
+                if (finalDamage <= 0)
+                    continue;
+
+                for (int n = 0; n < props.applytimes; n++)
                 {
-                    if (thing == null || thing.Destroyed || thing.def == null)
-                        continue;
-                    for (int i = 0; i < props.applytimes; ++i)
+                    if (thing.Destroyed)
+                        break;
+
+                    try
                     {
-                        //if (props.onlydmghostile && (thing.Faction == null || !thing.Faction.HostileTo(Faction.OfPlayer)))
-                        if (props.onlydmghostile && !thing.HostileTo(Faction.OfPlayer))
-                            continue;
-                        if (props.nofriendlyfire && thing.Faction != null && !thing.Faction.HostileTo(Faction.OfPlayer))
-                            continue;
-                        ApplyDamageToThing(thing, radiusDamage, damageDef, instigator, armorPenetration, equipmentDef, intendedTarget, props);
+                        DamageInfo dinfo = new DamageInfo(
+                            def: damageDef,
+                            amount: finalDamage,
+                            armorPenetration: finalArmorPenetration,
+                            instigator: instigator,
+                            hitPart: null,
+                            weapon: equipmentDef,
+                            category: DamageInfo.SourceCategory.ThingOrUnknown,
+                            intendedTarget: intendedTarget.Thing
+                        );
+
+                        if (thing is Pawn pawn)
+                        {
+                            if (Props.forcedDmg)
+                            {
+                                XiaoTiDoDamage.ApplyDamage(thing, damageDef, finalDamage, 999.0f, Props.preferredHitPart);
+                            }
+                            else if(Props.preferredHitPart != null)
+                            {
+                                var bodyDef = DefDatabase<BodyPartDef>.GetNamed(Props.preferredHitPart, errorOnFail: false);
+                                thing.TakeDamage(bodyDef != null
+                                    ? dinfo.WithPreferredPart(pawn, bodyDef)
+                                    : dinfo);
+                            }
+                            else
+                            {
+                                thing.TakeDamage(dinfo);
+                            }
+                        }
+                        else
+                        {
+                            thing.TakeDamage(dinfo);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Error($"Error applying radius damage to {thing}: {ex}");
                     }
                 }
-            }
-        }
-
-        private IEnumerable<IntVec3> GetRadiusCells(Map map, IntVec3 center, float radius, bool ignoreLineOfSight)
-        {
-            if (map == null)
-                yield break;
-
-            if (ignoreLineOfSight)
-            {
-                // 无视视线遮挡，直接使用圆形区域
-                foreach (IntVec3 cell in GenRadial.RadialCellsAround(center, radius, true))
-                {
-                    yield return cell;
-                }
-            }
-            else
-            {
-                // 如果需要考虑视线遮挡，可以使用原版的爆炸逻辑
-                // 这里简化处理，仍然使用圆形区域
-                foreach (IntVec3 cell in GenRadial.RadialCellsAround(center, radius, true))
-                {
-                    yield return cell;
-                }
-            }
-        }
-
-        private void ApplyDamageToThing(Thing thing, int damageAmount, DamageDef damageDef, Thing instigator,
-            float armorPenetration, ThingDef equipmentDef, LocalTargetInfo intendedTarget, CompProperties_RadiusDamage props)
-        {
-            if (thing.Destroyed) return;
-            if (thing.def.category == ThingCategory.Item)
-            {
-                damageAmount = Mathf.FloorToInt(damageAmount * props.dmgtoitem);
-            }
-            if (thing is Building)
-            {
-                damageAmount = Mathf.FloorToInt(damageAmount * props.dmgtobuilding);
-            }
-            if (thing is Plant)
-            {
-                damageAmount = Mathf.FloorToInt(damageAmount * props.dmgtoplant);
-            }
-            if (damageAmount <= 0)
-                return;
-            try
-            {
-                // 创建伤害信息
-                DamageInfo dinfo = new DamageInfo(
-                    def: damageDef,
-                    amount: damageAmount,
-                    armorPenetration: Mathf.Max(0f, armorPenetration * props.armorPenetrationMultiplier),
-                    instigator: instigator,
-                    hitPart: null,
-                    weapon: equipmentDef,
-                    category: DamageInfo.SourceCategory.ThingOrUnknown,
-                    intendedTarget: intendedTarget.Thing
-                );
-
-                // 应用伤害
-                thing.TakeDamage(dinfo);
-            }
-            catch (Exception ex)
-            {
-                Log.Error($"Error applying radius damage to {thing}: {ex}");
             }
         }
     }

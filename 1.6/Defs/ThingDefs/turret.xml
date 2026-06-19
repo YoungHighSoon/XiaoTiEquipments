@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <ThingDef ParentName="BuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>XiaoTi_Light_GuardTurret</defName>
     <label>LWT-小型野战机枪塔</label>
     <description>一种小型、短程的便携式自动机枪塔。由于是人工智能来运行无法被直接控制，所以要小心友军误伤。</description>
@@ -41,14 +41,14 @@
     </statBases>
     <tickerType>Normal</tickerType>
     <comps>
-      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Forbiddable" />
       <li Class="XiaoTiEquipment.CompProperties_BuildingSelfRepair">
-          <repairIntervalTicks>30</repairIntervalTicks>
-          <repairAmount>8</repairAmount>
-          <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
-          <showrepairinfo>false</showrepairinfo>
-          <minRepairCondition>0</minRepairCondition>
-          <maxRepairCondition>1</maxRepairCondition>
+        <repairIntervalTicks>30</repairIntervalTicks>
+        <repairAmount>8</repairAmount>
+        <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
+        <showrepairinfo>false</showrepairinfo>
+        <minRepairCondition>0</minRepairCondition>
+        <maxRepairCondition>1</maxRepairCondition>
       </li>
     </comps>
     <damageMultipliers>
@@ -79,8 +79,8 @@
     </placeWorkers>
     <designationHotKey>Misc2</designationHotKey>
   </ThingDef>
- 
-  <ThingDef ParentName="BuildingBase" Name="Guard_AutocannonTurret" Abstract="True"> 
+
+  <ThingDef ParentName="BuildingBase" Name="Guard_AutocannonTurret" Abstract="True">
     <thingClass>XiaoTiEquipment.TurretCanForcedTarget</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <drawHighlight>true</drawHighlight>
@@ -100,7 +100,7 @@
     </graphicData>
     <uiIconPath>Things/Building/Security/TurretMini_MenuIcon</uiIconPath>
     <uiIconScale>0.90</uiIconScale>
-    <minifiedDef>MinifiedThing</minifiedDef>    
+    <minifiedDef>MinifiedThing</minifiedDef>
     <altitudeLayer>Building</altitudeLayer>
     <stealable>false</stealable>
     <rotatable>false</rotatable>
@@ -133,7 +133,7 @@
       <li>PlaceWorker_TurretTop</li>
       <!-- <li>PlaceWorker_ShowTurretRadius</li> -->
     </placeWorkers>
-    <designationHotKey>Misc3</designationHotKey>    
+    <designationHotKey>Misc3</designationHotKey>
     <uiIconScale>0.95</uiIconScale>
     <damageMultipliers>
       <li>
@@ -159,11 +159,11 @@
     <costStuffCount>1</costStuffCount>
     <comps>
       <li Class="XiaoTiEquipment.CompProperties_BuildingSelfRepair">
-          <repairIntervalTicks>60</repairIntervalTicks>
-          <UsePercentRepair>true</UsePercentRepair>
-          <repairPercent>0.3</repairPercent>
-          <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
-          <showrepairinfo>false</showrepairinfo>
+        <repairIntervalTicks>60</repairIntervalTicks>
+        <UsePercentRepair>true</UsePercentRepair>
+        <repairPercent>0.3</repairPercent>
+        <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
+        <showrepairinfo>false</showrepairinfo>
       </li>
     </comps>
     <building>
@@ -187,11 +187,11 @@
     </costList>
     <comps>
       <li Class="XiaoTiEquipment.CompProperties_BuildingSelfRepair">
-          <repairIntervalTicks>60</repairIntervalTicks>
-           <UsePercentRepair>true</UsePercentRepair>
-           <repairPercent>1</repairPercent>
-          <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
-          <showrepairinfo>false</showrepairinfo>
+        <repairIntervalTicks>60</repairIntervalTicks>
+        <UsePercentRepair>true</UsePercentRepair>
+        <repairPercent>1</repairPercent>
+        <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
+        <showrepairinfo>false</showrepairinfo>
       </li>
     </comps>
     <building>
@@ -199,7 +199,7 @@
       <turretBurstCooldownTime>10</turretBurstCooldownTime>
     </building>
   </ThingDef>
-  
+
   <ThingDef ParentName="Guard_AutocannonTurret">
     <defName>Liberty_Heavy_GuardTurret</defName>
     <label>LHGT - “典礼官”</label>
@@ -212,11 +212,11 @@
     </costList>
     <comps>
       <li Class="XiaoTiEquipment.CompProperties_BuildingSelfRepair">
-          <repairIntervalTicks>60</repairIntervalTicks>
-           <UsePercentRepair>true</UsePercentRepair>
-           <repairPercent>1</repairPercent>
-          <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
-          <showrepairinfo>false</showrepairinfo>
+        <repairIntervalTicks>60</repairIntervalTicks>
+        <UsePercentRepair>true</UsePercentRepair>
+        <repairPercent>1</repairPercent>
+        <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
+        <showrepairinfo>false</showrepairinfo>
       </li>
     </comps>
     <building>

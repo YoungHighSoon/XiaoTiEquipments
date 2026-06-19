@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Verse;
-using RimWorld;
 
 namespace XiaoTiEquipment
 {
@@ -9,7 +8,6 @@ namespace XiaoTiEquipment
         public List<ThingDef> mountedGunDefs;
         public float burstWarmupTime = 0.5f;
         public float burstCooldownTime = -1f;
-        public bool autoAttack = true;
         public bool attackUndrafted = false;
 
         public CompProperties_WearableTurretMount()
@@ -27,9 +25,9 @@ namespace XiaoTiEquipment
             {
                 yield return "mountedGunDefs is null or empty.";
             }
-            if (!typeof(Apparel).IsAssignableFrom(parentDef.thingClass))
+            if (!typeof(ThingWithComps).IsAssignableFrom(parentDef.thingClass))
             {
-                yield return "CompWearableTurretMount can only be added to Apparel.";
+                yield return "CompWearableTurretMount can only be added to ThingWithComps.";
             }
         }
     }

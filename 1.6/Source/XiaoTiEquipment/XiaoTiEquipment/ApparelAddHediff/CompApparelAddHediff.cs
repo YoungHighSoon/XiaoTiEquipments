@@ -28,7 +28,7 @@ namespace XiaoTiEquipment
         public override void Notify_Equipped(Pawn pawn)
         {
             base.Notify_Equipped(pawn);
-
+            if (pawn.Faction != Faction.OfPlayer) return;
             // 获取要添加的hediff列表
             List<HediffDef> hediffs = GetHediffsToAdd();
             if (hediffs.NullOrEmpty())

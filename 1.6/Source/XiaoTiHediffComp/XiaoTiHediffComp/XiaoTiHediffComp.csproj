@@ -63,9 +63,12 @@
   <ItemGroup>
     <Compile Include="HediffComps\CompProperties_ClearBadhediff.cs" />
     <Compile Include="HediffComps\HediffComp_ClearBadhediff.cs" />
+    <Compile Include="HediffComps\CompProperties_ClearMentalState.cs" />
+    <Compile Include="HediffComps\HediffComp_ClearMentalState.cs" />
     <Compile Include="Hediff_Jobgiver\Patch_Tend_ApplyHediff.cs" />
     <Compile Include="MalevolentCap\ComProperties_HediffComp_MalevolentCap.cs" />
     <Compile Include="MalevolentCap\HediffComp_MalevolentCap.cs" />
+    <Compile Include="Patch_MassUtility_ExtraCaravanCapacity.cs" />
     <Compile Include="Patch_Pawn_DeSpawn_Reject.cs" />
     <Compile Include="Patch_Protection_Pawn_KillRefused.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

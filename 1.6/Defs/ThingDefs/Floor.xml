@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <TerrainDef ParentName="FloorBase">
+  <TerrainDef ParentName="FloorBase">
     <defName>Automent_CleaningFloor</defName>
     <label>极净地板</label>
     <renderPrecedence>243</renderPrecedence>

@@ -17,7 +17,7 @@
     <label>配备</label>
     <parent>XiaoTiApparel</parent>
   </ThingCategoryDef>
-    <!-- RH2 Backpack Base -->
+  <!-- RH2 Backpack Base -->
 
   <ThingDef Name="XiaoTi_BackpackBase" ParentName="ApparelNoQualityBase" Abstract="True">
     <recipeMaker>
@@ -28,7 +28,7 @@
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
-				<li>XiaoTi_workstationA</li>
+        <li>XiaoTi_workstationA</li>
       </recipeUsers>
       <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
       <!-- <defaultIngredientFilter>
@@ -54,7 +54,7 @@
     <selectable>True</selectable>
     <pathCost>14</pathCost>
     <useHitPoints>True</useHitPoints>
-	  <techLevel>Industrial</techLevel> 
+    <techLevel>Industrial</techLevel>
     <tradeability>All</tradeability>
     <resourceReadoutPriority>Middle</resourceReadoutPriority>
     <graphicData>
@@ -74,16 +74,16 @@
     <smeltable>true</smeltable>
     <rotatable>false</rotatable>
     <comps>
-      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Forbiddable" />
       <li>
         <compClass>CompColorable</compClass>
       </li>
     </comps>
     <apparel>
       <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
-	    <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <wornGraphicData>
-        <renderUtilityAsPack>true</renderUtilityAsPack>	
+        <renderUtilityAsPack>true</renderUtilityAsPack>
       </wornGraphicData>
       <careIfWornByCorpse>false</careIfWornByCorpse>
       <careIfDamaged>false</careIfDamaged>
@@ -97,7 +97,7 @@
       <!-- <defaultOutfitTags>
         <li>Soldier</li>
       </defaultOutfitTags> -->
-	    <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
     </apparel>
     <!-- <tradeTags>
       <li>XiaoTi_FBackpack</li>
@@ -114,54 +114,86 @@
     <description>SEAF配备的防护罩生成包，以球状护盾包裹佩戴者，抵挡高速射弹。</description>
     <graphicData>
       <texPath>Things/Apparel/Backpack/Shield_Pack/HD2_ShieldBackPack_north</texPath>
-      <graphicClass>Graphic_Single</graphicClass> 	  
-	  <shaderType>CutoutComplex</shaderType>
-	  <drawSize>0.9</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>0.9</drawSize>
     </graphicData>
     <recipeMaker>
       <recipeUsers>
         <li>ElectricSmithy</li>
         <li>FueledSmithy</li>
-				<li>XiaoTi_workstationA</li>
+        <li>XiaoTi_workstationA</li>
       </recipeUsers>
     </recipeMaker>
     <apparel>
       <wornGraphicPath>Things/Apparel/Backpack/Shield_Pack/HD2_ShieldBackPack</wornGraphicPath>
       <wornGraphicData>
         <east>
-          <offset>(-0.30,-0.05)</offset> 
-          <thin><offset>(0.05,0)</offset></thin>
-          <hulk><offset>(-0.1,0)</offset></hulk>
-          <fat><offset>(-0.15,0)</offset></fat>
-		  <female><offset>(0.02,0)</offset></female>
+          <offset>(-0.30,-0.05)</offset>
+          <thin>
+            <offset>(0.05,0)</offset>
+          </thin>
+          <hulk>
+            <offset>(-0.1,0)</offset>
+          </hulk>
+          <fat>
+            <offset>(-0.15,0)</offset>
+          </fat>
+          <female>
+            <offset>(0.02,0)</offset>
+          </female>
         </east>
         <west>
           <offset>(0.30,-0.10)</offset>
-          <thin><offset>(-0.05,0)</offset></thin>
-          <hulk><offset>(0.1,0)</offset></hulk>
-          <fat><offset>(0.15,0)</offset></fat>
-		  <female><offset>(-0.02,0)</offset></female>		  
+          <thin>
+            <offset>(-0.05,0)</offset>
+          </thin>
+          <hulk>
+            <offset>(0.1,0)</offset>
+          </hulk>
+          <fat>
+            <offset>(0.15,0)</offset>
+          </fat>
+          <female>
+            <offset>(-0.02,0)</offset>
+          </female>
         </west>
         <north>
-          <offset>(0,-0.1)</offset> 
-          <thin><offset>(0,0)</offset></thin>
-          <hulk><offset>(0,-0.05)</offset></hulk>
-          <fat><offset>(0,-0.05)</offset></fat>
-        </north>		
-        <male>  <scale>(0.90,0.90)</scale></male>
-        <female><scale>(0.90,0.90)</scale></female>
-        <thin>  <scale>(0.70,0.70)</scale></thin>
-        <hulk>  <scale>(1.0,1.0)</scale></hulk>
-        <fat>   <scale>(1.0,1.0)</scale></fat>
+          <offset>(0,-0.1)</offset>
+          <thin>
+            <offset>(0,0)</offset>
+          </thin>
+          <hulk>
+            <offset>(0,-0.05)</offset>
+          </hulk>
+          <fat>
+            <offset>(0,-0.05)</offset>
+          </fat>
+        </north>
+        <male>
+          <scale>(0.90,0.90)</scale>
+        </male>
+        <female>
+          <scale>(0.90,0.90)</scale>
+        </female>
+        <thin>
+          <scale>(0.70,0.70)</scale>
+        </thin>
+        <hulk>
+          <scale>(1.0,1.0)</scale>
+        </hulk>
+        <fat>
+          <scale>(1.0,1.0)</scale>
+        </fat>
       </wornGraphicData>
       <tags>
-		<!-- <li>RH2_Helldivers_ShieldPack</li>	
+        <!-- <li>RH2_Helldivers_ShieldPack</li>	
 		<li>RH2_Helldivers_Backpack</li>	
 		<li>RH2_Backpack_HD2</li>	 -->
-		    <li>XiaoTiEquipment</li>
+        <li>XiaoTiEquipment</li>
         <li>ApparelTag_Suit_sheildbackpack</li>
       </tags>
-	  <useWornGraphicMask>true</useWornGraphicMask>
+      <useWornGraphicMask>true</useWornGraphicMask>
       <bodyPartGroups>
         <li>FullHead</li>
         <li>Torso</li>
@@ -174,8 +206,8 @@
         <li>Feet</li>
       </bodyPartGroups>
     </apparel>
-	<tickerType>Normal</tickerType>
-  <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
     <statBases>
       <!-- <MaxHitPoints>1000</MaxHitPoints> -->
       <Flammability>0</Flammability>
@@ -183,15 +215,15 @@
       <WorkToMake>12000</WorkToMake>
       <Mass>0.05</Mass>
       <DeteriorationRate>0</DeteriorationRate>
-	    <Insulation_Cold>96</Insulation_Cold>
-	    <Insulation_Heat>48</Insulation_Heat>
+      <Insulation_Cold>96</Insulation_Cold>
+      <Insulation_Heat>48</Insulation_Heat>
       <EquipDelay>0.20</EquipDelay>
-	    <EnergyShieldRechargeRate>3</EnergyShieldRechargeRate>
+      <EnergyShieldRechargeRate>3</EnergyShieldRechargeRate>
       <EnergyShieldEnergyMax>10</EnergyShieldEnergyMax>
       <ArmorRating_Sharp>1.3</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
       <ArmorRating_Heat>2</ArmorRating_Heat>
-			<!-- <StuffEffectMultiplierArmor>0.6</StuffEffectMultiplierArmor> -->
+      <!-- <StuffEffectMultiplierArmor>0.6</StuffEffectMultiplierArmor> -->
     </statBases>
     <equippedStatOffsets>
       <XiaoTi_ExtraCaravanCarryCapacity>300</XiaoTi_ExtraCaravanCarryCapacity>
@@ -203,8 +235,8 @@
       <CaravanBonusSpeedFactor>30</CaravanBonusSpeedFactor>
       <ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
       <RM_MalevolentQiCapacity MayRequire="fxz.moelotlzombie.update">3500</RM_MalevolentQiCapacity>
-	  </equippedStatOffsets>
-		<comps>
+    </equippedStatOffsets>
+    <comps>
       <li Class="XiaoTiEquipment.CompProperties_RangedShieldBelt">
         <bubbleMatPath>Things/Apparel/Backpack/Shield_Pack/YellowShield</bubbleMatPath>
         <shader>Transparent</shader>
@@ -219,8 +251,8 @@
       </li>
       <li Class="XiaoTiEquipment.CompProperties_ApparelAddHediff">
         <hediffsToAdd>
-            <li>Cross_The_Bleach</li>
-            <li MayRequire="fxz.moelotlzombie.update">XiaoTiEquipment_MalevolentLimiter</li>
+          <li>Cross_The_Bleach</li>
+          <li MayRequire="fxz.moelotlzombie.update">XiaoTiEquipment_MalevolentLimiter</li>
         </hediffsToAdd>
         <useHediffInitialSeverity>false</useHediffInitialSeverity>
         <hediffSeverity>0.3</hediffSeverity>
@@ -240,19 +272,19 @@
         <!-- <autoAttack>true</autoAttack> -->
         <attackUndrafted>true</attackUndrafted>
       </li>
-		</comps>
-  <costList>
-    <Plasteel>10</Plasteel>
-    <P4PeaceKeeper>1</P4PeaceKeeper>
-  </costList>
-  <modExtensions>
-    <li Class="XiaoTiEquipment.ModExtension_ExtraBlockedDamages">
-      <extraDamageDefNames>
-        <li>AL_Damage_PsyChic</li>
-        <li>AL_Damage_Void</li>
-      </extraDamageDefNames>
-    </li>
-  </modExtensions>
+    </comps>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <P4PeaceKeeper>1</P4PeaceKeeper>
+    </costList>
+    <modExtensions>
+      <li Class="XiaoTiEquipment.ModExtension_ExtraBlockedDamages">
+        <extraDamageDefNames>
+          <li>AL_Damage_PsyChic</li>
+          <li>AL_Damage_Void</li>
+        </extraDamageDefNames>
+      </li>
+    </modExtensions>
   </ThingDef>
 
 </Defs>

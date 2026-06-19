@@ -10,7 +10,7 @@
 		<anesthetize>false</anesthetize>
 		<workAmount>240</workAmount>
 		<dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
-		<surgeryOutcomeEffect IsNull="True"/>
+		<surgeryOutcomeEffect IsNull="True" />
 		<ingredients>
 			<li>
 				<filter>
@@ -28,149 +28,149 @@
 		</fixedIngredientFilter>
 	</RecipeDef>
 
-    <ThingDef Name="XiaoTi_BenchBase" ParentName="BuildingBase" Abstract="True">
-    <canOverlapZones>false</canOverlapZones>
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-    <thingCategories>
-      <li>BuildingsProduction</li>
-    </thingCategories>
-    <statBases>
-      <Mass>5</Mass>
-    </statBases>
-    <interactionCellIcon>DiningChair</interactionCellIcon>
-    <comps>
-      <li Class="CompProperties_ReportWorkSpeed">
-        <workSpeedStat>WorkTableWorkSpeedFactor</workSpeedStat>
-      </li>
-    </comps>
-    <placeWorkers>
-      <li>PlaceWorker_ReportWorkSpeedPenalties</li>
-    </placeWorkers>
-    <building>
-      <buildingTags>
-        <li>Production</li>
-      </buildingTags>
-    </building>
-  </ThingDef>
+	<ThingDef Name="XiaoTi_BenchBase" ParentName="BuildingBase" Abstract="True">
+		<canOverlapZones>false</canOverlapZones>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<thingCategories>
+			<li>BuildingsProduction</li>
+		</thingCategories>
+		<statBases>
+			<Mass>5</Mass>
+		</statBases>
+		<interactionCellIcon>DiningChair</interactionCellIcon>
+		<comps>
+			<li Class="CompProperties_ReportWorkSpeed">
+				<workSpeedStat>WorkTableWorkSpeedFactor</workSpeedStat>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ReportWorkSpeedPenalties</li>
+		</placeWorkers>
+		<building>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>
+	</ThingDef>
 
-    <ThingDef ParentName="XiaoTi_BenchBase">
-    <defName>XiaoTi_workstationA</defName>
-    <label>虚空制造工作台</label>
-    <description>一种支持你左脚踩右脚上天的设备</description>
-    <thingClass>Building_WorkTable</thingClass>
-    <graphicData>
-      <texPath>Things/Building/Table/VoidTable/VoidTable</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-     <drawSize>(1,1)</drawSize>
-      <damageData>
-        <cornerTL>Damage/Corner</cornerTL>
-        <cornerTR>Damage/Corner</cornerTR>
-        <cornerBL>Damage/Corner</cornerBL>
-        <cornerBR>Damage/Corner</cornerBR>
-      </damageData>
-    </graphicData>
-    <castEdgeShadows>true</castEdgeShadows>
-    <staticSunShadowHeight>0.20</staticSunShadowHeight>
-	
-    <costList>
-      <Steel>75</Steel>
-      <!-- <Plasteel>25</Plasteel>
+	<ThingDef ParentName="XiaoTi_BenchBase">
+		<defName>XiaoTi_workstationA</defName>
+		<label>虚空制造工作台</label>
+		<description>一种支持你左脚踩右脚上天的设备</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Table/VoidTable/VoidTable</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1,1)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<castEdgeShadows>true</castEdgeShadows>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+
+		<costList>
+			<Steel>75</Steel>
+			<!-- <Plasteel>25</Plasteel>
       <ComponentIndustrial>5</ComponentIndustrial> -->
-    </costList>
+		</costList>
 
-    <altitudeLayer>Building</altitudeLayer>
-    <fillPercent>0.75</fillPercent>
-    <useHitPoints>True</useHitPoints>
-    <statBases>
-      <WorkToBuild>2000</WorkToBuild>
-      <MaxHitPoints>2400</MaxHitPoints>
-      <Flammability>0</Flammability>
-      <WorkTableWorkSpeedFactor>1.5</WorkTableWorkSpeedFactor>
-    </statBases>
-    <size>(1,1)</size>
-    <designationCategory>Production</designationCategory>
-    <passability>PassThroughOnly</passability>
-    <pathCost>13</pathCost>
-	<defaultPlacingRot>South</defaultPlacingRot>
-    <hasInteractionCell>True</hasInteractionCell>
-    <interactionCellOffset>(0,0,1)</interactionCellOffset>
-	<interactionCellIcon>Stool</interactionCellIcon>
-    <surfaceType>Item</surfaceType>
-    <inspectorTabs>
-      <li>ITab_Bills</li>
-    </inspectorTabs>
-    <building>
-      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-    </building>
-    <comps>
-      <li Class="XiaoTiEquipment.CompProperties_BuildingSelfRepair">
-          <repairIntervalTicks>600</repairIntervalTicks>
-           <UsePercentRepair>true</UsePercentRepair>
-           <repairPercent>1</repairPercent>
-          <repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
-          <showrepairinfo>false</showrepairinfo>
-      </li>
-      <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_AffectedByFacilities">
-        <linkableFacilities>
-          <li>ToolCabinet</li>
-        </linkableFacilities>
-      </li>
-      <li Class="CompProperties_Breakdownable"/>
-    </comps>
-    <placeWorkers>
-      <li>PlaceWorker_ShowFacilitiesConnections</li>
-    </placeWorkers>
-    <researchPrerequisites>
-      <li>Electricity</li>
-    </researchPrerequisites>
-    <recipes>
-        <li>ToMake_GodGolen_IngotFromSteel</li>
-        <li>Steel_ToMake_Plasteel</li>
-        <li>ToMake_SteelFromGodGolen_Ingot</li>
-        <li>Steel_ToMake_ArcheanSeed</li>
-        <li>Steel_ToMake_Neutroamine</li>
-        <li>Steel_ToMake_Gold</li>
-        <li>Steel_ToMake_PsychicAmplifier</li>
-        <li MayRequire="Ludeon.RimWorld.Biotech">Steel_ToMake_Mechlink</li>
-		<li>Steel_ToMake_Uranium</li>
-		<li>Void_ToMake_MedicineUltratech</li>
-		<li>Steel_ToMake_GoldGodsilk</li>
-		<li MayRequire="miho.fortifiedoutremer">Steel_ToMake_Miho_ExoticMatter</li>
-    </recipes>
-  </ThingDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.75</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToBuild>2000</WorkToBuild>
+			<MaxHitPoints>2400</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<WorkTableWorkSpeedFactor>1.5</WorkTableWorkSpeedFactor>
+		</statBases>
+		<size>(1,1)</size>
+		<designationCategory>Production</designationCategory>
+		<passability>PassThroughOnly</passability>
+		<pathCost>13</pathCost>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,1)</interactionCellOffset>
+		<interactionCellIcon>Stool</interactionCellIcon>
+		<surfaceType>Item</surfaceType>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		</building>
+		<comps>
+			<li Class="XiaoTiEquipment.CompProperties_BuildingSelfRepair">
+				<repairIntervalTicks>600</repairIntervalTicks>
+				<UsePercentRepair>true</UsePercentRepair>
+				<repairPercent>1</repairPercent>
+				<repairOnlyWhenDamaged>true</repairOnlyWhenDamaged>
+				<showrepairinfo>false</showrepairinfo>
+			</li>
+			<li Class="CompProperties_Flickable" />
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
+			<li Class="CompProperties_Breakdownable" />
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>Electricity</li>
+		</researchPrerequisites>
+		<recipes>
+			<li>ToMake_GodGolen_IngotFromSteel</li>
+			<li>Steel_ToMake_Plasteel</li>
+			<li>ToMake_SteelFromGodGolen_Ingot</li>
+			<li>Steel_ToMake_ArcheanSeed</li>
+			<li>Steel_ToMake_Neutroamine</li>
+			<li>Steel_ToMake_Gold</li>
+			<li>Steel_ToMake_PsychicAmplifier</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">Steel_ToMake_Mechlink</li>
+			<li>Steel_ToMake_Uranium</li>
+			<li>Void_ToMake_MedicineUltratech</li>
+			<li>Steel_ToMake_GoldGodsilk</li>
+			<li MayRequire="miho.fortifiedoutremer">Steel_ToMake_Miho_ExoticMatter</li>
+		</recipes>
+	</ThingDef>
 
 
-  <WorkGiverDef>
-    <defName>DoBillMakeVoidItems</defName>
-    <label>虚空编造</label>
-    <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>Crafting</workType>
-    <priorityInType>110</priorityInType>
-    <fixedBillGiverDefs>
-      <li>XiaoTi_workstationA</li>
-    </fixedBillGiverDefs>
-    <verb>craft</verb>
-    <gerund>crafting at</gerund>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-    <prioritizeSustains>true</prioritizeSustains>
-  </WorkGiverDef>
+	<WorkGiverDef>
+		<defName>DoBillMakeVoidItems</defName>
+		<label>虚空编造</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Crafting</workType>
+		<priorityInType>110</priorityInType>
+		<fixedBillGiverDefs>
+			<li>XiaoTi_workstationA</li>
+		</fixedBillGiverDefs>
+		<verb>craft</verb>
+		<gerund>crafting at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
 
-    <RecipeDef Name="XiaoTi_VoidToMake" Abstract="True">
+	<RecipeDef Name="XiaoTi_VoidToMake" Abstract="True">
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<workSkill>Crafting</workSkill>
 		<effectWorking>Smith</effectWorking>
 		<soundWorking>Recipe_Smith</soundWorking>
-        <!-- <recipeUsers>
+		<!-- <recipeUsers>
             <li>XiaoTi_workstationA</li>
         </recipeUsers> -->
-    </RecipeDef>
-	
-    <RecipeDef>
+	</RecipeDef>
+
+	<RecipeDef>
 		<defName>ToMake_GodGolen_IngotFromSteel</defName>
 		<label>虚空嬗变-神金</label>
 		<description>虚空嬗变-神金</description>
@@ -201,7 +201,7 @@
 			<GodGolen_Ingot>200</GodGolen_Ingot>
 		</products>
 	</RecipeDef>
-    <RecipeDef>
+	<RecipeDef>
 		<defName>ToMake_SteelFromGodGolen_Ingot</defName>
 		<label>虚空嬗变-钢铁</label>
 		<description>虚空嬗变-钢铁</description>
@@ -232,7 +232,7 @@
 			<Steel>400</Steel>
 		</products>
 	</RecipeDef>
-    <RecipeDef ParentName="XiaoTi_VoidToMake">
+	<RecipeDef ParentName="XiaoTi_VoidToMake">
 		<defName>Steel_ToMake_Plasteel</defName>
 		<label>虚空编造 - 玻璃钢</label>
 		<description>编造玻璃钢</description>
@@ -258,7 +258,7 @@
 			<Plasteel>40</Plasteel>
 		</products>
 	</RecipeDef>
-    <RecipeDef ParentName="XiaoTi_VoidToMake">
+	<RecipeDef ParentName="XiaoTi_VoidToMake">
 		<defName>Steel_ToMake_GoldGodsilk</defName>
 		<label>虚空编造 - 神金纤维</label>
 		<description>编造神金纤维</description>
@@ -284,7 +284,7 @@
 			<Resource_GodGolen_Silk>200</Resource_GodGolen_Silk>
 		</products>
 	</RecipeDef>
-    <RecipeDef ParentName="XiaoTi_VoidToMake">
+	<RecipeDef ParentName="XiaoTi_VoidToMake">
 		<defName>Steel_ToMake_Gold</defName>
 		<label>虚空编造 - 黄金</label>
 		<description>编造黄金</description>
@@ -310,7 +310,7 @@
 			<Gold>40</Gold>
 		</products>
 	</RecipeDef>
-    <RecipeDef ParentName="XiaoTi_VoidToMake">
+	<RecipeDef ParentName="XiaoTi_VoidToMake">
 		<defName>Steel_ToMake_PsychicAmplifier</defName>
 		<label>虚空编造 - 启灵装置</label>
 		<description>编造启灵装置</description>
@@ -336,7 +336,7 @@
 			<PsychicAmplifier>1</PsychicAmplifier>
 		</products>
 	</RecipeDef>
-    <RecipeDef ParentName="XiaoTi_VoidToMake" MayRequire="Ludeon.RimWorld.Biotech">
+	<RecipeDef ParentName="XiaoTi_VoidToMake" MayRequire="Ludeon.RimWorld.Biotech">
 		<defName>Steel_ToMake_Mechlink</defName>
 		<label>虚空编造 - 机控中枢</label>
 		<description>编造机控中枢</description>
@@ -359,10 +359,10 @@
 			</li>
 		</ingredients>
 		<products>
-		    <Mechlink>1</Mechlink>
+			<Mechlink>1</Mechlink>
 		</products>
 	</RecipeDef>
-    <RecipeDef ParentName="XiaoTi_VoidToMake">
+	<RecipeDef ParentName="XiaoTi_VoidToMake">
 		<defName>Steel_ToMake_ArcheanSeed</defName>
 		<label>虚空编造 - 源壤古树</label>
 		<description>编造源壤古树</description>
@@ -388,7 +388,7 @@
 			<ArcheanSeed>1</ArcheanSeed>
 		</products>
 	</RecipeDef>
-    <RecipeDef ParentName="XiaoTi_VoidToMake">
+	<RecipeDef ParentName="XiaoTi_VoidToMake">
 		<defName>Steel_ToMake_Jade</defName>
 		<label>虚空编造 - 翡翠</label>
 		<description>编造翡翠</description>
@@ -414,7 +414,7 @@
 			<Jade>20</Jade>
 		</products>
 	</RecipeDef>
-    <RecipeDef ParentName="XiaoTi_VoidToMake">
+	<RecipeDef ParentName="XiaoTi_VoidToMake">
 		<defName>Steel_ToMake_Neutroamine</defName>
 		<label>虚空编造 - 中性胺</label>
 		<description>编造中性胺</description>
@@ -440,7 +440,7 @@
 			<Neutroamine>20</Neutroamine>
 		</products>
 	</RecipeDef>
-    <RecipeDef ParentName="XiaoTi_VoidToMake">
+	<RecipeDef ParentName="XiaoTi_VoidToMake">
 		<defName>Void_ToMake_MedicineUltratech</defName>
 		<label>虚空编造 - 闪耀世界医药</label>
 		<description>编造闪耀世界医药</description>
@@ -466,7 +466,7 @@
 			<MedicineUltratech>4</MedicineUltratech>
 		</products>
 	</RecipeDef>
-    <RecipeDef ParentName="XiaoTi_VoidToMake">
+	<RecipeDef ParentName="XiaoTi_VoidToMake">
 		<defName>Steel_ToMake_Uranium</defName>
 		<label>虚空编造 - 铀</label>
 		<description>编造铀</description>
@@ -492,7 +492,7 @@
 			<Uranium>25</Uranium>
 		</products>
 	</RecipeDef>
-    <RecipeDef ParentName="XiaoTi_VoidToMake" MayRequire="miho.fortifiedoutremer">
+	<RecipeDef ParentName="XiaoTi_VoidToMake" MayRequire="miho.fortifiedoutremer">
 		<defName>Steel_ToMake_Miho_ExoticMatter</defName>
 		<label>虚空编造 - 异态秘药*5</label>
 		<description>编造异态秘药</description>

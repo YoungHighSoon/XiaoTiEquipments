@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    
+
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>Gun_Double_Mechine_Turret</defName>
     <label>典礼官</label>
@@ -27,16 +27,16 @@
         <soundCast>MG43_Shoot</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>2</muzzleFlashScale>
-				<hasStandardCommand>true</hasStandardCommand>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
           <canTargetPawns>true</canTargetPawns>
           <canTargetLocations>true</canTargetLocations>
           <canTargetBuildings>true</canTargetBuildings>
         </targetParams>
       </li>
     </verbs>
-  </ThingDef> 
+  </ThingDef>
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>Light_Guard_Turret_Gun</defName>
     <label>轻型防卫机枪</label>
@@ -67,9 +67,9 @@
         <soundCast>M105Stalwart_Shot</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-				<hasStandardCommand>true</hasStandardCommand>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
           <canTargetPawns>true</canTargetPawns>
           <canTargetLocations>true</canTargetLocations>
           <canTargetBuildings>true</canTargetBuildings>
@@ -78,7 +78,7 @@
       </li>
     </verbs>
   </ThingDef>
-  
+
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>Gun_Archar_Turret</defName>
     <label>长臂管辖</label>
@@ -97,7 +97,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <defaultProjectile>Bullet_40MMHEAT_Autocannon</defaultProjectile>
-				<forcedMissRadius>6</forcedMissRadius>
+        <forcedMissRadius>6</forcedMissRadius>
         <!-- <defaultProjectile>Bullet_40MMHEAT_Autocannon</defaultProjectile> -->
         <warmupTime>0</warmupTime>
         <!-- <minRange>2</minRange> -->
@@ -107,11 +107,11 @@
         <soundCast>Shot_40mm_Autocannon</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>12</muzzleFlashScale>
-				<!-- <isMortar>true</isMortar> -->
-				<!-- <hasStandardCommand>true</hasStandardCommand> -->
-				<requireLineOfSight>false</requireLineOfSight>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
+        <!-- <isMortar>true</isMortar> -->
+        <!-- <hasStandardCommand>true</hasStandardCommand> -->
+        <requireLineOfSight>false</requireLineOfSight>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
           <canTargetPawns>true</canTargetPawns>
           <canTargetLocations>true</canTargetLocations>
           <canTargetBuildings>true</canTargetBuildings>
@@ -151,10 +151,10 @@
         <hasStandardCommand>true</hasStandardCommand>
         <requireLineOfSight>false</requireLineOfSight>
         <targetParams>
-            <canTargetLocations>true</canTargetLocations>
-            <canTargetPawns>true</canTargetPawns>
-            <canTargetLocations>true</canTargetLocations>
-            <canTargetBuildings>true</canTargetBuildings>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>true</canTargetPawns>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetBuildings>true</canTargetBuildings>
         </targetParams>
       </li>
     </verbs>
@@ -162,11 +162,12 @@
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>P4PeaceKeeper_turret</defName>
     <label>维和者-自动</label>
-    <description>P-4“维和者”是一款双动式左轮手枪，此随身武器攻击力强大，相当可靠。虽然弹容量只有六发，但其厚重的枪身和高口径弹药使其成为近距离对抗装甲目标的理想之选，受到了那些注重力大砖飞的野蛮火力的老兵的青睐。</description>
+    <description>
+      P-4“维和者”是一款双动式左轮手枪，此随身武器攻击力强大，相当可靠。虽然弹容量只有六发，但其厚重的枪身和高口径弹药使其成为近距离对抗装甲目标的理想之选，受到了那些注重力大砖飞的野蛮火力的老兵的青睐。</description>
     <graphicData>
       <texPath>Things/Weapons/Senator</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>0.70</drawSize>
+      <drawSize>0.70</drawSize>
     </graphicData>
     <soundInteract>RNPickup_R4Senator</soundInteract>
     <statBases>
@@ -182,17 +183,17 @@
         <defaultProjectile>125_rifle_Bullet_sidearm</defaultProjectile>
         <warmupTime>1</warmupTime>
         <range>30</range>
-		    <ticksBetweenBurstShots>36</ticksBetweenBurstShots>
+        <ticksBetweenBurstShots>36</ticksBetweenBurstShots>
         <burstShotCount>6</burstShotCount>
         <soundCast>P4PeaceKeeper_Shot</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
-		<targetParams>
-			<canTargetLocations>true</canTargetLocations>
-		</targetParams>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
       </li>
     </verbs>
-  </ThingDef> 
+  </ThingDef>
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>Hand_Gun_turret_Auto</defName>
     <label>手炮-自动</label>
@@ -200,7 +201,7 @@
     <graphicData>
       <texPath>Things/Weapons/Senator</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>0.70</drawSize>
+      <drawSize>0.70</drawSize>
     </graphicData>
     <soundInteract>RNPickup_R4Senator</soundInteract>
     <statBases>
@@ -221,7 +222,7 @@
         <forcedMissRadius>0.01</forcedMissRadius>
         <warmupTime>1</warmupTime>
         <range>36</range>
-		    <ticksBetweenBurstShots>16</ticksBetweenBurstShots>
+        <ticksBetweenBurstShots>16</ticksBetweenBurstShots>
         <burstShotCount>1</burstShotCount>
         <soundCast>P4PeaceKeeper_Shot</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
@@ -231,7 +232,7 @@
         </targetParams>
       </li>
     </verbs>
-  </ThingDef> 
+  </ThingDef>
   <ThingDef ParentName="BaseWeaponTurret" MayRequire="fxz.moelotlzombie.update">
     <defName>Hand_Gun_turret_malevolent</defName>
     <label>手炮-辟邪</label>
@@ -239,7 +240,7 @@
     <graphicData>
       <texPath>Things/Weapons/Senator</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>0.70</drawSize>
+      <drawSize>0.70</drawSize>
     </graphicData>
     <soundInteract>RNPickup_R4Senator</soundInteract>
     <statBases>
@@ -260,7 +261,7 @@
         <forcedMissRadius>0.01</forcedMissRadius>
         <warmupTime>1</warmupTime>
         <range>36</range>
-		    <ticksBetweenBurstShots>16</ticksBetweenBurstShots>
+        <ticksBetweenBurstShots>16</ticksBetweenBurstShots>
         <burstShotCount>3</burstShotCount>
         <soundCast>P4PeaceKeeper_Shot</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>

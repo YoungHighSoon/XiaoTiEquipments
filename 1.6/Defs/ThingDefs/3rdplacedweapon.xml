@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	
+
 	<ThingDef Name="XiaoTiRangedWeaponBase" Abstract="True">
 		<genericMarketSellable>false</genericMarketSellable>
 		<thingClass>ThingWithComps</thingClass>
@@ -15,7 +15,7 @@
 		<selectable>true</selectable>
 		<rotatable>false</rotatable>
 		<graphicData>
-		<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
 		</graphicData>
 		<allowedArchonexusCount>1</allowedArchonexusCount>
 		<techLevel>Industrial</techLevel>
@@ -52,21 +52,21 @@
 			<unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
 			<researchPrerequisite>Gunsmithing</researchPrerequisite>
 		</recipeMaker>
-    	<stealable>false</stealable>
+		<stealable>false</stealable>
 		<thingCategories>
 			<li>XiaoTiApparel_Weaopn</li>
 		</thingCategories>
 		<comps>
-		<li Class="CompProperties_Biocodable"/>
-		<li Class="CompProperties_Forbiddable"/>
-		<li>
-			<compClass>CompEquippable</compClass>
-		</li>
-		<li Class="CompProperties_Styleable"/>
+			<li Class="CompProperties_Biocodable" />
+			<li Class="CompProperties_Forbiddable" />
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+			<li Class="CompProperties_Styleable" />
 		</comps>
 	</ThingDef>
 
-    <ThingDef ParentName="XiaoTiRangedWeaponBase">
+	<ThingDef ParentName="XiaoTiRangedWeaponBase">
 		<defName>MG43_Machinegun</defName>
 		<label>MG-43 通用机枪</label>
 		<description>MG-43 机枪是世界上第一款通用机枪，由弹链供弹的支援武器，穿甲能力适中。它最适合固定使用，能够以持续火力压制敌方集群。</description>
@@ -77,10 +77,10 @@
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-		<researchPrerequisite>BlowbackOperation</researchPrerequisite>
-		<skillRequirements>
-			<Crafting>2</Crafting>
-		</skillRequirements>
+			<researchPrerequisite>BlowbackOperation</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>2</Crafting>
+			</skillRequirements>
 		</recipeMaker>
 		<!-- <thingCategories>
 		<li>XiaoTiApparel_Weaopn</li>
@@ -127,242 +127,245 @@
 			<li>RN_Helldivers</li>
 		</weaponTags> -->
 		<tools>
-		<li>
-			<label>stock</label>
-			<capacities>
-			<li>Blunt</li>
-			</capacities>
-			<power>37</power>
-			<cooldownTime>1.5</cooldownTime>
-		</li>
-		<li>
-			<label>barrel</label>
-			<capacities>
-			<li>Blunt</li>
-			<li>Poke</li>
-			</capacities>
-			<power>37</power>
-			<cooldownTime>1.5</cooldownTime>
-		</li>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>37</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>37</power>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
 		</tools>
-			<!-- <tradeTags>
+		<!-- <tradeTags>
 				<li>RN_SEAF_Weapon</li>
 			</tradeTags> -->
 	</ThingDef>
 
-  <ThingDef ParentName="XiaoTiRangedWeaponBase">
-    <defName>APW1_AMR_rifle</defName>
-    <label>APW-1 反器材步枪</label>
-    <description>APW-1反器材步枪是一款大口径狙击步枪，它配备可调节光学瞄准镜和强大的穿甲弹，在远程距离可有效对付轻型载具装甲。它性能可靠，用途广泛，是绝地潜兵在作战中的关键武器。</description>
-    <graphicData>
-      <texPath>Things/Weapons/Support/HD2_AMR</texPath>
-	  <drawSize>1.30</drawSize>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>Interact_Rifle</soundInteract>
-	<equippedAngleOffset>40</equippedAngleOffset>
-    <statBases>
-      <!-- <MaxHitPoints>1000</MaxHitPoints> -->
-	  <MarketValue>1500</MarketValue>
-      <WorkToMake>60000</WorkToMake>
-      <Mass>0.1</Mass>
-      <!-- <AccuracyTouch>0.47</AccuracyTouch>
+	<ThingDef ParentName="XiaoTiRangedWeaponBase">
+		<defName>APW1_AMR_rifle</defName>
+		<label>APW-1 反器材步枪</label>
+		<description>
+			APW-1反器材步枪是一款大口径狙击步枪，它配备可调节光学瞄准镜和强大的穿甲弹，在远程距离可有效对付轻型载具装甲。它性能可靠，用途广泛，是绝地潜兵在作战中的关键武器。</description>
+		<graphicData>
+			<texPath>Things/Weapons/Support/HD2_AMR</texPath>
+			<drawSize>1.30</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<statBases>
+			<!-- <MaxHitPoints>1000</MaxHitPoints> -->
+			<MarketValue>1500</MarketValue>
+			<WorkToMake>60000</WorkToMake>
+			<Mass>0.1</Mass>
+			<!-- <AccuracyTouch>0.47</AccuracyTouch>
       <AccuracyShort>0.71</AccuracyShort>
       <AccuracyMedium>0.94</AccuracyMedium>
       <AccuracyLong>0.96</AccuracyLong> -->
-		<Flammability>0</Flammability>
-		<Beauty>6.6</Beauty>
-      <RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
-    </statBases>
-    <equippedStatOffsets>
-      <ShootingAccuracyPawn>24</ShootingAccuracyPawn>
-    </equippedStatOffsets>
-    <!-- <thingCategories>
+			<Flammability>0</Flammability>
+			<Beauty>6.6</Beauty>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>24</ShootingAccuracyPawn>
+		</equippedStatOffsets>
+		<!-- <thingCategories>
 	  <li>XiaoTiApparel_Weaopn</li>
     </thingCategories> -->
-    <stuffCategories>
-      <!-- <li>GodIngot_Metallic</li> -->
-      <li>Metallic</li>
-    </stuffCategories>
-    <costStuffCount>20</costStuffCount>
-    <!-- <costList>
+		<stuffCategories>
+			<!-- <li>GodIngot_Metallic</li> -->
+			<li>Metallic</li>
+		</stuffCategories>
+		<costStuffCount>20</costStuffCount>
+		<!-- <costList>
       <Steel>15</Steel>
       <ComponentIndustrial>1</ComponentIndustrial>
     </costList> -->
-    <recipeMaker>
-      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>3</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>125_rifle_Bullet</defaultProjectile>
-        <warmupTime>0</warmupTime>
-        <range>80</range>
-		<burstShotCount>7</burstShotCount>
-		<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
-		<stopBurstWithoutLos>true</stopBurstWithoutLos>
-        <soundCast>125rifleshoot</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-		<targetParams>
-			<canTargetLocations>true</canTargetLocations>
-		</targetParams>
-      </li>
-    </verbs>
-    <tools>
-      <li>
-        <label>stock</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>30</power>
-        <cooldownTime>0.6</cooldownTime>
-      </li>
-      <li>
-        <label>barrel</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
-        </capacities>
-        <power>37</power>
-        <cooldownTime>0.8</cooldownTime>
-      </li>
-    </tools>
-    <!-- <weaponTags Inherit="False">
+		<recipeMaker>
+			<researchPrerequisite>PrecisionRifling</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>125_rifle_Bullet</defaultProjectile>
+				<warmupTime>0</warmupTime>
+				<range>80</range>
+				<burstShotCount>7</burstShotCount>
+				<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+				<stopBurstWithoutLos>true</stopBurstWithoutLos>
+				<soundCast>125rifleshoot</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>30</power>
+				<cooldownTime>0.6</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>37</power>
+				<cooldownTime>0.8</cooldownTime>
+			</li>
+		</tools>
+		<!-- <weaponTags Inherit="False">
     </weaponTags> -->
 
-	<!-- <tradeTags>
+		<!-- <tradeTags>
 	</tradeTags> -->
-  </ThingDef>
-  <RecipeDef>
-	<defName>ToMake_APW1_AMR_rifle</defName>
-	<label>制作 神金反器材</label>
-	<description>制作 神金反器材</description>
-	<jobString>制作 神金反器材</jobString>
-	<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-	<workSkill>Crafting</workSkill>
-	<effectWorking>Smith</effectWorking>
-	<soundWorking>Recipe_Smith</soundWorking>
-	<allowMixingIngredients>true</allowMixingIngredients>
-	<workAmount>2800</workAmount>
-	<targetCountAdjustment>1</targetCountAdjustment>
-	<ingredients>
-		<li>
-			<filter>
-				<thingDefs>
-					<li>GodGolen_Ingot</li>
-				</thingDefs>
-			</filter>
-			<count>20</count>
-		</li>
-	</ingredients>
-	<products>
-		<APW1_AMR_rifle>1</APW1_AMR_rifle>
-	</products>
-</RecipeDef>
-  <ThingDef ParentName="XiaoTiRangedWeaponBase">
+	</ThingDef>
+	<RecipeDef>
+		<defName>ToMake_APW1_AMR_rifle</defName>
+		<label>制作 神金反器材</label>
+		<description>制作 神金反器材</description>
+		<jobString>制作 神金反器材</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Smith</effectWorking>
+		<soundWorking>Recipe_Smith</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>2800</workAmount>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GodGolen_Ingot</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<products>
+			<APW1_AMR_rifle>1</APW1_AMR_rifle>
+		</products>
+	</RecipeDef>
+	<ThingDef ParentName="XiaoTiRangedWeaponBase">
 		<defName>XiaoTi_MG206_HMG</defName>
 		<label>MG-206 重机枪</label>
-		<description>MG-206重机枪是一款由大口径弹链供弹的支援武器，专为长时间交战提供持续火力而设计。凭借强大的伤害输出和坚固的结构，它擅长压制敌方人群并有效打击装甲目标。但同样用于其威力强大，其武器操纵性与人机功效都只能用灾难来形容</description>
+		<description>
+			MG-206重机枪是一款由大口径弹链供弹的支援武器，专为长时间交战提供持续火力而设计。凭借强大的伤害输出和坚固的结构，它擅长压制敌方人群并有效打击装甲目标。但同样用于其威力强大，其武器操纵性与人机功效都只能用灾难来形容</description>
 		<graphicData>
 			<texPath>Things/Weapons/Support/HD2_HMG</texPath>
 			<drawSize>1.0</drawSize>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
-    <recipeMaker>
-      <researchPrerequisite>GasOperation</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>2</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-    <!-- <thingCategories>
+		<recipeMaker>
+			<researchPrerequisite>GasOperation</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>2</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<!-- <thingCategories>
 	  <li>XiaoTiApparel_Weaopn</li>
     </thingCategories> -->
-	<statBases>
-		<WorkToMake>33000</WorkToMake>
-		<Mass>0.5</Mass>
-		<!-- <MaxHitPoints>1000</MaxHitPoints> -->
-		<!-- <AccuracyTouch>0.56</AccuracyTouch>
+		<statBases>
+			<WorkToMake>33000</WorkToMake>
+			<Mass>0.5</Mass>
+			<!-- <MaxHitPoints>1000</MaxHitPoints> -->
+			<!-- <AccuracyTouch>0.56</AccuracyTouch>
 		<AccuracyShort>0.54</AccuracyShort>
 		<AccuracyMedium>0.37</AccuracyMedium>
 		<AccuracyLong>0.29</AccuracyLong> -->
-		<Flammability>0</Flammability>
-		<Beauty>6.6</Beauty>
-		<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
-	</statBases>
-    <equippedStatOffsets>
-      <ShootingAccuracyPawn>12</ShootingAccuracyPawn>
-    </equippedStatOffsets>
-	<costList>
-		<Steel>15</Steel>
-		<ComponentIndustrial>1</ComponentIndustrial>
-	</costList>
-	<equippedAngleOffset>40</equippedAngleOffset>
-    <verbs>
-		<li>
-			<verbClass>Verb_Shoot</verbClass>
-			<hasStandardCommand>true</hasStandardCommand>
-			<defaultProjectile>XiaoTi_50_mgbullet</defaultProjectile>
-			<warmupTime>0</warmupTime>
-			<range>55</range>
-			<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-			<burstShotCount>16</burstShotCount>
-			<stopBurstWithoutLos>true</stopBurstWithoutLos>
-			<soundCast>XiaoTi_MG206HMGShot</soundCast>
-			<soundCastTail>GunTail_Medium</soundCastTail>
-			<muzzleFlashScale>9</muzzleFlashScale>
-			<!-- <forcedMissRadius>1</forcedMissRadius> -->
-			<targetParams>
-				<canTargetLocations>true</canTargetLocations>
-			</targetParams>
-		</li>
-	</verbs>
+			<Flammability>0</Flammability>
+			<Beauty>6.6</Beauty>
+			<RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>12</ShootingAccuracyPawn>
+		</equippedStatOffsets>
+		<costList>
+			<Steel>15</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>XiaoTi_50_mgbullet</defaultProjectile>
+				<warmupTime>0</warmupTime>
+				<range>55</range>
+				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+				<burstShotCount>16</burstShotCount>
+				<stopBurstWithoutLos>true</stopBurstWithoutLos>
+				<soundCast>XiaoTi_MG206HMGShot</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<!-- <forcedMissRadius>1</forcedMissRadius> -->
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
 		<!-- <weaponTags Inherit="False">
 		</weaponTags> -->
-    <tools>
-      <li>
-        <label>stock</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>42</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-      <li>
-        <label>barrel</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
-        </capacities>
-        <power>49</power>
-        <cooldownTime>2</cooldownTime>
-      </li>
-    </tools>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>42</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>49</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
 		<!-- <tradeTags>
 			<li>RN_SEAF_Weapon</li>
 		</tradeTags> -->
-  </ThingDef>
-  <ThingDef ParentName="XiaoTiRangedWeaponBase">
+	</ThingDef>
+	<ThingDef ParentName="XiaoTiRangedWeaponBase">
 		<defName>Gun_M105_Stalwart_surpport</defName>
 		<label>M-105 盟友</label>
-		<description>M-105“盟友”机枪是一款紧凑型机枪，射速极高。它专为机动性和持续作战而设计，擅长压制成群的轻型敌人，但缺乏装甲穿透力，因此非常适合在长时间交火中进行群体控制。</description>
+		<description>
+			M-105“盟友”机枪是一款紧凑型机枪，射速极高。它专为机动性和持续作战而设计，擅长压制成群的轻型敌人，但缺乏装甲穿透力，因此非常适合在长时间交火中进行群体控制。</description>
 		<graphicData>
 			<texPath>Things/Weapons/Support/Stalwart</texPath>
 			<drawSize>1.0</drawSize>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
-    <recipeMaker>
-      <researchPrerequisite>GasOperation</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>2</Crafting>
-      </skillRequirements>
-    </recipeMaker>
+		<recipeMaker>
+			<researchPrerequisite>GasOperation</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>2</Crafting>
+			</skillRequirements>
+		</recipeMaker>
 		<statBases>
 			<WorkToMake>33000</WorkToMake>
 			<Mass>0.6</Mass>
@@ -377,8 +380,8 @@
 			<!-- <ComponentIndustrial>5</ComponentIndustrial> -->
 		</costList>
 		<equippedAngleOffset>40</equippedAngleOffset>
-		
-    <verbs>
+
+		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
@@ -403,26 +406,26 @@
 			<li>RN_Helldivers_GPMG</li>
 			<li>RN_Helldivers</li> -->
 		</weaponTags>
-    <tools>
-      <li>
-        <label>stock</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>29</power>
-        <cooldownTime>1</cooldownTime>
-      </li>
-      <li>
-        <label>barrel</label>
-        <capacities>
-          <li>Blunt</li>
-          <li>Poke</li>
-        </capacities>
-        <power>26</power>
-        <cooldownTime>0.8</cooldownTime>
-      </li>
-    </tools>
-	<!-- <tradeTags>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>29</power>
+				<cooldownTime>1</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>26</power>
+				<cooldownTime>0.8</cooldownTime>
+			</li>
+		</tools>
+		<!-- <tradeTags>
 	</tradeTags> -->
-  </ThingDef>
+	</ThingDef>
 </Defs>

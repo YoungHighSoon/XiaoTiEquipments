@@ -1,80 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <StuffCategoryDef>
-        <defName>GodIngot_Metallic</defName>
-        <label>神金</label>
-        <noun>metal</noun>
-        <destroySoundSmall>BuildingDestroyed_Metal_Small</destroySoundSmall>
-        <destroySoundMedium>BuildingDestroyed_Metal_Medium</destroySoundMedium>
-        <destroySoundLarge>BuildingDestroyed_Metal_Big</destroySoundLarge>
-    </StuffCategoryDef>
-    
-    <ThingDef ParentName="ResourceBase">
-        <defName>GodGolen_Ingot</defName>
-        <label>神金</label>
-        <description>物如其名</description>
-        <graphicData>
-            <texPath>Things/Item/Resource/Material</texPath>
-            <graphicClass>Graphic_StackCount</graphicClass>
-        </graphicData>
-        <soundInteract>Metal_Drop</soundInteract>
-        <soundDrop>Metal_Drop</soundDrop>
-        <useHitPoints>false</useHitPoints>
-        <healthAffectsPrice>false</healthAffectsPrice>
-        <thingCategories>
-            <li>ResourcesRaw</li>
-        </thingCategories>
-        <burnableByRecipe>false</burnableByRecipe>
-        <smeltable>false</smeltable>
-        <!-- 基础属性 -->
-        <statBases>
-            <!-- <MarketValue>10</MarketValue> -->
-            <Mass>0.001</Mass>
-            <StuffPower_Armor_Sharp>5.0</StuffPower_Armor_Sharp>
-            <SharpDamageMultiplier>5.0</SharpDamageMultiplier>
-            <StuffPower_Armor_Blunt>5.0</StuffPower_Armor_Blunt>
-            <BluntDamageMultiplier>5.0</BluntDamageMultiplier>
-            <StuffPower_Armor_Heat>5.0</StuffPower_Armor_Heat>
-            <StuffPower_Insulation_Cold>50</StuffPower_Insulation_Cold>
-            <StuffPower_Insulation_Heat>50</StuffPower_Insulation_Heat>
-        </statBases>
+  <StuffCategoryDef>
+    <defName>GodIngot_Metallic</defName>
+    <label>神金</label>
+    <noun>metal</noun>
+    <destroySoundSmall>BuildingDestroyed_Metal_Small</destroySoundSmall>
+    <destroySoundMedium>BuildingDestroyed_Metal_Medium</destroySoundMedium>
+    <destroySoundLarge>BuildingDestroyed_Metal_Big</destroySoundLarge>
+  </StuffCategoryDef>
 
-        <!-- 材料特性（核心） -->
-        <stuffProps>
-            <categories>
-                <li>Metallic</li>
-                <li>GodIngot_Metallic</li>
-            </categories>
-            <commonality>0</commonality> <!-- 稀有度，0-1 -->
-            <color>(253,245,95)</color>
-            <stuffAdjective>神金</stuffAdjective> <!-- 形容词形式 -->
-            <appearance>Metal</appearance> <!-- 外观类型 -->
-            <isAirtight>true</isAirtight>
-            <constructEffect>ConstructMetal</constructEffect>
-            <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
-            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
-            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-            <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+  <ThingDef ParentName="ResourceBase">
+    <defName>GodGolen_Ingot</defName>
+    <label>神金</label>
+    <description>物如其名</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Material</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <!-- 基础属性 -->
+    <statBases>
+      <!-- <MarketValue>10</MarketValue> -->
+      <Mass>0.001</Mass>
+      <StuffPower_Armor_Sharp>5.0</StuffPower_Armor_Sharp>
+      <SharpDamageMultiplier>5.0</SharpDamageMultiplier>
+      <StuffPower_Armor_Blunt>5.0</StuffPower_Armor_Blunt>
+      <BluntDamageMultiplier>5.0</BluntDamageMultiplier>
+      <StuffPower_Armor_Heat>5.0</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>50</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>50</StuffPower_Insulation_Heat>
+    </statBases>
 
-            <!-- 属性影响 -->
-            <statFactors>
-                <MaxHitPoints>20</MaxHitPoints>
-                <Beauty>10</Beauty>
-                <Comfort>5.0</Comfort>
-                <Mass>0.01</Mass>
-                <Flammability>0</Flammability>
-                <WorkToMake>0.8</WorkToMake>
-                <WorkToBuild>0.8</WorkToBuild>
-                <RangedWeapon_Cooldown>0.01</RangedWeapon_Cooldown>
-                <MeleeWeapon_CooldownMultiplier>0.3</MeleeWeapon_CooldownMultiplier>
-            </statFactors>
-            <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
-        </stuffProps>
-        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-        <allowedArchonexusCount>80</allowedArchonexusCount>
-    </ThingDef>
-    
-    <ThingDef ParentName="ResourceBase">
+    <!-- 材料特性（核心） -->
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+        <li>GodIngot_Metallic</li>
+      </categories>
+      <commonality>0</commonality> <!-- 稀有度，0-1 -->
+      <color>(253,245,95)</color>
+      <stuffAdjective>神金</stuffAdjective> <!-- 形容词形式 -->
+      <appearance>Metal</appearance> <!-- 外观类型 -->
+      <isAirtight>true</isAirtight>
+      <constructEffect>ConstructMetal</constructEffect>
+      <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+
+      <!-- 属性影响 -->
+      <statFactors>
+        <MaxHitPoints>20</MaxHitPoints>
+        <Beauty>10</Beauty>
+        <Comfort>5.0</Comfort>
+        <Mass>0.01</Mass>
+        <Flammability>0</Flammability>
+        <WorkToMake>0.8</WorkToMake>
+        <WorkToBuild>0.8</WorkToBuild>
+        <RangedWeapon_Cooldown>0.01</RangedWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>0.3</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <allowedArchonexusCount>80</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
     <defName>Resource_GodGolen_Silk</defName>
     <label>神金纤维</label>
     <description>物如其名</description>
@@ -91,36 +91,36 @@
     </thingCategories>
     <useHitPoints>false</useHitPoints>
     <statBases>
-        <Mass>0.001</Mass>
-        <StuffPower_Armor_Sharp>5.0</StuffPower_Armor_Sharp>
-        <StuffPower_Armor_Blunt>5.0</StuffPower_Armor_Blunt>
-        <StuffPower_Armor_Heat>5.0</StuffPower_Armor_Heat>
-        <StuffPower_Insulation_Cold>50</StuffPower_Insulation_Cold>
-        <StuffPower_Insulation_Heat>50</StuffPower_Insulation_Heat>
+      <Mass>0.001</Mass>
+      <StuffPower_Armor_Sharp>5.0</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>5.0</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>5.0</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>50</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>50</StuffPower_Insulation_Heat>
     </statBases>
 
     <burnableByRecipe>false</burnableByRecipe>
     <stuffProps>
-        <categories>
-            <li>Leathery</li>
-            <li>Fabric</li>
-        </categories>
-        <commonality>0</commonality> <!-- 稀有度，0-1 -->
-        <stuffAdjective>神金</stuffAdjective> <!-- 形容词形式 -->
-        <isAirtight>true</isAirtight>
-        <!-- 属性影响 -->
-        <statFactors>
-            <MaxHitPoints>20</MaxHitPoints>
-            <Beauty>10</Beauty>
-            <Comfort>5.0</Comfort>
-            <Mass>0.01</Mass>
-            <Flammability>0</Flammability>
-            <WorkToMake>0.8</WorkToMake>
-            <WorkToBuild>0.8</WorkToBuild>
-            <RangedWeapon_Cooldown>0.01</RangedWeapon_Cooldown>
-            <MeleeWeapon_CooldownMultiplier>0.3</MeleeWeapon_CooldownMultiplier>
-        </statFactors>
-        <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+      <categories>
+        <li>Leathery</li>
+        <li>Fabric</li>
+      </categories>
+      <commonality>0</commonality> <!-- 稀有度，0-1 -->
+      <stuffAdjective>神金</stuffAdjective> <!-- 形容词形式 -->
+      <isAirtight>true</isAirtight>
+      <!-- 属性影响 -->
+      <statFactors>
+        <MaxHitPoints>20</MaxHitPoints>
+        <Beauty>10</Beauty>
+        <Comfort>5.0</Comfort>
+        <Mass>0.01</Mass>
+        <Flammability>0</Flammability>
+        <WorkToMake>0.8</WorkToMake>
+        <WorkToBuild>0.8</WorkToBuild>
+        <RangedWeapon_Cooldown>0.01</RangedWeapon_Cooldown>
+        <MeleeWeapon_CooldownMultiplier>0.3</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
     </stuffProps>
   </ThingDef>
 </Defs>

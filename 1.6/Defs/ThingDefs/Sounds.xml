@@ -1,1014 +1,1015 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <SoundDef>
-    <defName>AC8shoot</defName>  
+  <SoundDef>
+    <defName>AC8shoot</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/Support/AC_shot</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>70</min>        
+        </grains>
+        <volumeRange>
+          <min>70</min>
           <max>85</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>      
+        </pitchRange>
         <paramMappings>
           <li>
-            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <inParam Class="SoundParamSource_CameraAltitude" />
             <outParam Class="SoundParamTarget_PropertyLowPass">
               <filterProperty>Cutoff</filterProperty>
-            </outParam>          
-            <paramUpdateMode>Constant</paramUpdateMode>          
+            </outParam>
+            <paramUpdateMode>Constant</paramUpdateMode>
             <curve>
               <points>
                 <li>
                   <loc>
-                    <x>17.08957</x>                  
+                    <x>17.08957</x>
                     <y>21001.8</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>24.77761</x>                  
+                    <x>24.77761</x>
                     <y>12701.95</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>32.786</x>                  
+                    <x>32.786</x>
                     <y>7168.717</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>45.91975</x>                  
+                    <x>45.91975</x>
                     <y>4270.358</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>66.10088</x>                  
+                    <x>66.10088</x>
                     <y>2557.69</y>
                   </loc>
                 </li>
               </points>
             </curve>
           </li>
-        </paramMappings>      
+        </paramMappings>
         <filters>
           <li Class="SoundFilterLowPass">
-            <cutoffFrequency>10000</cutoffFrequency>          
+            <cutoffFrequency>10000</cutoffFrequency>
             <lowpassResonaceQ>1</lowpassResonaceQ>
           </li>
-        </filters>      
+        </filters>
         <sustainLoop>False</sustainLoop>
       </li>
     </subSounds>
   </SoundDef>
-  
-    <!-- ===================== Autocannon Explosion ========================= -->
+
+  <!-- ===================== Autocannon Explosion ========================= -->
 
   <SoundDef>
-    <defName>AC8_Explode</defName>  
+    <defName>AC8_Explode</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/Support/AC_blast</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>60</min>        
+        </grains>
+        <volumeRange>
+          <min>60</min>
           <max>60</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>                
+        </pitchRange>
         <sustainLoop>False</sustainLoop>
       </li>
-	  
+
     </subSounds>
   </SoundDef>
   <SoundDef>
-    <defName>MG43_Shoot</defName>  
+    <defName>MG43_Shoot</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/Support/MG43_shot</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>30</min>        
+        </grains>
+        <volumeRange>
+          <min>30</min>
           <max>30</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>      
+        </pitchRange>
         <paramMappings>
           <li>
-            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <inParam Class="SoundParamSource_CameraAltitude" />
             <outParam Class="SoundParamTarget_PropertyLowPass">
               <filterProperty>Cutoff</filterProperty>
-            </outParam>          
-            <paramUpdateMode>Constant</paramUpdateMode>          
+            </outParam>
+            <paramUpdateMode>Constant</paramUpdateMode>
             <curve>
               <points>
                 <li>
                   <loc>
-                    <x>17.08957</x>                  
+                    <x>17.08957</x>
                     <y>21001.8</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>24.77761</x>                  
+                    <x>24.77761</x>
                     <y>12701.95</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>32.786</x>                  
+                    <x>32.786</x>
                     <y>7168.717</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>45.91975</x>                  
+                    <x>45.91975</x>
                     <y>4270.358</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>66.10088</x>                  
+                    <x>66.10088</x>
                     <y>2557.69</y>
                   </loc>
                 </li>
               </points>
             </curve>
           </li>
-        </paramMappings>      
+        </paramMappings>
         <filters>
           <li Class="SoundFilterLowPass">
-            <cutoffFrequency>10000</cutoffFrequency>          
+            <cutoffFrequency>10000</cutoffFrequency>
             <lowpassResonaceQ>1</lowpassResonaceQ>
           </li>
-        </filters>      
+        </filters>
         <sustainLoop>False</sustainLoop>
       </li>
     </subSounds>
-  </SoundDef>	
-  
-    	<!-- ===================== HMG ========================= -->
+  </SoundDef>
+
+  <!-- ===================== HMG ========================= -->
   <SoundDef>
-    <defName>RNShot_MG206HMGShot</defName>  
+    <defName>RNShot_MG206HMGShot</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/Support/HMG_shot</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>40</min>        
+        </grains>
+        <volumeRange>
+          <min>40</min>
           <max>40</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>      
+        </pitchRange>
         <paramMappings>
           <li>
-            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <inParam Class="SoundParamSource_CameraAltitude" />
             <outParam Class="SoundParamTarget_PropertyLowPass">
               <filterProperty>Cutoff</filterProperty>
-            </outParam>          
-            <paramUpdateMode>Constant</paramUpdateMode>          
+            </outParam>
+            <paramUpdateMode>Constant</paramUpdateMode>
             <curve>
               <points>
                 <li>
                   <loc>
-                    <x>17.08957</x>                  
+                    <x>17.08957</x>
                     <y>21001.8</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>24.77761</x>                  
+                    <x>24.77761</x>
                     <y>12701.95</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>32.786</x>                  
+                    <x>32.786</x>
                     <y>7168.717</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>45.91975</x>                  
+                    <x>45.91975</x>
                     <y>4270.358</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>66.10088</x>                  
+                    <x>66.10088</x>
                     <y>2557.69</y>
                   </loc>
                 </li>
               </points>
             </curve>
           </li>
-        </paramMappings>      
+        </paramMappings>
         <filters>
           <li Class="SoundFilterLowPass">
-            <cutoffFrequency>10000</cutoffFrequency>          
+            <cutoffFrequency>10000</cutoffFrequency>
             <lowpassResonaceQ>1</lowpassResonaceQ>
           </li>
-        </filters>      
+        </filters>
         <sustainLoop>False</sustainLoop>
       </li>
     </subSounds>
-  </SoundDef>	
+  </SoundDef>
   <!-- ===================== APW ========================= -->
   <SoundDef>
-    <defName>125rifleshoot</defName>  
+    <defName>125rifleshoot</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/Support/AMR_shot</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>60</min>        
+        </grains>
+        <volumeRange>
+          <min>60</min>
           <max>60</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>      
+        </pitchRange>
         <paramMappings>
           <li>
-            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <inParam Class="SoundParamSource_CameraAltitude" />
             <outParam Class="SoundParamTarget_PropertyLowPass">
               <filterProperty>Cutoff</filterProperty>
-            </outParam>          
-            <paramUpdateMode>Constant</paramUpdateMode>          
+            </outParam>
+            <paramUpdateMode>Constant</paramUpdateMode>
             <curve>
               <points>
                 <li>
                   <loc>
-                    <x>17.08957</x>                  
+                    <x>17.08957</x>
                     <y>21001.8</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>24.77761</x>                  
+                    <x>24.77761</x>
                     <y>12701.95</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>32.786</x>                  
+                    <x>32.786</x>
                     <y>7168.717</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>45.91975</x>                  
+                    <x>45.91975</x>
                     <y>4270.358</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>66.10088</x>                  
+                    <x>66.10088</x>
                     <y>2557.69</y>
                   </loc>
                 </li>
               </points>
             </curve>
           </li>
-        </paramMappings>      
+        </paramMappings>
         <filters>
           <li Class="SoundFilterLowPass">
-            <cutoffFrequency>10000</cutoffFrequency>          
+            <cutoffFrequency>10000</cutoffFrequency>
             <lowpassResonaceQ>1</lowpassResonaceQ>
           </li>
-        </filters>      
+        </filters>
         <sustainLoop>False</sustainLoop>
       </li>
     </subSounds>
-  </SoundDef>	
-  	<SoundDef>
-    <defName>Shot_40mm_Autocannon</defName>  
+  </SoundDef>
+  <SoundDef>
+    <defName>Shot_40mm_Autocannon</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>2</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>2</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/Support/new/APW-1</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>60</min>        
+        </grains>
+        <volumeRange>
+          <min>60</min>
           <max>60</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>      
+        </pitchRange>
         <paramMappings>
           <li>
-            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <inParam Class="SoundParamSource_CameraAltitude" />
             <outParam Class="SoundParamTarget_PropertyLowPass">
               <filterProperty>Cutoff</filterProperty>
-            </outParam>          
-            <paramUpdateMode>Constant</paramUpdateMode>          
+            </outParam>
+            <paramUpdateMode>Constant</paramUpdateMode>
             <curve>
               <points>
                 <li>
                   <loc>
-                    <x>17.08957</x>                  
+                    <x>17.08957</x>
                     <y>21001.8</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>24.77761</x>                  
+                    <x>24.77761</x>
                     <y>12701.95</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>32.786</x>                  
+                    <x>32.786</x>
                     <y>7168.717</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>45.91975</x>                  
+                    <x>45.91975</x>
                     <y>4270.358</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>66.10088</x>                  
+                    <x>66.10088</x>
                     <y>2557.69</y>
                   </loc>
                 </li>
               </points>
             </curve>
           </li>
-        </paramMappings>      
+        </paramMappings>
         <filters>
           <li Class="SoundFilterLowPass">
-            <cutoffFrequency>10000</cutoffFrequency>          
+            <cutoffFrequency>10000</cutoffFrequency>
             <lowpassResonaceQ>1</lowpassResonaceQ>
           </li>
-        </filters>      
+        </filters>
         <sustainLoop>False</sustainLoop>
       </li>
     </subSounds>
     <!-- HMG -->
-  </SoundDef><SoundDef>
-    <defName>XiaoTi_MG206HMGShot</defName>  
+  </SoundDef>
+  <SoundDef>
+    <defName>XiaoTi_MG206HMGShot</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/Support/HMG_shot</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>40</min>        
+        </grains>
+        <volumeRange>
+          <min>40</min>
           <max>40</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>      
+        </pitchRange>
         <paramMappings>
           <li>
-            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <inParam Class="SoundParamSource_CameraAltitude" />
             <outParam Class="SoundParamTarget_PropertyLowPass">
               <filterProperty>Cutoff</filterProperty>
-            </outParam>          
-            <paramUpdateMode>Constant</paramUpdateMode>          
+            </outParam>
+            <paramUpdateMode>Constant</paramUpdateMode>
             <curve>
               <points>
                 <li>
                   <loc>
-                    <x>17.08957</x>                  
+                    <x>17.08957</x>
                     <y>21001.8</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>24.77761</x>                  
+                    <x>24.77761</x>
                     <y>12701.95</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>32.786</x>                  
+                    <x>32.786</x>
                     <y>7168.717</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>45.91975</x>                  
+                    <x>45.91975</x>
                     <y>4270.358</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>66.10088</x>                  
+                    <x>66.10088</x>
                     <y>2557.69</y>
                   </loc>
                 </li>
               </points>
             </curve>
           </li>
-        </paramMappings>      
+        </paramMappings>
         <filters>
           <li Class="SoundFilterLowPass">
-            <cutoffFrequency>10000</cutoffFrequency>          
+            <cutoffFrequency>10000</cutoffFrequency>
             <lowpassResonaceQ>1</lowpassResonaceQ>
           </li>
-        </filters>      
+        </filters>
         <sustainLoop>False</sustainLoop>
       </li>
     </subSounds>
   </SoundDef>
 
   <SoundDef>
-    <defName>G31_Ultimatum_SHOT</defName>  
+    <defName>G31_Ultimatum_SHOT</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/Ultimatum_Shot</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>80</min>        
+        </grains>
+        <volumeRange>
+          <min>80</min>
           <max>80</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>      
+        </pitchRange>
         <paramMappings>
           <li>
-            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <inParam Class="SoundParamSource_CameraAltitude" />
             <outParam Class="SoundParamTarget_PropertyLowPass">
               <filterProperty>Cutoff</filterProperty>
-            </outParam>          
-            <paramUpdateMode>Constant</paramUpdateMode>          
+            </outParam>
+            <paramUpdateMode>Constant</paramUpdateMode>
             <curve>
               <points>
                 <li>
                   <loc>
-                    <x>17.08957</x>                  
+                    <x>17.08957</x>
                     <y>21001.8</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>24.77761</x>                  
+                    <x>24.77761</x>
                     <y>12701.95</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>32.786</x>                  
+                    <x>32.786</x>
                     <y>7168.717</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>45.91975</x>                  
+                    <x>45.91975</x>
                     <y>4270.358</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>66.10088</x>                  
+                    <x>66.10088</x>
                     <y>2557.69</y>
                   </loc>
                 </li>
               </points>
             </curve>
           </li>
-        </paramMappings>      
+        </paramMappings>
         <filters>
           <li Class="SoundFilterLowPass">
-            <cutoffFrequency>10000</cutoffFrequency>          
+            <cutoffFrequency>10000</cutoffFrequency>
             <lowpassResonaceQ>1</lowpassResonaceQ>
           </li>
-        </filters>      
+        </filters>
         <sustainLoop>False</sustainLoop>
       </li>
     </subSounds>
-  </SoundDef>	 
+  </SoundDef>
 
   <SoundDef>
-    <defName>Ultimatum_Explosion_Sound</defName>  
+    <defName>Ultimatum_Explosion_Sound</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/Ultimatum_Explosion</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>90</min>        
+        </grains>
+        <volumeRange>
+          <min>90</min>
           <max>90</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>                
+        </pitchRange>
         <sustainLoop>False</sustainLoop>
       </li>
-	  
+
     </subSounds>
-	</SoundDef>
+  </SoundDef>
   <SoundDef>
-    <defName>GR8_400mm_RecoillessRifleShot</defName>  
+    <defName>GR8_400mm_RecoillessRifleShot</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/Support/RR_shot</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>30</min>        
+        </grains>
+        <volumeRange>
+          <min>30</min>
           <max>30</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>      
+        </pitchRange>
         <paramMappings>
           <li>
-            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <inParam Class="SoundParamSource_CameraAltitude" />
             <outParam Class="SoundParamTarget_PropertyLowPass">
               <filterProperty>Cutoff</filterProperty>
-            </outParam>          
-            <paramUpdateMode>Constant</paramUpdateMode>          
+            </outParam>
+            <paramUpdateMode>Constant</paramUpdateMode>
             <curve>
               <points>
                 <li>
                   <loc>
-                    <x>17.08957</x>                  
+                    <x>17.08957</x>
                     <y>21001.8</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>24.77761</x>                  
+                    <x>24.77761</x>
                     <y>12701.95</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>32.786</x>                  
+                    <x>32.786</x>
                     <y>7168.717</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>45.91975</x>                  
+                    <x>45.91975</x>
                     <y>4270.358</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>66.10088</x>                  
+                    <x>66.10088</x>
                     <y>2557.69</y>
                   </loc>
                 </li>
               </points>
             </curve>
           </li>
-        </paramMappings>      
+        </paramMappings>
         <filters>
           <li Class="SoundFilterLowPass">
-            <cutoffFrequency>10000</cutoffFrequency>          
+            <cutoffFrequency>10000</cutoffFrequency>
             <lowpassResonaceQ>1</lowpassResonaceQ>
           </li>
-        </filters>      
+        </filters>
         <sustainLoop>False</sustainLoop>
       </li>
     </subSounds>
   </SoundDef>
 
   <SoundDef>
-    <defName>400mm_HUGE_artillerry_explosion</defName>  
+    <defName>400mm_HUGE_artillerry_explosion</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/RocketSentry_blast</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>60</min>        
+        </grains>
+        <volumeRange>
+          <min>60</min>
           <max>60</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>                
+        </pitchRange>
         <sustainLoop>False</sustainLoop>
       </li>
-	  
+
     </subSounds>
   </SoundDef>
 
   <SoundDef>
-    <defName>HEAT_40mm_BOMB</defName>  
+    <defName>HEAT_40mm_BOMB</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/RocketSentry_blast_short</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>60</min>        
+        </grains>
+        <volumeRange>
+          <min>60</min>
           <max>60</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>                
+        </pitchRange>
         <sustainLoop>False</sustainLoop>
       </li>
-	  
+
     </subSounds>
   </SoundDef>
 
   <SoundDef>
-    <defName>P4PeaceKeeper_Shot</defName>  
+    <defName>P4PeaceKeeper_Shot</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/Senator_shot</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>60</min>        
+        </grains>
+        <volumeRange>
+          <min>60</min>
           <max>60</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>      
+        </pitchRange>
         <paramMappings>
           <li>
-            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <inParam Class="SoundParamSource_CameraAltitude" />
             <outParam Class="SoundParamTarget_PropertyLowPass">
               <filterProperty>Cutoff</filterProperty>
-            </outParam>          
-            <paramUpdateMode>Constant</paramUpdateMode>          
+            </outParam>
+            <paramUpdateMode>Constant</paramUpdateMode>
             <curve>
               <points>
                 <li>
                   <loc>
-                    <x>17.08957</x>                  
+                    <x>17.08957</x>
                     <y>21001.8</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>24.77761</x>                  
+                    <x>24.77761</x>
                     <y>12701.95</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>32.786</x>                  
+                    <x>32.786</x>
                     <y>7168.717</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>45.91975</x>                  
+                    <x>45.91975</x>
                     <y>4270.358</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>66.10088</x>                  
+                    <x>66.10088</x>
                     <y>2557.69</y>
                   </loc>
                 </li>
               </points>
             </curve>
           </li>
-        </paramMappings>      
+        </paramMappings>
         <filters>
           <li Class="SoundFilterLowPass">
-            <cutoffFrequency>10000</cutoffFrequency>          
+            <cutoffFrequency>10000</cutoffFrequency>
             <lowpassResonaceQ>1</lowpassResonaceQ>
           </li>
-        </filters>      
+        </filters>
         <sustainLoop>False</sustainLoop>
       </li>
     </subSounds>
   </SoundDef>
   <SoundDef>
-    <defName>XiaoTi_G21GrenadeLauncher</defName>  
+    <defName>XiaoTi_G21GrenadeLauncher</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/G21GrenadeLauncher_Shot</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>60</min>        
+        </grains>
+        <volumeRange>
+          <min>60</min>
           <max>60</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>      
+        </pitchRange>
         <paramMappings>
           <li>
-            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <inParam Class="SoundParamSource_CameraAltitude" />
             <outParam Class="SoundParamTarget_PropertyLowPass">
               <filterProperty>Cutoff</filterProperty>
-            </outParam>          
-            <paramUpdateMode>Constant</paramUpdateMode>          
+            </outParam>
+            <paramUpdateMode>Constant</paramUpdateMode>
             <curve>
               <points>
                 <li>
                   <loc>
-                    <x>17.08957</x>                  
+                    <x>17.08957</x>
                     <y>21001.8</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>24.77761</x>                  
+                    <x>24.77761</x>
                     <y>12701.95</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>32.786</x>                  
+                    <x>32.786</x>
                     <y>7168.717</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>45.91975</x>                  
+                    <x>45.91975</x>
                     <y>4270.358</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>66.10088</x>                  
+                    <x>66.10088</x>
                     <y>2557.69</y>
                   </loc>
                 </li>
               </points>
             </curve>
           </li>
-        </paramMappings>      
+        </paramMappings>
         <filters>
           <li Class="SoundFilterLowPass">
-            <cutoffFrequency>10000</cutoffFrequency>          
+            <cutoffFrequency>10000</cutoffFrequency>
             <lowpassResonaceQ>1</lowpassResonaceQ>
           </li>
-        </filters>      
+        </filters>
         <sustainLoop>False</sustainLoop>
       </li>
     </subSounds>
   </SoundDef>
   <SoundDef>
-    <defName>M105Stalwart_Shot</defName>  
+    <defName>M105Stalwart_Shot</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/Support/new/Stalwart_shot</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>30</min>        
+        </grains>
+        <volumeRange>
+          <min>30</min>
           <max>30</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>      
+        </pitchRange>
         <paramMappings>
           <li>
-            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <inParam Class="SoundParamSource_CameraAltitude" />
             <outParam Class="SoundParamTarget_PropertyLowPass">
               <filterProperty>Cutoff</filterProperty>
-            </outParam>          
-            <paramUpdateMode>Constant</paramUpdateMode>          
+            </outParam>
+            <paramUpdateMode>Constant</paramUpdateMode>
             <curve>
               <points>
                 <li>
                   <loc>
-                    <x>17.08957</x>                  
+                    <x>17.08957</x>
                     <y>21001.8</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>24.77761</x>                  
+                    <x>24.77761</x>
                     <y>12701.95</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>32.786</x>                  
+                    <x>32.786</x>
                     <y>7168.717</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>45.91975</x>                  
+                    <x>45.91975</x>
                     <y>4270.358</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>66.10088</x>                  
+                    <x>66.10088</x>
                     <y>2557.69</y>
                   </loc>
                 </li>
               </points>
             </curve>
           </li>
-        </paramMappings>      
+        </paramMappings>
         <filters>
           <li Class="SoundFilterLowPass">
-            <cutoffFrequency>10000</cutoffFrequency>          
+            <cutoffFrequency>10000</cutoffFrequency>
             <lowpassResonaceQ>1</lowpassResonaceQ>
           </li>
-        </filters>      
+        </filters>
         <sustainLoop>False</sustainLoop>
       </li>
     </subSounds>
   </SoundDef>
   <SoundDef>
-    <defName>RNPickup_R4Senator</defName>  
+    <defName>RNPickup_R4Senator</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/Senator_pickup</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>40</min>        
+        </grains>
+        <volumeRange>
+          <min>40</min>
           <max>40</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>                
+        </pitchRange>
         <sustainLoop>False</sustainLoop>
       </li>
-	  
+
     </subSounds>
   </SoundDef>
 
-  	<SoundDef>
-    <defName>Shot_40mm_Autocannon_FeiMao</defName>  
+  <SoundDef>
+    <defName>Shot_40mm_Autocannon_FeiMao</defName>
     <context>MapOnly</context>
-    <eventNames />  
-    <maxSimultaneous>2</maxSimultaneous>  
+    <eventNames />
+    <maxSimultaneous>2</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>SEAF_Weapons/Support/new/Fei_Mao</clipPath>
           </li>
-        </grains>      
-		<volumeRange>
-          <min>60</min>        
+        </grains>
+        <volumeRange>
+          <min>60</min>
           <max>60</max>
-        </volumeRange>   
+        </volumeRange>
         <pitchRange>
-          <min>0.936413</min>        
+          <min>0.936413</min>
           <max>1.042391</max>
-        </pitchRange>      
+        </pitchRange>
         <paramMappings>
           <li>
-            <inParam Class="SoundParamSource_CameraAltitude" />          
+            <inParam Class="SoundParamSource_CameraAltitude" />
             <outParam Class="SoundParamTarget_PropertyLowPass">
               <filterProperty>Cutoff</filterProperty>
-            </outParam>          
-            <paramUpdateMode>Constant</paramUpdateMode>          
+            </outParam>
+            <paramUpdateMode>Constant</paramUpdateMode>
             <curve>
               <points>
                 <li>
                   <loc>
-                    <x>17.08957</x>                  
+                    <x>17.08957</x>
                     <y>21001.8</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>24.77761</x>                  
+                    <x>24.77761</x>
                     <y>12701.95</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>32.786</x>                  
+                    <x>32.786</x>
                     <y>7168.717</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>45.91975</x>                  
+                    <x>45.91975</x>
                     <y>4270.358</y>
                   </loc>
-                </li>              
+                </li>
                 <li>
                   <loc>
-                    <x>66.10088</x>                  
+                    <x>66.10088</x>
                     <y>2557.69</y>
                   </loc>
                 </li>
               </points>
             </curve>
           </li>
-        </paramMappings>      
+        </paramMappings>
         <filters>
           <li Class="SoundFilterLowPass">
-            <cutoffFrequency>10000</cutoffFrequency>          
+            <cutoffFrequency>10000</cutoffFrequency>
             <lowpassResonaceQ>1</lowpassResonaceQ>
           </li>
-        </filters>      
+        </filters>
         <sustainLoop>False</sustainLoop>
       </li>
     </subSounds>

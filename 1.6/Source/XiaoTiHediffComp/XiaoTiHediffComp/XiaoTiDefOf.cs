@@ -11,6 +11,7 @@ namespace XiaoTiEquipment
         public static HediffDef Cross_The_Bleach;
         public static HediffDef GreenPin_Repair;
         public static ThingDef Repair_GreenPin;
+        public static StatDef XiaoTi_ExtraCaravanCarryCapacity;
 
         static XiaoTiDefOf()
         {

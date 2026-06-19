@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <ThingDef ParentName="XiaoTiRangedWeaponBase">
+  <ThingDef ParentName="XiaoTiRangedWeaponBase">
     <defName>P4PeaceKeeper</defName>
     <label>PeaceKeeper 维和者</label>
-    <description>P-4“维和者”是一款双动式左轮手枪，此随身武器攻击力强大，相当可靠。虽然弹容量只有六发，但其厚重的枪身和高口径弹药使其成为近距离对抗装甲目标的理想之选，受到了那些注重力大砖飞的野蛮火力的老兵的青睐。</description>
+    <description>
+      P-4“维和者”是一款双动式左轮手枪，此随身武器攻击力强大，相当可靠。虽然弹容量只有六发，但其厚重的枪身和高口径弹药使其成为近距离对抗装甲目标的理想之选，受到了那些注重力大砖飞的野蛮火力的老兵的青睐。</description>
     <graphicData>
       <texPath>Things/Weapons/Senator</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>0.70</drawSize>
+      <drawSize>0.70</drawSize>
     </graphicData>
     <soundInteract>RNPickup_R4Senator</soundInteract>
     <recipeMaker>
@@ -17,7 +18,7 @@
         <Crafting>2</Crafting>
       </skillRequirements>
     </recipeMaker>
-		<!-- <weaponTags Inherit="False">
+    <!-- <weaponTags Inherit="False">
 			<li>RN_P4_Senator</li>
 			<li>RN_SEAF_CQB</li>
 			<li>RN_SEAF</li>
@@ -47,7 +48,7 @@
         <defaultProjectile>125_rifle_Bullet_sidearm</defaultProjectile>
         <warmupTime>1</warmupTime>
         <range>36</range>
-		    <ticksBetweenBurstShots>48</ticksBetweenBurstShots>
+        <ticksBetweenBurstShots>48</ticksBetweenBurstShots>
         <burstShotCount>6</burstShotCount>
         <soundCast>P4PeaceKeeper_Shot</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
@@ -76,12 +77,12 @@
         <cooldownTime>1</cooldownTime>
       </li>
     </tools>
-	
-		<tradeTags>
-			<li>WeaponRanged</li>
+
+    <tradeTags>
+      <li>WeaponRanged</li>
       <li>ExoticMisc</li>
-		</tradeTags>
-		
-  </ThingDef>  
+    </tradeTags>
+
+  </ThingDef>
 
 </Defs>

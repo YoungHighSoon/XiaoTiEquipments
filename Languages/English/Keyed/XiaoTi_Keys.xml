@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- CompAccelerator Gizmo -->
+  <XiaoTi_SpeedMultiplierLabel>Speed Multiplier: {0}x</XiaoTi_SpeedMultiplierLabel>
+  <XiaoTi_SpeedMultiplierDesc>Tick multiplier applied to all objects within {0} cells.</XiaoTi_SpeedMultiplierDesc>
+  <XiaoTi_PawnBoostLabel>Pawn Boost: {0}</XiaoTi_PawnBoostLabel>
+  <XiaoTi_PawnBoostDescOn>Active: Pawns within range receive additional tick acceleration.\nWARNING: May cause abnormal Pawn behavior. Use with caution!</XiaoTi_PawnBoostDescOn>
+  <XiaoTi_PawnBoostDescOff>Disabled: Pawns are not affected by acceleration (default).\nEnable to apply additional tick acceleration to pawns within range.</XiaoTi_PawnBoostDescOff>
+  <XiaoTi_PawnBoostEnabledMsg>Pawn boost enabled. May cause abnormal Pawn behavior.</XiaoTi_PawnBoostEnabledMsg>
+  <!-- CompAccelerator Inspect -->
+  <XiaoTi_InspectSpeedMultiplier>Speed Multiplier: {0}x (16x max)</XiaoTi_InspectSpeedMultiplier>
+  <XiaoTi_InspectPawnBoostWarning>Warning: Pawn Boost is enabled</XiaoTi_InspectPawnBoostWarning>
+</LanguageData>

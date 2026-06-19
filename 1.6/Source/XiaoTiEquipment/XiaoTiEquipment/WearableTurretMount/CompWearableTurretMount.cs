@@ -13,10 +13,25 @@ namespace XiaoTiEquipment
 
         private LocalTargetInfo lastAttackedTarget = LocalTargetInfo.Invalid;
         private int lastAttackTargetTick;
+        private Pawn lastKnownWearer;
 
         public CompProperties_WearableTurretMount Props => (CompProperties_WearableTurretMount)props;
 
-        public Pawn Wearer => (parent as Apparel)?.Wearer;
+        public Pawn Wearer
+        {
+            get
+            {
+                var holder = parent.ParentHolder;
+                while (holder != null)
+                {
+                    if (holder is Pawn_EquipmentTracker eq) return eq.pawn;
+                    if (holder is Pawn_ApparelTracker ap) return ap.pawn;
+                    if (holder is Pawn_InventoryTracker inv) return inv.pawn;
+                    holder = holder.ParentHolder;
+                }
+                return null;
+            }
+        }
 
         private bool CanAct
         {
@@ -26,6 +41,7 @@ namespace XiaoTiEquipment
                     return false;
                 if (!Props.attackUndrafted && Wearer.IsColonistPlayerControlled && !Wearer.Drafted)
                     return false;
+                if (Wearer.Faction != Faction.OfPlayer) return false;
                 return true;
             }
         }
@@ -45,14 +61,26 @@ namespace XiaoTiEquipment
         public override void Notify_Equipped(Pawn pawn)
         {
             base.Notify_Equipped(pawn);
+            OnWearerChanged(pawn);
+        }
+
+        private void TryDetectWearerChange()
+        {
+            Pawn current = Wearer;
+            if (current != lastKnownWearer)
+            {
+                lastKnownWearer = current;
+                if (current != null)
+                    OnWearerChanged(current);
+            }
+        }
+
+        private void OnWearerChanged(Pawn wearer)
+        {
             if (slots.Count == 0)
-            {
                 InitGuns();
-            }
             else
-            {
                 UpdateAllVerbCasters();
-            }
         }
 
         private void InitGuns()
@@ -93,15 +121,17 @@ namespace XiaoTiEquipment
         public override void CompTick()
         {
             base.CompTick();
+            TryDetectWearerChange();
             if (!CanAct) return;
 
+            Pawn wearer = Wearer;
             for (int i = 0; i < slots.Count; i++)
             {
-                TickSlot(i);
+                TickSlot(i, wearer);
             }
         }
 
-        private void TickSlot(int index)
+        private void TickSlot(int index, Pawn wearer)
         {
             TurretGunSlot slot = slots[index];
             Verb verb = slot.AttackVerb;
@@ -121,7 +151,7 @@ namespace XiaoTiEquipment
                 if (slot.burstWarmupTicksLeft <= 0)
                 {
                     slot.burstWarmupTicksLeft = 0;
-                    if (slot.currentTarget.IsValid && verb.CanHitTargetFrom(Wearer.Position, slot.currentTarget))
+                    if (slot.currentTarget.IsValid && verb.CanHitTargetFrom(wearer.Position, slot.currentTarget))
                     {
                         verb.TryStartCastOn(slot.currentTarget, surpriseAttack: false,
                             canHitNonTargetPawns: true, preventFriendlyFire: false,
@@ -139,7 +169,7 @@ namespace XiaoTiEquipment
 
             if (slot.burstCooldownTicksLeft > 0) return;
 
-            if (!Wearer.IsHashIntervalTick(15)) return;
+            if (!wearer.IsHashIntervalTick(15)) return;
 
             if (!slot.forcedTarget.IsValid || (slot.forcedTarget.HasThing && !slot.forcedTarget.Thing.Spawned))
             {
@@ -158,7 +188,7 @@ namespace XiaoTiEquipment
 
             if (slot.currentTarget.IsValid)
             {
-                if (!verb.CanHitTargetFrom(Wearer.Position, slot.currentTarget))
+                if (!verb.CanHitTargetFrom(wearer.Position, slot.currentTarget))
                 {
                     slot.ResetCurrentTarget();
                     return;
@@ -170,10 +200,21 @@ namespace XiaoTiEquipment
         public override IEnumerable<Gizmo> CompGetWornGizmosExtra()
         {
             foreach (Gizmo g in base.CompGetWornGizmosExtra())
-            {
                 yield return g;
-            }
+            foreach (Gizmo g in GetTurretGizmos())
+                yield return g;
+        }
 
+        public override IEnumerable<Gizmo> CompGetGizmosExtra()
+        {
+            foreach (Gizmo g in base.CompGetGizmosExtra())
+                yield return g;
+            foreach (Gizmo g in GetTurretGizmos())
+                yield return g;
+        }
+
+        private IEnumerable<Gizmo> GetTurretGizmos()
+        {
             if (Wearer == null || Wearer.Faction != Faction.OfPlayer) yield break;
             if (!Wearer.Drafted && !Props.attackUndrafted) yield break;
 
@@ -280,7 +321,7 @@ namespace XiaoTiEquipment
                 }
                 else if (slot.IsWarmingUp)
                 {
-                    s += $"\n{label}: " + "Warming up...";
+                    s += $"\n{label}: " + "WarmingUp".Translate();
                 }
                 else
                 {

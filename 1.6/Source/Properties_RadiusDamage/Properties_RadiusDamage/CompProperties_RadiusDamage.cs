@@ -16,6 +16,10 @@ namespace XiaoTiEquipment
         public float dmgtoplant = 1.0f;
         public bool nofriendlyfire = false;
         public bool onlydmghostile = false;
+        public bool forcedDmg = false;
+        public string preferredHitPart = null;
+        public float Damage = -1f;
+        //public bool noreason = false;
 
         public CompProperties_RadiusDamage()
         {

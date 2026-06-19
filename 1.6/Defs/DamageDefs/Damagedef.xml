@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><Defs>
-    
-    <DamageDef Name="AC8BOMB">
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <DamageDef Name="AC8BOMB">
     <defName>AC8_BOMB</defName>
     <label>bomb</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
@@ -206,7 +207,9 @@
   <!-- <AbilityDef>
     <defName>Bomb_spearDeadlifeDust</defName>
     <label>释放死灵尘</label>
-    <description>Release a cloud of dust-like substance that will settle on nearby corpses and raise them as shamblers. The shamblers will only attack your enemies. Deadlife dust is made of nano-scale archites that penetrate and reanimate dead tissue at the cellular level.</description>
+    <description>Release a cloud of dust-like substance that will settle on nearby corpses and raise
+  them as shamblers. The shamblers will only attack your enemies. Deadlife dust is made of
+  nano-scale archites that penetrate and reanimate dead tissue at the cellular level.</description>
     <iconPath>UI/Abilities/ReleaseDeadlifeDust</iconPath>
     <cooldownTicksRange>60000</cooldownTicksRange>
     <showPsycastEffects>false</showPsycastEffects>

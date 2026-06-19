@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<ThingDef Name="XiaoTi_BaseBullet" Abstract="True">
-    <category>Projectile</category>
-    <tickerType>Normal</tickerType>
-    <altitudeLayer>Projectile</altitudeLayer>
-    <thingClass>Bullet</thingClass>
-    <label>bullet</label>
-    <useHitPoints>False</useHitPoints>
-    <neverMultiSelect>True</neverMultiSelect>
-    <graphicData>
-      <shaderType>Transparent</shaderType>
-    </graphicData>
-  </ThingDef>
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<thingClass>Bullet</thingClass>
+		<label>bullet</label>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+			<shaderType>Transparent</shaderType>
+		</graphicData>
+	</ThingDef>
 
-    <ThingDef ParentName="XiaoTi_BaseBullet">
+	<ThingDef ParentName="XiaoTi_BaseBullet">
 		<defName>MG43_Bullet</defName>
 		<label>8mm Mauser bullet</label>
 		<graphicData>
@@ -24,11 +24,11 @@
 			<damageDef>MG43_Bullet</damageDef>
 			<damageAmountBase>48</damageAmountBase>
 			<stoppingPower>8.0</stoppingPower>
-      		<armorPenetrationBase>0.8</armorPenetrationBase>
+			<armorPenetrationBase>0.8</armorPenetrationBase>
 			<speed>90</speed>
 		</projectile>
 	</ThingDef>
-  <!---->
+	<!---->
 	<ThingDef ParentName="XiaoTi_BaseBullet">
 		<defName>125_rifle_Bullet</defName>
 		<label>12.5mm 反器材步枪弹</label>
@@ -61,7 +61,7 @@
 			<speed>120</speed>
 		</projectile>
 	</ThingDef>
-    
+
 	<ThingDef ParentName="XiaoTi_BaseBullet">
 		<defName>125_rifle_Bullet_sidearm</defName>
 		<label>12.5mm 步枪弹</label>

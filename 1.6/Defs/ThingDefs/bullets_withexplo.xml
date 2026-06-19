@@ -1,112 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <ThingDef ParentName="BaseBullet">
-        <defName>AC8_Proj</defName>
-        <label>穿甲高爆弹</label>
-        <graphicData>
-            <texPath>Things/Projectile/Bullet_Big</texPath>
-            <drawSize>1.4</drawSize>
-            <graphicClass>Graphic_Single</graphicClass>
-            <shaderType>TransparentPostLight</shaderType>
-            <color>(255, 255, 255)</color>
-        </graphicData>
-        <thingClass>Projectile_Explosive</thingClass>
-        <projectile>
-            <damageDef>AC8_BOMB</damageDef>
-            <damageAmountBase>120</damageAmountBase>
-            <!-- Use default damage from explosion def -->
-            <explosionRadius>6.0</explosionRadius>
-            <speed>80</speed>
-            <flyOverhead>true</flyOverhead>
-            <stoppingPower>2</stoppingPower>
-            <explosionDamageFalloff>true</explosionDamageFalloff>
-        </projectile>
-	</ThingDef>
-    <ThingDef ParentName="BaseBullet">
-		<defName>400mm_HUGE_Bullet</defName>
-		<label>纯粹恶意</label>
-		<graphicData>
-			<texPath>Things/Projectile/RR_85mm_HEAT</texPath>
-			<drawSize>4.0</drawSize>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
-		</graphicData>
-		<thingClass>XiaoTiEquipment.Projectile_RadiusDamage</thingClass>
-		<projectile>
-			<damageDef>400mm_HUGE_artillerry</damageDef>
-			<explosionRadius>36.0</explosionRadius>
-			<speed>45</speed>
-			<explosionChanceToStartFire>1</explosionChanceToStartFire>
-			<screenShakeFactor>1.5</screenShakeFactor>
-			<explosionDamageFalloff>true</explosionDamageFalloff>
-			<explosionEffect>GiantExplosion</explosionEffect>
-			<flyOverhead>true</flyOverhead>
-			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
-			<soundExplode>Explosion_GiantBomb</soundExplode>
-			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
-			<soundAmbient>MortarRound_Ambient</soundAmbient>
-			<preExplosionSpawnSingleThingDef>CraterMedium</preExplosionSpawnSingleThingDef>
-			<!-- <projectileClass>XiaoTiEquipment.Projectile_RadiusDamage</projectileClass> -->
-		</projectile>
-        <comps>
-            <li Class="XiaoTiEquipment.CompProperties_RadiusDamage">
-                <radius>24.0</radius>
-				<Damage>1024</Damage>
-                <!-- <damageMultiplier>2</damageMultiplier> -->
-                <damageDef>Blunt</damageDef>
-				<forcedDmg>true</forcedDmg>
-				<preferredHitPart>Heart</preferredHitPart>
-				<nofriendlyfire>true</nofriendlyfire>
-                <!-- <ignoreLineOfSight>true</ignoreLineOfSight> -->
-                <armorPenetrationMultiplier>4.0</armorPenetrationMultiplier>
-            </li>
-        </comps>
-	</ThingDef>
-	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_Ultimatum_Bomb</defName>
-		<label>大型榴弹</label>
-		<graphicData>
-			<texPath>Things/Projectile/GP-31_Ultimatum_Projectile</texPath>
-			<drawSize>1.50</drawSize>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
-			<color>(255, 255, 255)</color>
-		</graphicData>
-		<thingClass>XiaoTiEquipment.Projectile_RadiusDamage</thingClass>
-		<projectile>
-			<damageDef>Ultimatum_BombBlast</damageDef>
-			<!-- Use default damage from explosion def -->
-			<explosionRadius>7.9</explosionRadius>
-			<speed>30</speed>
-			<flyOverhead>true</flyOverhead>
-			<damageAmountBase>160</damageAmountBase>
-			<stoppingPower>6</stoppingPower>
-			<armorPenetrationBase>1.0</armorPenetrationBase>
-		</projectile>
-        <comps>
-            <li Class="XiaoTiEquipment.CompProperties_RadiusDamage">
-                <radius>7.9</radius>
-                <Damage>40</Damage>
-				<applytimes>2</applytimes>
-				<onlydmghostile>true</onlydmghostile>
-                <damageDef>Blunt</damageDef>
-				<forcedDmg>true</forcedDmg>
-                <!-- <ignoreLineOfSight>true</ignoreLineOfSight> -->
-                <armorPenetrationMultiplier>4.0</armorPenetrationMultiplier>
-            </li>
-        </comps>
-	</ThingDef>
-	<ThingDef ParentName="BaseBullet">
-		<defName>Bullet_40mm_Grenade</defName>
-		<label>40x46mm 榴弹炮_死灵弹</label>
-		<graphicData>
-			<texPath>Things/Projectile/LauncherShot</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
-			<color>(248, 202, 116)</color>
-		</graphicData>
-		<thingClass>Projectile_Explosive</thingClass>
-		<!-- <comps>
+  <ThingDef ParentName="BaseBullet">
+    <defName>AC8_Proj</defName>
+    <label>穿甲高爆弹</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <drawSize>1.4</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(255, 255, 255)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>AC8_BOMB</damageDef>
+      <damageAmountBase>120</damageAmountBase>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>6.0</explosionRadius>
+      <speed>80</speed>
+      <flyOverhead>true</flyOverhead>
+      <stoppingPower>2</stoppingPower>
+      <explosionDamageFalloff>true</explosionDamageFalloff>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>400mm_HUGE_Bullet</defName>
+    <label>纯粹恶意</label>
+    <graphicData>
+      <texPath>Things/Projectile/RR_85mm_HEAT</texPath>
+      <drawSize>4.0</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>XiaoTiEquipment.Projectile_RadiusDamage</thingClass>
+    <projectile>
+      <damageDef>400mm_HUGE_artillerry</damageDef>
+      <explosionRadius>36.0</explosionRadius>
+      <speed>45</speed>
+      <explosionChanceToStartFire>1</explosionChanceToStartFire>
+      <screenShakeFactor>1.5</screenShakeFactor>
+      <explosionDamageFalloff>true</explosionDamageFalloff>
+      <explosionEffect>GiantExplosion</explosionEffect>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <soundExplode>Explosion_GiantBomb</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+      <preExplosionSpawnSingleThingDef>CraterMedium</preExplosionSpawnSingleThingDef>
+      <!-- <projectileClass>XiaoTiEquipment.Projectile_RadiusDamage</projectileClass> -->
+    </projectile>
+    <comps>
+      <li Class="XiaoTiEquipment.CompProperties_RadiusDamage">
+        <radius>24.0</radius>
+        <Damage>1024</Damage>
+        <!-- <damageMultiplier>2</damageMultiplier> -->
+        <damageDef>Blunt</damageDef>
+        <forcedDmg>true</forcedDmg>
+        <preferredHitPart>Heart</preferredHitPart>
+        <nofriendlyfire>true</nofriendlyfire>
+        <!-- <ignoreLineOfSight>true</ignoreLineOfSight> -->
+        <armorPenetrationMultiplier>4.0</armorPenetrationMultiplier>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Ultimatum_Bomb</defName>
+    <label>大型榴弹</label>
+    <graphicData>
+      <texPath>Things/Projectile/GP-31_Ultimatum_Projectile</texPath>
+      <drawSize>1.50</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(255, 255, 255)</color>
+    </graphicData>
+    <thingClass>XiaoTiEquipment.Projectile_RadiusDamage</thingClass>
+    <projectile>
+      <damageDef>Ultimatum_BombBlast</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>7.9</explosionRadius>
+      <speed>30</speed>
+      <flyOverhead>true</flyOverhead>
+      <damageAmountBase>160</damageAmountBase>
+      <stoppingPower>6</stoppingPower>
+      <armorPenetrationBase>1.0</armorPenetrationBase>
+    </projectile>
+    <comps>
+      <li Class="XiaoTiEquipment.CompProperties_RadiusDamage">
+        <radius>7.9</radius>
+        <Damage>40</Damage>
+        <applytimes>2</applytimes>
+        <onlydmghostile>true</onlydmghostile>
+        <damageDef>Blunt</damageDef>
+        <forcedDmg>true</forcedDmg>
+        <!-- <ignoreLineOfSight>true</ignoreLineOfSight> -->
+        <armorPenetrationMultiplier>4.0</armorPenetrationMultiplier>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_40mm_Grenade</defName>
+    <label>40x46mm 榴弹炮_死灵弹</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(248, 202, 116)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <!-- <comps>
 		<li Class="CompProperties_Explosive">
 			<explosiveDamageType>DeadlifeDust</explosiveDamageType>
 			<explosiveRadius>8</explosiveRadius>
@@ -114,138 +114,138 @@
 			<wickTicks>60~80</wickTicks>
 		</li>
 		</comps> -->
-		<projectile>
-			<damageDef>Bomb_spearDeadlifeDust</damageDef>
-			<damageAmountBase>60</damageAmountBase>
-			<explosionRadius>12</explosionRadius>
-			<speed>60</speed>
-			<flyOverhead>true</flyOverhead>
-			<stoppingPower>4</stoppingPower>
-      		<postExplosionSpawnThingDef>Grenade_Deadlife_Releasing</postExplosionSpawnThingDef>
-		</projectile>
-	</ThingDef>
-    
+    <projectile>
+      <damageDef>Bomb_spearDeadlifeDust</damageDef>
+      <damageAmountBase>60</damageAmountBase>
+      <explosionRadius>12</explosionRadius>
+      <speed>60</speed>
+      <flyOverhead>true</flyOverhead>
+      <stoppingPower>4</stoppingPower>
+      <postExplosionSpawnThingDef>Grenade_Deadlife_Releasing</postExplosionSpawnThingDef>
+    </projectile>
+  </ThingDef>
+
   <ThingDef ParentName="BaseBullet">
-	<defName>Bullet_40MMHEAT_Autocannon</defName>
+    <defName>Bullet_40MMHEAT_Autocannon</defName>
     <label>40mm高爆穿甲弹-溅射</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Big</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-		<thingClass>XiaoTiEquipment.Projectile_RadiusDamage</thingClass>
-		<projectile>
-			<damageDef>HEAT_40mm_around</damageDef>
-			<damageAmountBase>2</damageAmountBase>
-			<!-- Use default damage from explosion def -->
-			<explosionRadius>3.9</explosionRadius>
-			<speed>240</speed>
-			<flyOverhead>true</flyOverhead>
-			<stoppingPower>8</stoppingPower>
-			<explosionDamageFalloff>true</explosionDamageFalloff>
-			<screenShakeFactor>0</screenShakeFactor>
-		</projectile>
+    <thingClass>XiaoTiEquipment.Projectile_RadiusDamage</thingClass>
+    <projectile>
+      <damageDef>HEAT_40mm_around</damageDef>
+      <damageAmountBase>2</damageAmountBase>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>3.9</explosionRadius>
+      <speed>240</speed>
+      <flyOverhead>true</flyOverhead>
+      <stoppingPower>8</stoppingPower>
+      <explosionDamageFalloff>true</explosionDamageFalloff>
+      <screenShakeFactor>0</screenShakeFactor>
+    </projectile>
     <comps>
-        <li Class="XiaoTiEquipment.CompProperties_RadiusDamage">
-            <radius>3.9</radius>
-            <Damage>14</Damage>
-            <applytimes>2</applytimes>
-            <damageDef>HEAT_40mm_around</damageDef>
-            <dmgtoitem>0</dmgtoitem>
-            <dmgtobuilding>50</dmgtobuilding>
-            <onlydmghostile>true</onlydmghostile>
-            <dmgtoplant>0</dmgtoplant>
-			<forcedDmg>true</forcedDmg>
-            <!-- <ignoreLineOfSight>true</ignoreLineOfSight> -->
-            <armorPenetrationMultiplier>2.0</armorPenetrationMultiplier>
-        </li>
+      <li Class="XiaoTiEquipment.CompProperties_RadiusDamage">
+        <radius>3.9</radius>
+        <Damage>14</Damage>
+        <applytimes>2</applytimes>
+        <damageDef>HEAT_40mm_around</damageDef>
+        <dmgtoitem>0</dmgtoitem>
+        <dmgtobuilding>50</dmgtobuilding>
+        <onlydmghostile>true</onlydmghostile>
+        <dmgtoplant>0</dmgtoplant>
+        <forcedDmg>true</forcedDmg>
+        <!-- <ignoreLineOfSight>true</ignoreLineOfSight> -->
+        <armorPenetrationMultiplier>2.0</armorPenetrationMultiplier>
+      </li>
     </comps>
-    </ThingDef>
+  </ThingDef>
   <ThingDef ParentName="BaseBullet">
-	<defName>Bullet_40MMHEAT_Official</defName>
+    <defName>Bullet_40MMHEAT_Official</defName>
     <label>40mm高爆穿甲弹-电磁</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Big</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-	<thingClass>XiaoTiEquipment.Projectile_RadiusDamage</thingClass>
-	<projectile>
-		<damageDef>EMP</damageDef>
-		<damageAmountBase>100</damageAmountBase>
-		<explosionRadius>5.9</explosionRadius>
-		<speed>80</speed>
-		<flyOverhead>true</flyOverhead>
-		<stoppingPower>4</stoppingPower>
-	</projectile>
+    <thingClass>XiaoTiEquipment.Projectile_RadiusDamage</thingClass>
+    <projectile>
+      <damageDef>EMP</damageDef>
+      <damageAmountBase>100</damageAmountBase>
+      <explosionRadius>5.9</explosionRadius>
+      <speed>80</speed>
+      <flyOverhead>true</flyOverhead>
+      <stoppingPower>4</stoppingPower>
+    </projectile>
     <comps>
-        <li Class="XiaoTiEquipment.CompProperties_RadiusDamage">
-            <radius>5.9</radius>
-            <Damage>20</Damage>
-            <applytimes>4</applytimes>
-            <damageDef>HEAT_40mm_around</damageDef>
-            <armorPenetrationMultiplier>3.3</armorPenetrationMultiplier>
-            <nofriendlyfire>true</nofriendlyfire>
-            <dmgtoitem>0</dmgtoitem>
-            <dmgtobuilding>2</dmgtobuilding>
-			<!-- <forcedDmg>true</forcedDmg> -->
-        </li>
+      <li Class="XiaoTiEquipment.CompProperties_RadiusDamage">
+        <radius>5.9</radius>
+        <Damage>20</Damage>
+        <applytimes>4</applytimes>
+        <damageDef>HEAT_40mm_around</damageDef>
+        <armorPenetrationMultiplier>3.3</armorPenetrationMultiplier>
+        <nofriendlyfire>true</nofriendlyfire>
+        <dmgtoitem>0</dmgtoitem>
+        <dmgtobuilding>2</dmgtobuilding>
+        <!-- <forcedDmg>true</forcedDmg> -->
+      </li>
     </comps>
-	</ThingDef>
-	<ThingDef ParentName="BaseBullet">
-	<defName>125_rifle_Bullet_Auto</defName>
-	<label>12.5mm 孢裂弹</label>
-	<thingClass>XiaoTiEquipment.Projectile_RadiusDamage</thingClass>
-	<graphicData>
-		<texPath>Things/Projectile/Bullet_Big</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
-	</graphicData>
-	<projectile>
-		<damageDef>HEAT_40mm_around</damageDef>
-		<damageAmountBase>1</damageAmountBase>
-		<explosionRadius>1.9</explosionRadius>
-		<armorPenetrationBase>0.75</armorPenetrationBase>
-		<stoppingPower>4.0</stoppingPower>
-		<speed>70</speed>
-	</projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>125_rifle_Bullet_Auto</defName>
+    <label>12.5mm 孢裂弹</label>
+    <thingClass>XiaoTiEquipment.Projectile_RadiusDamage</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>HEAT_40mm_around</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <explosionRadius>1.9</explosionRadius>
+      <armorPenetrationBase>0.75</armorPenetrationBase>
+      <stoppingPower>4.0</stoppingPower>
+      <speed>70</speed>
+    </projectile>
     <comps>
-        <li Class="XiaoTiEquipment.CompProperties_RadiusDamage">
-            <radius>0.9</radius>
-            <Damage>5</Damage>
-            <applytimes>3</applytimes>
-            <damageDef>HEAT_40mm_around</damageDef>
-            <armorPenetrationMultiplier>3.3</armorPenetrationMultiplier>
-            <onlydmghostile>true</onlydmghostile>
-            <dmgtoitem>0</dmgtoitem>
-            <dmgtobuilding>6</dmgtobuilding>
-        </li>
+      <li Class="XiaoTiEquipment.CompProperties_RadiusDamage">
+        <radius>0.9</radius>
+        <Damage>5</Damage>
+        <applytimes>3</applytimes>
+        <damageDef>HEAT_40mm_around</damageDef>
+        <armorPenetrationMultiplier>3.3</armorPenetrationMultiplier>
+        <onlydmghostile>true</onlydmghostile>
+        <dmgtoitem>0</dmgtoitem>
+        <dmgtobuilding>6</dmgtobuilding>
+      </li>
     </comps>
-	</ThingDef>
-	<ThingDef ParentName="BaseBullet" MayRequire="fxz.moelotlzombie.update">
-	<defName>125_rifle_Bullet_malevolent</defName>
-	<label>12.5mm 辟邪弹</label>
-	<thingClass>XiaoTiEquipment.Projectile_RadiusDamage</thingClass>
-	<graphicData>
-		<texPath>Things/Projectile/Bullet_Big</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
-	</graphicData>
-	<projectile>
-		<damageDef>HEAT_40mm_around</damageDef>
-		<damageAmountBase>1</damageAmountBase>
-		<explosionRadius>1.9</explosionRadius>
-		<armorPenetrationBase>0.75</armorPenetrationBase>
-		<stoppingPower>4.0</stoppingPower>
-		<speed>70</speed>
-	</projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet" MayRequire="fxz.moelotlzombie.update">
+    <defName>125_rifle_Bullet_malevolent</defName>
+    <label>12.5mm 辟邪弹</label>
+    <thingClass>XiaoTiEquipment.Projectile_RadiusDamage</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>HEAT_40mm_around</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <explosionRadius>1.9</explosionRadius>
+      <armorPenetrationBase>0.75</armorPenetrationBase>
+      <stoppingPower>4.0</stoppingPower>
+      <speed>70</speed>
+    </projectile>
     <comps>
-        <li Class="XiaoTiEquipment.CompProperties_RadiusDamage">
-            <radius>0.9</radius>
-            <Damage>60</Damage>
-            <applytimes>3</applytimes>
-            <damageDef>RM_Burn</damageDef>
-            <armorPenetrationMultiplier>2.1</armorPenetrationMultiplier>
-            <!-- <onlydmghostile>true</onlydmghostile> -->
-            <dmgtoitem>0</dmgtoitem>
-            <dmgtobuilding>6</dmgtobuilding>
-        </li>
+      <li Class="XiaoTiEquipment.CompProperties_RadiusDamage">
+        <radius>0.9</radius>
+        <Damage>60</Damage>
+        <applytimes>3</applytimes>
+        <damageDef>RM_Burn</damageDef>
+        <armorPenetrationMultiplier>2.1</armorPenetrationMultiplier>
+        <!-- <onlydmghostile>true</onlydmghostile> -->
+        <dmgtoitem>0</dmgtoitem>
+        <dmgtobuilding>6</dmgtobuilding>
+      </li>
     </comps>
-	</ThingDef>
+  </ThingDef>
 </Defs>

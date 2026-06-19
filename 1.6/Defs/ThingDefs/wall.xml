@@ -408,7 +408,7 @@
       </li>
       <li Class="XiaoTiEquipment.CompProperties_HeatPusherThermostat">
         <heatPerSecond>45</heatPerSecond>
-        <heatPerSecond>42</heatPerSecond>
+        <coolPerSecond>42</coolPerSecond>
         <tempTolerance>1</tempTolerance>
       </li>
       <li Class="XiaoTiEquipment.CompProperties_BuildingSelfRepair">
